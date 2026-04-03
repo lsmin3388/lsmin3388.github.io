@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all modules
+    initI18n();
     initRevealAnimations();
     initNavigation();
     initMobileMenu();
