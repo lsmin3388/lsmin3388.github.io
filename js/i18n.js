@@ -17,7 +17,7 @@ const translations = {
         // Hero
         'hero.greeting': 'Hey there, I\'m',
         'hero.name': 'Sangmin Lee.',
-        'hero.title': 'Backend engineer who wants to live easy.',
+        'hero.title': 'A diligent researcher with lazy ambitions.',
         'hero.description': 'I like building systems that just work — solid, scalable, and boring in the best way. Currently a <span class="highlight">ROND 11th Cadet</span>, heading to the Agency for Defense Development (ADD) after graduation.',
         'hero.cta.work': 'See What I\'ve Built',
         'hero.cta.contact': 'Say Hi',
@@ -124,7 +124,7 @@ const translations = {
         // Hero
         'hero.greeting': '안녕하세요,',
         'hero.name': '이상민입니다.',
-        'hero.title': '편하게 살고 싶은 백엔드 개발자.',
+        'hero.title': '게으름을 위해 부지런한 연구자.',
         'hero.description': '잘 돌아가는 시스템을 만드는 걸 좋아합니다. 안정적이고, 확장 가능하고, 심심할 정도로 잘 동작하는 그런 시스템이요. 현재 <span class="highlight">ROND 11기</span>로 선발되어 졸업 후 국방과학연구소(ADD)에서 복무 예정입니다.',
         'hero.cta.work': '프로젝트 구경하기',
         'hero.cta.contact': '연락하기',
