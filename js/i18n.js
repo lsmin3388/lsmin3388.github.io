@@ -7,7 +7,7 @@
 const translations = {
     ko: {
         /* Nav (shared) */
-        'nav.brand': '이상민',
+        'nav.brand': 'Curriculum Vitae',
         'nav.about': '소개',
         'nav.experience': '경력',
         'nav.projects': '프로젝트',
@@ -18,19 +18,18 @@ const translations = {
         'proj.readmore': '자세히 보기 →',
 
         /* Hero */
-        'hero.role': '백엔드 엔지니어 · 연구자',
-        'hero.name': '이상민',
-        'hero.headline': '잘 돌아가는 시스템을 만듭니다.',
-        'hero.sub': '백엔드와 인프라, 그리고 연구. 경북대학교 컴퓨터학부 · ROND 11기 전문사관 후보생.',
-        'hero.signature.gloss': '천천히, 그러나 멈춤 없이.',
+        'hero.kicker': '이상민 · Sangmin Lee',
+        'hero.gloss': '서두르지 않되, 멈추지 않는다.',
+        'hero.identity': '소프트웨어 공학, 그리고 백엔드와 인프라, 그리고 연구.',
+        'hero.cred': '경북대학교 컴퓨터학부 제17대 학생회장 · 과학기술전문사관 11기 기수 대표',
         'hero.cta.work': '작업 보기',
         'hero.cta.contact': '연락하기',
 
         /* About */
         'about.title': '소개',
-        'about.p1': '대구를 기반으로 <span class="mark">백엔드와 인프라</span>를 다룹니다. 경북대학교 컴퓨터학부에서 플랫폼SW·데이터과학을 전공하고, <span class="mark">ROND 11기 전문사관 후보생</span>으로 선발되어 졸업 후 국방과학연구소(ADD)에서 연구합니다.',
-        'about.p2': '스타트업 정규직, 베트남 해외 인턴, 여러 개발 커뮤니티 운영까지 — <span class="mark">만들고, 배포하고, 가르치는</span> 일을 해왔습니다. 지금은 경북대 컴퓨터학부 17대 학생회 <span class="mark">부학생회장</span>으로 학부를 운영합니다.',
-        'about.p3': '장기적으로는 기술로 팀을 이끄는 <span class="mark">CTO</span>를 목표로 합니다.',
+        'about.p1': '안녕하십니까. 컴퓨터 과학을 전공하는 이상민입니다.',
+        'about.p2': '<span class="es">Sin prisa, pero sin pausa.</span> 서두르지 않되, 멈추지 않는다 — 제가 일과 공부를 대하는 태도입니다. 아직 부족한 점이 많지만, 배움을 멈추지 않고 한 걸음씩 나아가 최신 기술을 선도하는 기업의 <span class="mark">CTO</span>가 되는 것을 목표로 합니다.',
+        'about.p3': '경북대학교 컴퓨터학부에서 학사 과정을 마무리하고 있으며, 앞으로 대한민국 국군의 장교이자 <span class="mark">국방과학연구소(ADD)</span>의 연구원으로서 사명감을 잃지 않고 맡은 일에 최선을 다하겠습니다.',
         'about.stackLabel': '주로 쓰는 기술',
 
         /* Experience */
@@ -91,7 +90,7 @@ const translations = {
         'awards.sch.t': '이공계 국가우수장학금 · 샘 인재 장학기금', 'awards.sch.d': '한국장학재단 · 경북대 컴퓨터학부',
         'awards.cert.t': 'SQLD · 정보처리기능사', 'awards.cert.d': '자격증',
         'awards.leadership': '리더십 · 커뮤니티',
-        'awards.vp.t': '부학생회장', 'awards.vp.d': '경북대 컴퓨터학부 17대 학생회 Do:IT', 'awards.vp.y': '2026 — 현재',
+        'awards.vp.t': '학생회장', 'awards.vp.d': '경북대 컴퓨터학부 17대 학생회 Do:IT', 'awards.vp.y': '2026 — 현재',
         'awards.ll.t': 'BE Officer', 'awards.ll.d': '멋쟁이사자처럼 11–13기 · Java/Spring 교육', 'awards.ll.y': '2023 — 2025',
         'awards.gdg.t': 'Backend Core Member', 'awards.gdg.d': 'GDG on Campus KNU', 'awards.gdg.y': '2023 — 2025',
         'awards.goorm.t': 'Backend Officer', 'awards.goorm.d': '9oormthon Univ KNU', 'awards.goorm.y': '2024 — 2025',
@@ -100,7 +99,7 @@ const translations = {
         'time.title': '학력 & 앞으로',
         'time.t1': '경북대학교 컴퓨터학부 입학 (플랫폼SW·데이터과학)',
         'time.t2': '경북대학교 컴퓨터학부 졸업 예정',
-        'time.t3': '국방과학연구소(ADD) 전문사관 복무 시작',
+        'time.t3': '국방과학연구소(ADD) 복무 시작',
         'time.t4': 'ADD 복무 완료',
         'time.t5': '미국 박사과정 진학 예정',
 
@@ -180,26 +179,25 @@ const translations = {
 
     en: {
         /* Nav */
-        'nav.brand': 'Sangmin Lee',
+        'nav.brand': 'Curriculum Vitae',
         'nav.about': 'About', 'nav.experience': 'Experience', 'nav.projects': 'Projects',
         'nav.research': 'Research', 'nav.awards': 'Honors', 'nav.contact': 'Contact',
         'common.back': '← Back to home',
         'proj.readmore': 'Read more →',
 
         /* Hero */
-        'hero.role': 'Backend Engineer · Researcher',
-        'hero.name': 'Sangmin Lee',
-        'hero.headline': 'I build systems that just work.',
-        'hero.sub': 'Backend, infrastructure, and research. CS at Kyungpook National University · ROND 11th defense-research cadet.',
-        'hero.signature.gloss': 'Slowly, but without pause.',
+        'hero.kicker': 'Sangmin Lee',
+        'hero.gloss': 'Without haste, but without pause.',
+        'hero.identity': 'Software engineering — backend, infrastructure, and research.',
+        'hero.cred': '17th CSE Student Council President, KNU · ROND 11th cohort representative',
         'hero.cta.work': 'See my work',
         'hero.cta.contact': 'Get in touch',
 
         /* About */
         'about.title': 'About',
-        'about.p1': 'Based in Daegu, I work across <span class="mark">backend and infrastructure</span>. I\'m a final-year CS student at <span class="mark">Kyungpook National University</span>, selected as a <span class="mark">ROND 11th cadet</span> — after graduation I\'ll do research at the Agency for Defense Development (ADD).',
-        'about.p2': 'Full-time at startups, a backend internship in Vietnam, and running several dev communities — I\'ve spent my time <span class="mark">building, shipping, and teaching</span>. Right now I serve as <span class="mark">Vice President</span> of the 17th KNU CSE Student Council.',
-        'about.p3': 'Long term, I\'m aiming to become a <span class="mark">CTO</span> who leads through technology.',
+        'about.p1': 'Hello. I\'m Sangmin Lee, studying computer science.',
+        'about.p2': '<span class="es">Sin prisa, pero sin pausa.</span> Without haste, but without pause — that\'s how I approach my work and my study. I still have much to learn, but by never stopping and moving forward one step at a time, I aim to become the <span class="mark">CTO</span> of a company at the forefront of technology.',
+        'about.p3': 'I\'m finishing my B.S. at Kyungpook National University\'s School of Computer Science. Ahead lies my duty as an officer of the Republic of Korea Armed Forces and a researcher at the <span class="mark">Agency for Defense Development (ADD)</span> — one I intend to meet with steadfast commitment.',
         'about.stackLabel': 'Core stack',
 
         /* Experience */
@@ -260,7 +258,7 @@ const translations = {
         'awards.sch.t': 'National Science Scholarship · Saem Talent Fund', 'awards.sch.d': 'KOSAF · KNU CSE',
         'awards.cert.t': 'SQLD · Engineer Information Processing', 'awards.cert.d': 'Certifications',
         'awards.leadership': 'Leadership & Community',
-        'awards.vp.t': 'Vice President', 'awards.vp.d': 'KNU CSE 17th Student Council Do:IT', 'awards.vp.y': '2026 — present',
+        'awards.vp.t': 'President', 'awards.vp.d': 'KNU CSE 17th Student Council Do:IT', 'awards.vp.y': '2026 — present',
         'awards.ll.t': 'BE Officer', 'awards.ll.d': 'LikeLion 11–13th · Java/Spring teaching', 'awards.ll.y': '2023 — 2025',
         'awards.gdg.t': 'Backend Core Member', 'awards.gdg.d': 'GDG on Campus KNU', 'awards.gdg.y': '2023 — 2025',
         'awards.goorm.t': 'Backend Officer', 'awards.goorm.d': '9oormthon Univ KNU', 'awards.goorm.y': '2024 — 2025',
@@ -375,7 +373,7 @@ function setLanguage(lang) {
     const ogTitle = document.querySelector('meta[property="og:title"]');
     const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogTitle) ogTitle.content = lang === 'ko' ? '이상민 · Sangmin Lee' : 'Sangmin Lee · Portfolio';
-    if (ogDesc) ogDesc.content = lang === 'ko' ? '백엔드 엔지니어 · 연구자 — Despacio, pero sin pausa.' : 'Backend Engineer · Researcher — Despacio, pero sin pausa.';
+    if (ogDesc) ogDesc.content = lang === 'ko' ? 'Sin prisa, pero sin pausa. — 소프트웨어 공학 · 백엔드·인프라 · 연구' : 'Sin prisa, pero sin pausa. — Software engineering · backend · research';
 }
 
 function toggleLanguage() {

@@ -33,7 +33,6 @@
 * , *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 html {
-    scroll-behavior: smooth;
     scroll-padding-top: calc(var(--nav-h) + 20px);
 }
 
@@ -185,48 +184,48 @@ strong { color: var(--ink); font-weight: 600; }
    Hero
    ============================================================ */
 .hero {
-    min-height: 92vh;
+    min-height: 94vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: calc(var(--nav-h) + 40px) 0 60px;
 }
-.hero-role {
-    font-size: 14px; font-weight: 600;
-    letter-spacing: 0.04em;
-    color: var(--accent-ink);
-    margin-bottom: 22px;
-}
 .hero-name {
-    font-family: var(--serif);
-    font-size: clamp(52px, 12vw, 104px);
-    font-weight: 500;
+    font-size: 15px; font-weight: 600;
+    letter-spacing: 0.06em;
     color: var(--ink);
-    line-height: 0.98;
-    letter-spacing: -0.02em;
-    margin-bottom: 18px;
+    margin-bottom: 30px;
 }
-.hero-headline {
+.hero-statement {
     font-family: var(--serif);
-    font-size: clamp(22px, 4.4vw, 34px);
+    font-size: clamp(44px, 9.5vw, 100px);
     font-weight: 400;
-    color: var(--ink-soft);
-    line-height: 1.25;
-    margin-bottom: 28px;
-}
-.hero-sub {
-    max-width: 540px;
-    font-size: 17px;
-    color: var(--ink-soft);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
     margin-bottom: 26px;
 }
-.hero-signature {
-    display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px;
-    margin-bottom: 44px;
+.hero-statement .es {
+    color: var(--accent-ink);
+    font-style: italic;
+    font-weight: 400;
 }
-.hero-signature .es { font-size: 20px; }
-.hero-signature .gloss { font-size: 13px; color: var(--ink-muted); }
-
+.hero-gloss {
+    font-size: 15px;
+    color: var(--ink-muted);
+    margin-bottom: 34px;
+}
+.hero-identity {
+    font-size: clamp(17px, 2.4vw, 22px);
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 8px;
+    max-width: 30ch;
+}
+.hero-cred {
+    font-size: 15px;
+    color: var(--ink-muted);
+    margin-bottom: 42px;
+}
 .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* Buttons */
@@ -588,6 +587,7 @@ strong { color: var(--ink); font-weight: 600; }
 
 @media (max-width: 560px) {
     .section { padding: 72px 0; }
+    .nav-brand { font-size: 17px; }
     .exp-item { grid-template-columns: 1fr; gap: 12px; }
     .exp-meta { flex-direction: row; gap: 12px; align-items: baseline; }
     .about-stack { grid-template-columns: 1fr; }

@@ -3,13 +3,76 @@
  * Shared across the root page and detail pages.
  */
 
+/* Own the scroll position so every page load is predictable
+   (no browser scroll restoration carrying over between pages). */
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initI18n();
     initReveal();
     initNav();
     initMobileMenu();
     initActiveLink();
+    initAnchorScroll();
+    initInitialScroll();
 });
+
+window.addEventListener('load', () => {
+    // Re-correct the hash position once fonts/images settle the layout.
+    if (window.location.hash) positionToHash(false);
+});
+
+/* ---- Scroll helpers ---- */
+function prefersReducedMotion() {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+function navOffset() {
+    const nav = document.getElementById('nav');
+    return (nav ? nav.offsetHeight : 0) + 20;
+}
+function scrollToTarget(target, smooth) {
+    const y = target.getBoundingClientRect().top + window.scrollY - navOffset();
+    window.scrollTo({
+        top: Math.max(0, y),
+        behavior: (smooth && !prefersReducedMotion()) ? 'smooth' : 'auto'
+    });
+}
+function positionToHash(smooth) {
+    const hash = window.location.hash;
+    if (!hash || hash.length < 2) return false;
+    let target = null;
+    try { target = document.querySelector(decodeURIComponent(hash)); } catch (e) { return false; }
+    if (!target) return false;
+    scrollToTarget(target, smooth);
+    return true;
+}
+
+/* On first load: jump to the hash (instant, offset-corrected) or reset to top. */
+function initInitialScroll() {
+    if (window.location.hash) {
+        requestAnimationFrame(() => requestAnimationFrame(() => positionToHash(false)));
+    } else {
+        window.scrollTo(0, 0);
+    }
+}
+
+/* Smooth, offset-aware scrolling for same-page anchor links. */
+function initAnchorScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        a.addEventListener('click', (e) => {
+            let target = null;
+            try { target = document.querySelector(href); } catch (err) { return; }
+            if (!target) return;
+            e.preventDefault();
+            scrollToTarget(target, true);
+            history.pushState(null, '', href);
+        });
+    });
+}
 
 /* Reveal on scroll */
 function initReveal() {
