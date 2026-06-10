@@ -1,580 +1,335 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sangmin Lee - Backend Developer & Researcher. ROND Cadet, Full-Stack Developer with experience in scalable systems.">
+    <meta name="description" content="이상민 (Sangmin Lee) — 백엔드 엔지니어이자 연구자. 경북대 컴퓨터학부, ROND 11기 전문사관 후보생. 백엔드·인프라·시계열 표현학습.">
     <meta name="author" content="Sangmin Lee">
-    <meta name="keywords" content="Backend Developer, Software Engineer, ROND, ADD, Portfolio">
+    <meta name="keywords" content="이상민, Sangmin Lee, Backend Engineer, 백엔드 개발자, ROND, ADD, 시계열 연구, Portfolio">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Sangmin Lee | Portfolio">
-    <meta property="og:description" content="Backend Developer & Researcher">
+    <meta property="og:title" content="이상민 · Sangmin Lee">
+    <meta property="og:description" content="백엔드 엔지니어 · 연구자 — Despacio, pero sin pausa.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lsmin3388.github.io">
 
-    <title>Sangmin Lee | Portfolio</title>
+    <title>이상민 · Sangmin Lee</title>
+
+    <!-- Favicon (terracotta dot) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23faf7f2'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23c4634a'/%3E%3C/svg%3E">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Sangmin Lee</a>
-            <ul class="nav-links">
-                <li><a href="#about" class="nav-link"><span class="nav-number">01.</span> <span data-i18n="nav.about">About</span></a></li>
-                <li><a href="#experience" class="nav-link"><span class="nav-number">02.</span> <span data-i18n="nav.experience">Experience</span></a></li>
-                <li><a href="#projects" class="nav-link"><span class="nav-number">03.</span> <span data-i18n="nav.projects">Projects</span></a></li>
-                <li><a href="#awards" class="nav-link"><span class="nav-number">04.</span> <span data-i18n="nav.awards">Awards</span></a></li>
-                <li><a href="#contact" class="nav-link"><span class="nav-number">05.</span> <span data-i18n="nav.contact">Contact</span></a></li>
-            </ul>
+    <header class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-brand" data-i18n="nav.brand">이상민</a>
+            <nav class="nav-links" aria-label="주요 메뉴">
+                <a href="#about" class="nav-link" data-i18n="nav.about">소개</a>
+                <a href="#experience" class="nav-link" data-i18n="nav.experience">경력</a>
+                <a href="#projects" class="nav-link" data-i18n="nav.projects">프로젝트</a>
+                <a href="#research" class="nav-link" data-i18n="nav.research">연구</a>
+                <a href="#awards" class="nav-link" data-i18n="nav.awards">수상</a>
+                <a href="#contact" class="nav-link" data-i18n="nav.contact">연락</a>
+            </nav>
             <div class="nav-actions">
-                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">KO</button>
-                <a href="assets/resume.pdf" class="nav-resume" target="_blank" data-i18n="nav.resume">Resume</a>
+                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">EN</button>
+                <button class="nav-hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false">
+                    <span></span><span></span>
+                </button>
             </div>
-            <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
-    </nav>
+    </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <ul class="mobile-nav-links">
-            <li><a href="#about" class="mobile-nav-link"><span class="nav-number">01.</span> <span data-i18n="nav.about">About</span></a></li>
-            <li><a href="#experience" class="mobile-nav-link"><span class="nav-number">02.</span> <span data-i18n="nav.experience">Experience</span></a></li>
-            <li><a href="#projects" class="mobile-nav-link"><span class="nav-number">03.</span> <span data-i18n="nav.projects">Projects</span></a></li>
-            <li><a href="#awards" class="mobile-nav-link"><span class="nav-number">04.</span> <span data-i18n="nav.awards">Awards</span></a></li>
-            <li><a href="#contact" class="mobile-nav-link"><span class="nav-number">05.</span> <span data-i18n="nav.contact">Contact</span></a></li>
-        </ul>
-        <button class="lang-toggle mobile-lang-toggle" id="mobile-lang-toggle" aria-label="Toggle language">KO</button>
-        <a href="assets/resume.pdf" class="mobile-resume" target="_blank" data-i18n="nav.resume">Resume</a>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <nav class="mobile-links" aria-label="모바일 메뉴">
+            <a href="#about" class="mobile-link" data-i18n="nav.about">소개</a>
+            <a href="#experience" class="mobile-link" data-i18n="nav.experience">경력</a>
+            <a href="#projects" class="mobile-link" data-i18n="nav.projects">프로젝트</a>
+            <a href="#research" class="mobile-link" data-i18n="nav.research">연구</a>
+            <a href="#awards" class="mobile-link" data-i18n="nav.awards">수상</a>
+            <a href="#contact" class="mobile-link" data-i18n="nav.contact">연락</a>
+        </nav>
     </div>
 
-    <!-- Main Content -->
     <main class="main">
-        <!-- Hero Section -->
+        <!-- Hero -->
         <section class="hero" id="hero">
-            <div class="hero-content">
-                <p class="hero-greeting reveal" data-i18n="hero.greeting">Hey there, I'm</p>
-                <h1 class="hero-name reveal" data-i18n="hero.name">Sangmin Lee.</h1>
-                <h2 class="hero-title reveal" data-i18n="hero.title">A diligent researcher with lazy ambitions.</h2>
-                <p class="hero-description reveal" data-i18n="hero.description" data-i18n-html>
-                    I like building systems that just work — solid, scalable, and boring in the best way.
-                    Currently a <span class="highlight">ROND 11th Cadet</span>, heading to the Agency for Defense Development (ADD) after graduation.
-                </p>
-                <div class="hero-cta reveal">
-                    <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.work">See What I've Built</a>
-                    <a href="#contact" class="btn btn-outline" data-i18n="hero.cta.contact">Say Hi</a>
-                </div>
-            </div>
-            <div class="hero-scroll">
-                <span data-i18n="hero.scroll">Scroll</span>
-                <div class="hero-scroll-line"></div>
+            <p class="hero-role reveal" data-i18n="hero.role">백엔드 엔지니어 · 연구자</p>
+            <h1 class="hero-name reveal" data-i18n="hero.name">이상민</h1>
+            <p class="hero-headline reveal" data-i18n="hero.headline">잘 돌아가는 시스템을 만듭니다.</p>
+            <p class="hero-sub reveal" data-i18n="hero.sub">백엔드와 인프라, 그리고 연구. 경북대학교 컴퓨터학부 · ROND 11기 전문사관 후보생.</p>
+            <p class="hero-signature reveal">
+                <span class="es">Despacio, pero sin pausa.</span>
+                <span class="gloss" data-i18n="hero.signature.gloss">천천히, 그러나 멈춤 없이.</span>
+            </p>
+            <div class="hero-cta reveal">
+                <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.work">작업 보기</a>
+                <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta.contact">연락하기</a>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- About -->
         <section class="section about" id="about">
-            <h2 class="section-title reveal">
-                <span class="section-number">01.</span> <span data-i18n="about.title">About Me</span>
-            </h2>
-            <div class="about-content">
+            <div class="section-head reveal">
+                <span class="eyebrow">About</span>
+                <h2 class="section-title" data-i18n="about.title">소개</h2>
+            </div>
+            <div class="about-grid">
                 <div class="about-text reveal">
-                    <p data-i18n="about.p1" data-i18n-html>
-                        I'm Sangmin, based in Daegu, South Korea. My long-term goal is to become a <span class="highlight">Big Tech CTO</span>
-                        — but my life motto is honestly just "I want to live comfortably." Funny combo, I know.
-                    </p>
-                    <p data-i18n="about.p2" data-i18n-html>
-                        Finishing up my final year at <span class="highlight">Kyungpook National University</span>,
-                        majoring in Computer Science. Got selected as a <span class="highlight">ROND 11th Cadet</span>,
-                        so after graduation I'll be doing research at ADD (Agency for Defense Development).
-                    </p>
-                    <p data-i18n="about.p3" data-i18n-html>
-                        Along the way, I've worked at <span class="highlight">startups</span>,
-                        done an <span class="highlight">internship in Vietnam</span>,
-                        and led a bunch of <span class="highlight">dev communities</span>.
-                        Right now I'm Vice President of the 17th KNU CSE Student Council <span class="highlight">Do:IT</span>.
-                    </p>
-                    <p data-i18n="about.p4">Tech I work with day to day:</p>
-                    <ul class="about-skills">
-                        <li>Java / Spring Boot</li>
-                        <li>Node.js / TypeScript</li>
-                        <li>Docker / Kubernetes</li>
-                        <li>MySQL / PostgreSQL</li>
-                        <li>AWS / GitHub Actions</li>
-                        <li>RabbitMQ / Redis</li>
+                    <p data-i18n="about.p1" data-i18n-html>대구를 기반으로 <span class="mark">백엔드와 인프라</span>를 다룹니다. 경북대학교 컴퓨터학부에서 플랫폼SW·데이터과학을 전공하고, <span class="mark">ROND 11기 전문사관 후보생</span>으로 선발되어 졸업 후 국방과학연구소(ADD)에서 연구합니다.</p>
+                    <p data-i18n="about.p2" data-i18n-html>스타트업 정규직, 베트남 해외 인턴, 여러 개발 커뮤니티 운영까지 — <span class="mark">만들고, 배포하고, 가르치는</span> 일을 해왔습니다. 지금은 경북대 컴퓨터학부 17대 학생회 <span class="mark">부학생회장</span>으로 학부를 운영합니다.</p>
+                    <p data-i18n="about.p3" data-i18n-html>장기적으로는 기술로 팀을 이끄는 <span class="mark">CTO</span>를 목표로 합니다.</p>
+
+                    <p class="about-stack-label" data-i18n="about.stackLabel">주로 쓰는 기술</p>
+                    <ul class="about-stack">
+                        <li>Java · Spring Boot</li>
+                        <li>Node.js · TypeScript</li>
+                        <li>Docker · AWS</li>
+                        <li>MySQL · PostgreSQL</li>
+                        <li>RabbitMQ · Redis</li>
+                        <li>Nginx · GitHub Actions</li>
                     </ul>
                 </div>
-                <div class="about-image reveal">
-                    <div class="about-image-wrapper">
-                        <div class="about-image-placeholder">
-                            <span>SL</span>
-                        </div>
-                        <div class="about-image-border"></div>
+                <figure class="about-photo reveal">
+                    <div class="photo-frame">
+                        <img src="assets/profile.jpg" alt="이상민 프로필 사진" loading="lazy"
+                             onerror="this.closest('.photo-frame').classList.add('photo-failed')">
+                        <span class="photo-fallback">이미지 다운로드 실패<br><code>assets/profile.jpg</code></span>
                     </div>
-                </div>
-            </div>
-
-            <!-- Education -->
-            <div class="education reveal">
-                <h3 class="education-title" data-i18n="about.education.title">Education</h3>
-                <div class="education-item">
-                    <div class="education-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                        </svg>
-                    </div>
-                    <div class="education-info">
-                        <h4 data-i18n="about.education.name">Kyungpook National University</h4>
-                        <p class="education-degree" data-i18n="about.education.degree">B.S. in Computer Science & Engineering</p>
-                        <p class="education-date" data-i18n="about.education.date">Mar 2023 — Feb 2027 (Expected)</p>
-                    </div>
-                </div>
+                    <figcaption class="es-caption">Hecho con calma · Daegu</figcaption>
+                </figure>
             </div>
         </section>
 
-        <!-- Experience Section -->
+        <!-- Experience -->
         <section class="section experience" id="experience">
-            <h2 class="section-title reveal">
-                <span class="section-number">02.</span> <span data-i18n="exp.title">Work Experience</span>
-            </h2>
-            <div class="experience-content">
-                <div class="timeline">
-                    <!-- DataHouse Vietnam -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-marker">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-line"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3 class="timeline-title" data-i18n="exp.dh.role">Backend Developer</h3>
-                                <span class="timeline-company" data-i18n="exp.dh.company">@ DataHouse Vietnam</span>
-                            </div>
-                            <p class="timeline-date" data-i18n="exp.dh.date">Jan 2026 — Feb 2026 · Da Nang, Vietnam</p>
-                            <ul class="timeline-details">
-                                <li data-i18n="exp.dh.d1">Developed backend systems using Node.js and TypeScript</li>
-                                <li data-i18n="exp.dh.d2">Built TechTalk Hub: Slack-based voting & scheduling chatbot</li>
-                                <li data-i18n="exp.dh.d3">Optimized database queries, reducing response time by 38%</li>
-                            </ul>
-                            <div class="timeline-tags">
-                                <span>Node.js</span>
-                                <span>TypeScript</span>
-                                <span>PostgreSQL</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Rond Corporation -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-marker">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-line"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3 class="timeline-title" data-i18n="exp.rond.role">Full-Stack Developer</h3>
-                                <span class="timeline-company" data-i18n="exp.rond.company">@ Rond Corporation</span>
-                            </div>
-                            <p class="timeline-date" data-i18n="exp.rond.date">May 2025 — Dec 2025 · Seoul, South Korea</p>
-                            <p class="timeline-badge" data-i18n="exp.rond.badge">Youth Startup Academy Selected Company</p>
-                            <ul class="timeline-details">
-                                <li data-i18n="exp.rond.d1">Developed web applications as a full-stack developer</li>
-                                <li data-i18n="exp.rond.d2">Participated in government-backed startup program</li>
-                            </ul>
-                            <div class="timeline-tags">
-                                <span>Spring Boot</span>
-                                <span>React</span>
-                                <span>AWS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Happy Aging -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-marker">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-line"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3 class="timeline-title" data-i18n="exp.ha.role">DevOps Technical Lead</h3>
-                                <span class="timeline-company" data-i18n="exp.ha.company">@ Happy Aging</span>
-                            </div>
-                            <p class="timeline-date" data-i18n="exp.ha.date">Jul 2024 — Mar 2025</p>
-                            <ul class="timeline-details">
-                                <li data-i18n="exp.ha.d1">Led development of elderly fall prevention assistant service</li>
-                                <li data-i18n="exp.ha.d2">Implemented AI-based home hazard detection using OpenAI APIs</li>
-                                <li data-i18n="exp.ha.d3">Built Android application with Kotlin</li>
-                                <li data-i18n="exp.ha.d4">Deployed on AWS EC2 with Docker containerization</li>
-                            </ul>
-                            <div class="timeline-tags">
-                                <span>Spring Boot</span>
-                                <span>Kotlin</span>
-                                <span>Docker</span>
-                                <span>AWS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Stocodi -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-marker">
-                            <div class="timeline-dot"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3 class="timeline-title" data-i18n="exp.st.role">DevOps Engineer / Server Developer</h3>
-                                <span class="timeline-company" data-i18n="exp.st.company">@ Stocodi</span>
-                            </div>
-                            <p class="timeline-date" data-i18n="exp.st.date">Jun 2023 — Mar 2024</p>
-                            <ul class="timeline-details">
-                                <li data-i18n="exp.st.d1">Designed real-time stock data processing infrastructure</li>
-                                <li data-i18n="exp.st.d2">Processed live data for 3000+ stocks (KOSPI & KOSDAQ)</li>
-                                <li data-i18n="exp.st.d3">Migrated monolithic architecture to MSA</li>
-                            </ul>
-                            <div class="timeline-tags">
-                                <span>Spring Webflux</span>
-                                <span>RabbitMQ</span>
-                                <span>InfluxDB</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-head reveal">
+                <span class="eyebrow">Experience</span>
+                <h2 class="section-title" data-i18n="exp.title">경력</h2>
             </div>
+            <ol class="exp-list">
+                <li class="exp-item reveal">
+                    <div class="exp-meta">
+                        <span class="exp-date" data-i18n="exp.dh.date">2026.01 — 02</span>
+                        <span class="exp-place" data-i18n="exp.dh.place">다낭, 베트남</span>
+                    </div>
+                    <div class="exp-body">
+                        <h3 class="exp-role" data-i18n="exp.dh.role" data-i18n-html>백엔드 개발자 <span class="exp-type">인턴</span></h3>
+                        <p class="exp-org" data-i18n="exp.dh.org">DataHouse Vietnam</p>
+                        <ul class="exp-points">
+                            <li data-i18n="exp.dh.d1">Node.js · TypeScript 기반 백엔드 개발</li>
+                            <li data-i18n="exp.dh.d2">Slack 기반 투표·일정 챗봇 ‘TechTalk Hub’ 개발</li>
+                            <li data-i18n="exp.dh.d3" data-i18n-html>쿼리·UI 최적화로 응답시간 <strong>38% 단축</strong></li>
+                        </ul>
+                        <div class="tags"><span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span></div>
+                    </div>
+                </li>
+                <li class="exp-item reveal">
+                    <div class="exp-meta">
+                        <span class="exp-date" data-i18n="exp.rond.date">2025.05 — 12</span>
+                        <span class="exp-place" data-i18n="exp.rond.place">서울</span>
+                    </div>
+                    <div class="exp-body">
+                        <h3 class="exp-role" data-i18n="exp.rond.role" data-i18n-html>풀스택 개발자 <span class="exp-type">정규직</span></h3>
+                        <p class="exp-org" data-i18n="exp.rond.org">론드코퍼레이션</p>
+                        <p class="exp-badge" data-i18n="exp.rond.badge">청년창업사관학교 선정 기업</p>
+                        <ul class="exp-points">
+                            <li data-i18n="exp.rond.d1">웹 풀스택 제품 개발 (프론트엔드 · 백엔드)</li>
+                        </ul>
+                        <div class="tags"><span>Spring Boot</span><span>React</span><span>AWS</span></div>
+                    </div>
+                </li>
+                <li class="exp-item reveal">
+                    <div class="exp-meta">
+                        <span class="exp-date" data-i18n="exp.ha.date">2024.07 — 2025.03</span>
+                        <span class="exp-place" data-i18n="exp.ha.place">산학 프로젝트</span>
+                    </div>
+                    <div class="exp-body">
+                        <h3 class="exp-role" data-i18n="exp.ha.role">DevOps 테크리드</h3>
+                        <p class="exp-org" data-i18n="exp.ha.org">해피에이징</p>
+                        <ul class="exp-points">
+                            <li data-i18n="exp.ha.d1">노인 낙상 예방 어시스턴트 서버 개발 총괄</li>
+                            <li data-i18n="exp.ha.d2">OpenAI 기반 가정 내 위험요소 감지 구현</li>
+                            <li data-i18n="exp.ha.d3">Kotlin 안드로이드 앱 개발, AWS EC2 · Docker 배포</li>
+                        </ul>
+                        <div class="tags"><span>Spring Boot</span><span>Kotlin</span><span>OpenAI</span><span>AWS</span></div>
+                    </div>
+                </li>
+                <li class="exp-item reveal">
+                    <div class="exp-meta">
+                        <span class="exp-date" data-i18n="exp.st.date">2023.06 — 2024.03</span>
+                        <span class="exp-place" data-i18n="exp.st.place">서울</span>
+                    </div>
+                    <div class="exp-body">
+                        <h3 class="exp-role" data-i18n="exp.st.role">DevOps · 서버 개발자</h3>
+                        <p class="exp-org" data-i18n="exp.st.org">주식·금융 교육 스타트업</p>
+                        <ul class="exp-points">
+                            <li data-i18n="exp.st.d1">코스피·코스닥 전 종목 실시간 시세 처리 인프라 설계</li>
+                            <li data-i18n="exp.st.d2" data-i18n-html>모놀리식 → <strong>MSA 전환 주도</strong></li>
+                        </ul>
+                        <div class="tags"><span>Spring WebFlux</span><span>RabbitMQ</span><span>InfluxDB</span></div>
+                    </div>
+                </li>
+            </ol>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Projects -->
         <section class="section projects" id="projects">
-            <h2 class="section-title reveal">
-                <span class="section-number">03.</span> <span data-i18n="proj.title">Projects</span>
-            </h2>
-
-            <!-- Featured Project -->
-            <div class="project-featured reveal">
-                <div class="project-featured-content">
-                    <p class="project-overline" data-i18n="proj.featured">Featured</p>
-                    <h3 class="project-title" data-i18n="proj.stock.title">Real-time Stock Data Pipeline</h3>
-                    <div class="project-description">
-                        <p data-i18n="proj.stock.desc">
-                            Real-time price pipeline for 3000+ KOSPI/KOSDAQ stocks.
-                            Rewrote the whole thing from a monolith to MSA because the old system just couldn't keep up.
-                        </p>
-                    </div>
-                    <div class="project-case-study">
-                        <div class="case-study-item">
-                            <h4 data-i18n="proj.stock.problem.title">Problem</h4>
-                            <p data-i18n="proj.stock.problem">Legacy monolithic system couldn't handle real-time data for thousands of stocks simultaneously.</p>
-                        </div>
-                        <div class="case-study-item">
-                            <h4 data-i18n="proj.stock.solution.title">Solution</h4>
-                            <p data-i18n="proj.stock.solution">Redesigned as MSA using Spring Webflux for reactive processing, RabbitMQ for message queuing, and InfluxDB for time-series data.</p>
-                        </div>
-                        <div class="case-study-item">
-                            <h4 data-i18n="proj.stock.impact.title">Impact</h4>
-                            <p data-i18n="proj.stock.impact">Successfully handled 3000+ concurrent WebSocket connections with sub-second latency.</p>
-                        </div>
-                    </div>
-                    <ul class="project-tech">
-                        <li>Spring Webflux</li>
-                        <li>RabbitMQ</li>
-                        <li>InfluxDB</li>
-                        <li>WebSocket</li>
-                        <li>Docker</li>
-                    </ul>
-                </div>
-                <div class="project-featured-image">
-                    <div class="project-image-placeholder">
-                        <div class="architecture-diagram">
-                            <div class="arch-box">Client</div>
-                            <div class="arch-arrow">→</div>
-                            <div class="arch-box">API Gateway</div>
-                            <div class="arch-arrow">→</div>
-                            <div class="arch-box">RabbitMQ</div>
-                            <div class="arch-arrow">→</div>
-                            <div class="arch-box">Services</div>
-                            <div class="arch-arrow">→</div>
-                            <div class="arch-box">InfluxDB</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-head reveal">
+                <span class="eyebrow">Projects</span>
+                <h2 class="section-title" data-i18n="proj.title">프로젝트</h2>
             </div>
 
-            <!-- Other Projects Grid -->
-            <h3 class="projects-other-title reveal" data-i18n="proj.other">Other Noteworthy Projects</h3>
+            <a class="project-featured reveal" href="projects/realtime-stock.html">
+                <div class="featured-body">
+                    <p class="featured-label" data-i18n="proj.featured">대표 프로젝트</p>
+                    <h3 class="featured-title" data-i18n="proj.stock.title">실시간 주식 데이터 파이프라인</h3>
+                    <p class="featured-desc" data-i18n="proj.stock.desc">코스피·코스닥 전 종목의 실시간 시세를 처리하는 파이프라인. 기존 모놀리식이 부하를 감당하지 못해 MSA로 전면 재설계했습니다.</p>
+                    <div class="tags"><span>Spring WebFlux</span><span>RabbitMQ</span><span>InfluxDB</span><span>WebSocket</span></div>
+                    <span class="featured-more" data-i18n="proj.readmore">자세히 보기 →</span>
+                </div>
+                <div class="featured-aside">
+                    <div class="metric"><strong>3,000+</strong><span data-i18n="proj.stock.m1">동시 종목 처리</span></div>
+                    <div class="metric"><strong>&lt;1s</strong><span data-i18n="proj.stock.m2">실시간 지연</span></div>
+                    <div class="metric"><strong>MSA</strong><span data-i18n="proj.stock.m3">아키텍처 전환</span></div>
+                </div>
+            </a>
+
             <div class="projects-grid">
-                <!-- Project Card 1 -->
-                <div class="project-card reveal">
-                    <div class="project-card-header">
-                        <div class="project-card-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-                            </svg>
-                        </div>
-                        <div class="project-card-links">
-                            <a href="https://github.com/lsmin3388/fall-prevention-server" target="_blank" aria-label="GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h4 class="project-card-title" data-i18n="proj.fall.title">Fall Prevention Assistant</h4>
-                    <p class="project-card-description" data-i18n="proj.fall.desc">
-                        AI-powered service that analyzes home images to detect fall hazards for elderly.
-                        Includes health surveys and generates personalized safety reports.
-                    </p>
-                    <ul class="project-card-tech">
-                        <li>Spring Boot</li>
-                        <li>Kotlin</li>
-                        <li>OpenAI</li>
-                        <li>AWS</li>
-                    </ul>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="project-card reveal">
-                    <div class="project-card-header">
-                        <div class="project-card-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <h4 class="project-card-title" data-i18n="proj.council.title">KNU Student Council System</h4>
-                    <p class="project-card-description" data-i18n="proj.council.desc">
-                        Integrated management system for 2000+ students. Features SSO authentication,
-                        QR-based student ID verification, and admin dashboard.
-                    </p>
-                    <ul class="project-card-tech">
-                        <li>Spring Boot</li>
-                        <li>Thymeleaf</li>
-                        <li>MySQL</li>
-                        <li>Docker</li>
-                    </ul>
-                </div>
-
-                <!-- Project Card 3 -->
-                <div class="project-card reveal">
-                    <div class="project-card-header">
-                        <div class="project-card-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <h4 class="project-card-title" data-i18n="proj.locker.title">Locker Management System</h4>
-                    <p class="project-card-description" data-i18n="proj.locker.desc">
-                        Web service for managing university department lockers. Built physical server
-                        infrastructure with SSL, firewall, and Docker containerization.
-                    </p>
-                    <ul class="project-card-tech">
-                        <li>Spring Boot</li>
-                        <li>Nginx</li>
-                        <li>Ubuntu</li>
-                        <li>Docker</li>
-                    </ul>
-                </div>
+                <a class="card reveal" href="projects/fall-prevention.html">
+                    <h4 class="card-title" data-i18n="proj.fall.title">낙상 예방 어시스턴트</h4>
+                    <p class="card-desc" data-i18n="proj.fall.desc">가정 내 이미지를 분석해 고령자의 낙상 위험을 감지하는 AI 서비스. 건강 설문과 맞춤형 안전 보고서 제공.</p>
+                    <div class="tags"><span>Spring Boot</span><span>Kotlin</span><span>OpenAI</span></div>
+                    <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
+                </a>
+                <a class="card reveal" href="projects/knu-council.html">
+                    <h4 class="card-title" data-i18n="proj.council.title">경북대 학생회 통합 시스템</h4>
+                    <p class="card-desc" data-i18n="proj.council.desc">재학생 2,000명+ 대상 통합 관리 시스템. SSO 인증, QR 학생증 인증, 관리자 페이지를 물리서버에 직접 구축.</p>
+                    <div class="tags"><span>Spring Boot</span><span>MySQL</span><span>Docker</span></div>
+                    <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
+                </a>
+                <a class="card reveal" href="projects/techtalk-hub.html">
+                    <h4 class="card-title" data-i18n="proj.techtalk.title">TechTalk Hub</h4>
+                    <p class="card-desc" data-i18n="proj.techtalk.desc">Slack 기반 투표·일정 관리 챗봇. 베트남 인턴십에서 개발, 쿼리·UI 최적화로 응답시간 38% 단축.</p>
+                    <div class="tags"><span>Node.js</span><span>TypeScript</span><span>Slack API</span></div>
+                    <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
+                </a>
+                <a class="card reveal" href="projects/locker.html">
+                    <h4 class="card-title" data-i18n="proj.locker.title">사물함 통합 관리 서비스</h4>
+                    <p class="card-desc" data-i18n="proj.locker.desc">학과 사물함 관리 웹 서비스. Ubuntu 물리서버에 방화벽·SSL·Nginx·Docker로 인프라를 직접 구성.</p>
+                    <div class="tags"><span>Spring Boot</span><span>Nginx</span><span>Ubuntu</span></div>
+                    <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
+                </a>
             </div>
         </section>
 
-        <!-- Awards Section -->
+        <!-- Research -->
+        <section class="section research" id="research">
+            <div class="section-head reveal">
+                <span class="eyebrow">Research</span>
+                <h2 class="section-title" data-i18n="research.title">연구</h2>
+            </div>
+            <p class="research-intro reveal" data-i18n="research.intro">시스템을 만드는 일과 함께, 연구도 합니다.</p>
+
+            <a class="research-item reveal" href="research.html#ts">
+                <div class="research-head">
+                    <h3 class="research-title" data-i18n="research.ts.title">시계열 임베딩의 군집화 가능성 연구</h3>
+                    <span class="research-venue">KSC 2025</span>
+                </div>
+                <p class="research-paper" data-i18n="research.ts.paper">「비군집화 임베딩의 군집화 가능성 탐구: 다중 도메인 다변량 시계열 데이터 기반 임베딩 모델 비교 연구」 · 공저자</p>
+                <p class="research-desc" data-i18n="research.ts.desc">TS2Vec · PatchTST · MERIT · TimeCMA · TimeKD 5종 시계열 임베딩의 비지도 군집화 성능을 UEA 4개 데이터셋에서 체계적으로 비교. LLM 기반 방법의 군집 붕괴(NMI≈0) 현상을 규명하고, 데이터 특성별 방법 선택 가이드라인을 제시.</p>
+                <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
+            </a>
+
+            <a class="research-item reveal" href="research.html#sar">
+                <div class="research-head">
+                    <h3 class="research-title" data-i18n="research.sar.title">편광 SAR 기반 저피탐 표적 탐지</h3>
+                    <span class="research-venue">KAIST · 2025</span>
+                </div>
+                <p class="research-paper" data-i18n="research.sar.paper">「편광 SAR 신호 합성을 통한 저피탐 표적 탐지 기법」 · 밀리테크 챌린지 2025 대상</p>
+                <p class="research-desc" data-i18n="research.sar.desc">KAIST 차세대 SAR 연구실 지도 하에 수행한 국방 연구. 단일 편파로는 탐지가 어려운 저피탐 표적을, 서로 다른 편파 영상을 위상 상관으로 정합·합성해 탐지하는 기법입니다. X-band FMCW 레이다 야외 실측에서 단일 편파로 보이지 않던 표적을 편광 RGB 합성 영상으로 탐지, 과기정통부 장관상(대상)을 수상.</p>
+                <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
+            </a>
+        </section>
+
+        <!-- Awards & Leadership -->
         <section class="section awards" id="awards">
-            <h2 class="section-title reveal">
-                <span class="section-number">04.</span> <span data-i18n="awards.title">Honors & Leadership</span>
-            </h2>
-
-            <div class="awards-content">
-                <!-- Honors -->
-                <div class="awards-column reveal">
-                    <h3 class="awards-subtitle" data-i18n="awards.honors">Honors & Awards</h3>
-                    <div class="award-list">
-                        <div class="award-item">
-                            <div class="award-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="8" r="7"/>
-                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
-                                </svg>
-                            </div>
-                            <div class="award-info">
-                                <h4 data-i18n="awards.rond.title">ROND 11th Cohort</h4>
-                                <p data-i18n="awards.rond.desc">Research Officers for National Defense</p>
-                                <span class="award-date">2024</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon trophy">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-                                    <path d="M4 22h16"/>
-                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
-                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
-                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
-                                </svg>
-                            </div>
-                            <div class="award-info">
-                                <h4 data-i18n="awards.mili.title">Mili-Tech Challenge 2025</h4>
-                                <p data-i18n="awards.mili.desc">Grand Prize (Minister of Science & ICT Award)</p>
-                                <span class="award-date">2025</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="8" r="7"/>
-                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
-                                </svg>
-                            </div>
-                            <div class="award-info">
-                                <h4 data-i18n="awards.topcit.title">TOPCIT 22nd Assessment</h4>
-                                <p data-i18n="awards.topcit.desc">1st Place (Score: 805) - President's Award</p>
-                                <span class="award-date">2025</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="8" r="7"/>
-                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
-                                </svg>
-                            </div>
-                            <div class="award-info">
-                                <h4 data-i18n="awards.scholarship.title">National Science & Engineering Scholarship</h4>
-                                <p data-i18n="awards.scholarship.desc">Korea Student Aid Foundation</p>
-                                <span class="award-date">2024</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="8" r="7"/>
-                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
-                                </svg>
-                            </div>
-                            <div class="award-info">
-                                <h4 data-i18n="awards.wfk.title">WFK ICT Volunteer Corps</h4>
-                                <p data-i18n="awards.wfk.desc">NIA Director's Award - Indonesia</p>
-                                <span class="award-date">2024</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="section-head reveal">
+                <span class="eyebrow">Honors</span>
+                <h2 class="section-title" data-i18n="awards.title">수상 &amp; 리더십</h2>
+            </div>
+            <div class="awards-grid">
+                <div class="awards-col reveal">
+                    <h3 class="awards-sub" data-i18n="awards.honors">수상 · 선발</h3>
+                    <ul class="award-list">
+                        <li><span class="award-year">2024</span><div><h4 data-i18n="awards.rond.t">ROND 11기 전문사관 후보생 선발</h4><p data-i18n="awards.rond.d">국방과학연구소(ADD) R&amp;D 인력 양성</p></div></li>
+                        <li><span class="award-year">2025</span><div><h4 data-i18n="awards.mili.t">밀리테크 챌린지 2025 · 대상</h4><p data-i18n="awards.mili.d">과학기술정보통신부 장관상</p></div></li>
+                        <li><span class="award-year">2025</span><div><h4 data-i18n="awards.topcit.t">TOPCIT 제22회 · 대상 (1등)</h4><p data-i18n="awards.topcit.d">805점 · 경북대학교 총장상</p></div></li>
+                        <li><span class="award-year">2024</span><div><h4 data-i18n="awards.hack1.t">SW교육원 아이디어 해커톤 · 대상 (1등)</h4><p data-i18n="awards.hack1.d">대구·경북권 5개 대학</p></div></li>
+                        <li><span class="award-year">2023</span><div><h4 data-i18n="awards.hack2.t">대구를 빛내는 SW 해커톤 · 최우수상</h4><p data-i18n="awards.hack2.d">블록체인 기반 교육권 침해 신고 서비스</p></div></li>
+                        <li><span class="award-year">2024</span><div><h4 data-i18n="awards.wfk.t">WFK ICT 해외봉사단 · 원장상</h4><p data-i18n="awards.wfk.d">인도네시아 · 소 품종·무게 감지 AI</p></div></li>
+                        <li><span class="award-year">—</span><div><h4 data-i18n="awards.sch.t">이공계 국가우수장학금 · 샘 인재 장학기금</h4><p data-i18n="awards.sch.d">한국장학재단 · 경북대 컴퓨터학부</p></div></li>
+                        <li><span class="award-year">25·24</span><div><h4 data-i18n="awards.cert.t">SQLD · 정보처리기능사</h4><p data-i18n="awards.cert.d">자격증</p></div></li>
+                    </ul>
                 </div>
-
-                <!-- Leadership -->
-                <div class="awards-column reveal">
-                    <h3 class="awards-subtitle" data-i18n="awards.leadership">Leadership</h3>
-                    <div class="leadership-list">
-                        <div class="leadership-item">
-                            <h4 data-i18n="awards.vp.title">Vice President</h4>
-                            <p data-i18n="awards.vp.desc">KNU CSE 17th Student Council Do:IT</p>
-                            <span class="leadership-date">2026 - Present</span>
-                        </div>
-                        <div class="leadership-item">
-                            <h4 data-i18n="awards.likelion.title">Backend Officer</h4>
-                            <p data-i18n="awards.likelion.desc">LikeLion University (3 years)</p>
-                            <span class="leadership-date">2023 - 2025</span>
-                        </div>
-                        <div class="leadership-item">
-                            <h4 data-i18n="awards.gdg.title">Backend Core Member</h4>
-                            <p data-i18n="awards.gdg.desc">GDG on Campus KNU</p>
-                            <span class="leadership-date">2024 - 2025</span>
-                        </div>
-                        <div class="leadership-item">
-                            <h4 data-i18n="awards.goorm.title">Backend Officer</h4>
-                            <p data-i18n="awards.goorm.desc">9oormthon Univ KNU</p>
-                            <span class="leadership-date">2024 - 2025</span>
-                        </div>
-                    </div>
+                <div class="awards-col reveal">
+                    <h3 class="awards-sub" data-i18n="awards.leadership">리더십 · 커뮤니티</h3>
+                    <ul class="lead-list">
+                        <li><h4 data-i18n="awards.vp.t">부학생회장</h4><p data-i18n="awards.vp.d">경북대 컴퓨터학부 17대 학생회 Do:IT</p><span data-i18n="awards.vp.y">2026 — 현재</span></li>
+                        <li><h4 data-i18n="awards.ll.t">BE Officer</h4><p data-i18n="awards.ll.d">멋쟁이사자처럼 11–13기 · Java/Spring 교육</p><span data-i18n="awards.ll.y">2023 — 2025</span></li>
+                        <li><h4 data-i18n="awards.gdg.t">Backend Core Member</h4><p data-i18n="awards.gdg.d">GDG on Campus KNU</p><span data-i18n="awards.gdg.y">2023 — 2025</span></li>
+                        <li><h4 data-i18n="awards.goorm.t">Backend Officer</h4><p data-i18n="awards.goorm.d">9oormthon Univ KNU</p><span data-i18n="awards.goorm.y">2024 — 2025</span></li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Timeline -->
+        <section class="section timeline" id="timeline">
+            <div class="section-head reveal">
+                <span class="eyebrow">Path</span>
+                <h2 class="section-title" data-i18n="time.title">학력 &amp; 앞으로</h2>
+            </div>
+            <ol class="time-list reveal">
+                <li><span class="time-year">2023.03</span><span class="time-text" data-i18n="time.t1">경북대학교 컴퓨터학부 입학 (플랫폼SW·데이터과학)</span></li>
+                <li><span class="time-year">2027.02</span><span class="time-text" data-i18n="time.t2">경북대학교 컴퓨터학부 졸업 예정</span></li>
+                <li><span class="time-year">2027.06</span><span class="time-text" data-i18n="time.t3">국방과학연구소(ADD) 전문사관 복무 시작</span></li>
+                <li><span class="time-year">2030.06</span><span class="time-text" data-i18n="time.t4">ADD 복무 완료</span></li>
+                <li class="time-future"><span class="time-year">2030 —</span><span class="time-text" data-i18n="time.t5">미국 박사과정 진학 예정</span></li>
+            </ol>
+        </section>
+
+        <!-- Contact -->
         <section class="section contact" id="contact">
-            <h2 class="section-title reveal">
-                <span class="section-number">05.</span> <span data-i18n="contact.title">Let's Talk</span>
-            </h2>
-            <div class="contact-content reveal">
-                <p class="contact-text" data-i18n="contact.text">
-                    Always down for interesting conversations — whether it's a project idea,
-                    a job opportunity, or just a random hello. Drop me a line.
-                </p>
-                <a href="mailto:sjsb4838@gmail.com" class="btn btn-primary btn-large" data-i18n="contact.btn">Send Email</a>
+            <div class="reveal">
+                <span class="eyebrow">Contact</span>
+                <h2 class="contact-title" data-i18n="contact.title">연락해요</h2>
+                <p class="contact-text" data-i18n="contact.text">제안이든 협업이든, 그냥 인사든 편하게 연락 주세요.</p>
+                <p class="contact-es es">¿Hablamos?</p>
+                <a href="mailto:sjsb4838@gmail.com" class="btn btn-primary btn-lg">sjsb4838@gmail.com</a>
+                <div class="contact-socials">
+                    <a href="https://github.com/lsmin3388" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/sangminn0" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://velog.io/@sangminn" target="_blank" rel="noopener">velog</a>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-socials">
-            <a href="https://github.com/lsmin3388" target="_blank" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                </svg>
-            </a>
-            <a href="https://linkedin.com/in/sangminn0" target="_blank" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                    <rect x="2" y="9" width="4" height="12"/>
-                    <circle cx="4" cy="4" r="2"/>
-                </svg>
-            </a>
-            <a href="https://velog.io/@sangminn" target="_blank" aria-label="Blog">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                </svg>
-            </a>
-            <a href="mailto:sjsb4838@gmail.com" aria-label="Email">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
-                </svg>
-            </a>
-        </div>
-        <p class="footer-credit" data-i18n="footer.credit">
-            Built by Sangmin Lee
-        </p>
+        <p class="footer-es es">Hecho con calma · Daegu, KR</p>
+        <p class="footer-credit">© 2026 이상민 · Sangmin Lee</p>
     </footer>
-
-    <!-- Side Elements -->
-    <div class="side-element side-left">
-        <a href="mailto:sjsb4838@gmail.com" class="side-email">sjsb4838@gmail.com</a>
-    </div>
-    <div class="side-element side-right">
-        <div class="side-socials">
-            <a href="https://github.com/lsmin3388" target="_blank" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                </svg>
-            </a>
-            <a href="https://linkedin.com/in/sangminn0" target="_blank" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                    <rect x="2" y="9" width="4" height="12"/>
-                    <circle cx="4" cy="4" r="2"/>
-                </svg>
-            </a>
-            <a href="https://velog.io/@sangminn" target="_blank" aria-label="Blog">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                </svg>
-            </a>
-        </div>
-    </div>
 
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>

@@ -1,226 +1,90 @@
 /**
- * Portfolio Main JavaScript
- * Handles animations, navigation, and interactions
+ * Portfolio — interactions
+ * Shared across the root page and detail pages.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize all modules
     initI18n();
-    initRevealAnimations();
-    initNavigation();
+    initReveal();
+    initNav();
     initMobileMenu();
-    initSmoothScroll();
+    initActiveLink();
 });
 
-/**
- * Reveal Animations on Scroll
- * Uses Intersection Observer for performance
- */
-function initRevealAnimations() {
+/* Reveal on scroll */
+function initReveal() {
     const reveals = document.querySelectorAll('.reveal');
-
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const revealObserver = new IntersectionObserver((entries, observer) => {
+    if (!('IntersectionObserver' in window) || !reveals.length) {
+        reveals.forEach(el => el.classList.add('active'));
+        return;
+    }
+    const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                observer.unobserve(entry.target);
+                obs.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.12 });
 
-    reveals.forEach(reveal => {
-        revealObserver.observe(reveal);
+    reveals.forEach(el => observer.observe(el));
+
+    // Hero reveals fire immediately
+    requestAnimationFrame(() => {
+        document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('active'));
     });
-
-    // Trigger hero animations immediately
-    setTimeout(() => {
-        document.querySelectorAll('.hero .reveal').forEach(el => {
-            el.classList.add('active');
-        });
-    }, 100);
 }
 
-/**
- * Navigation Scroll Effects
- * Adds shadow on scroll and highlights active section
- */
-function initNavigation() {
+/* Nav border on scroll */
+function initNav() {
     const nav = document.getElementById('nav');
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    // Add shadow on scroll
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        // Add/remove scrolled class
-        if (currentScroll > 50) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
-        }
-
-        // Hide/show nav on scroll direction
-        if (currentScroll > lastScroll && currentScroll > 100) {
-            nav.style.transform = 'translateY(-100%)';
-        } else {
-            nav.style.transform = 'translateY(0)';
-        }
-
-        lastScroll = currentScroll;
-
-        // Update active nav link
-        updateActiveNavLink(sections, navLinks);
-    });
+    if (!nav) return;
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-/**
- * Update Active Navigation Link
- */
-function updateActiveNavLink(sections, navLinks) {
-    let current = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (window.pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-}
-
-/**
- * Mobile Menu Toggle
- */
+/* Mobile menu */
 function initMobileMenu() {
     const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-    const body = document.body;
+    const menu = document.getElementById('mobile-menu');
+    if (!hamburger || !menu) return;
 
-    if (!hamburger || !mobileMenu) return;
+    const close = () => {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('active');
+        menu.setAttribute('aria-hidden', 'true');
+    };
+    const toggle = () => {
+        const open = menu.classList.toggle('active');
+        hamburger.classList.toggle('active', open);
+        hamburger.setAttribute('aria-expanded', String(open));
+        menu.setAttribute('aria-hidden', String(!open));
+    };
 
-    // Toggle menu
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    });
+    hamburger.addEventListener('click', toggle);
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+}
 
-    // Close menu on link click
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            body.style.overflow = '';
+/* Active nav link (root page only) */
+function initActiveLink() {
+    const links = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('main section[id]');
+    if (!links.length || !sections.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const id = entry.target.getAttribute('id');
+            links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
         });
-    });
+    }, { rootMargin: '-45% 0px -50% 0px' });
 
-    // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            body.style.overflow = '';
-        }
-    });
-
-    // Close menu on outside click
-    document.addEventListener('click', (e) => {
-        if (mobileMenu.classList.contains('active') &&
-            !mobileMenu.contains(e.target) &&
-            !hamburger.contains(e.target)) {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            body.style.overflow = '';
-        }
-    });
+    sections.forEach(s => observer.observe(s));
 }
 
-/**
- * Smooth Scroll for Anchor Links
- */
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
-            const target = document.querySelector(targetId);
-            if (target) {
-                const navHeight = document.getElementById('nav').offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-}
-
-/**
- * Typing Animation (optional - for hero section)
- */
-function initTypingAnimation() {
-    const text = "I build things for the backend.";
-    const element = document.querySelector('.hero-title');
-
-    if (!element) return;
-
-    element.textContent = '';
-    let index = 0;
-
-    function type() {
-        if (index < text.length) {
-            element.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, 50);
-        }
-    }
-
-    // Start after initial animations
-    setTimeout(type, 1000);
-}
-
-/**
- * Preloader (optional)
- */
-function hidePreloader() {
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        preloader.classList.add('hidden');
-        setTimeout(() => preloader.remove(), 500);
-    }
-}
-
-/**
- * Console Easter Egg
- */
-console.log(
-    '%c👋 Hi there!',
-    'font-size: 24px; font-weight: bold; color: #64ffda;'
-);
-console.log(
-    '%cInterested in my code? Check out my GitHub: https://github.com/lsmin3388',
-    'font-size: 14px; color: #8892b0;'
-);
+/* Spanish console note */
+console.log('%cHecho con calma. ¡Hola! 👋', 'font-family: Georgia, serif; font-style: italic; font-size: 18px; color: #c4634a;');
+console.log('%cgithub.com/lsmin3388', 'font-size: 13px; color: #8c867c;');
