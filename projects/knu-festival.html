@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="경북대 대동제 80주년 웹앱 — 2026 대동제 실서비스. React + Spring Boot 풀스택, 온라인 대기열·실시간 랭킹·랜덤 매칭, 백엔드 최다 기여.">
+    <title>경북대 대동제 80주년 웹앱 · 이상민</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23faf7f2'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23c4634a'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="nav detail-nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand" data-i18n="nav.brand">Curriculum Vitae</a>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail">
+        <a href="../index.html#projects" class="back-link" data-i18n="common.back">← 메인으로</a>
+        <header class="detail-head">
+            <span class="eyebrow" data-i18n="d.festival.eyebrow">Project · 실서비스</span>
+            <h1 class="detail-title" data-i18n="d.festival.title">경북대 대동제 80주년 웹앱</h1>
+            <div class="detail-meta">
+                <div><span class="dm-label" data-i18n="d.role">역할</span><span data-i18n="d.festival.role">풀스택 개발 · 프로덕션 운영</span></div>
+                <div><span class="dm-label" data-i18n="d.period">기간</span><span data-i18n="d.festival.period">2026.04 — 05 · 경북대학교 2026 대동제</span></div>
+            </div>
+        </header>
+        <div class="detail-body">
+            <section class="block"><h2 data-i18n="d.h.context">배경</h2><p data-i18n="d.festival.context">경북대학교 80주년 대동제(2026.05.20–22)에서 실제 관람객이 사용한 모바일 웹앱입니다. 부스·주막 정보, 온라인 대기열, 실시간 부스 랭킹, 롤링페이퍼, 랜덤 매칭을 제공합니다.</p></section>
+            <section class="block"><h2 data-i18n="d.h.problem">문제</h2><p data-i18n="d.festival.problem">수천 명이 몰리는 축제 현장의 대기·정보·참여를, 한 번에 견디는 실서비스로 풀어야 했습니다.</p></section>
+            <section class="block"><h2 data-i18n="d.h.solution">해결</h2><p data-i18n="d.festival.solution">React 19 + Spring Boot 3.5 풀스택으로 구축했습니다. 전화 인증·SMS 호출 알림 기반 온라인 대기열, SSE·Redis 실시간 부스 랭킹, 시간대별 랜덤 매칭(공정성 알고리즘), 관리자 콘솔을 구현하고, Docker Compose·GitHub Actions로 학과 서버에 배포·운영했습니다.</p></section>
+            <section class="block"><h2 data-i18n="d.h.impact">성과</h2><p data-i18n="d.festival.impact">대동제 사흘간 실제 운영 — 부스 59개, 롤링페이퍼 100보드, 실대기·매칭 데이터를 처리했습니다. 약 1,500 동시 접속을 대비해 용량을 설계하고, 런북·모니터링·장애 대응까지 프로덕션 운영을 맡았습니다. 백엔드 커밋의 약 53%를 담당한 최다 기여자였습니다.</p></section>
+            <section class="block"><h2 data-i18n="d.stack">기술 스택</h2>
+                <div class="tags"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>Zustand</span><span>TanStack Query</span><span>Java 21</span><span>Spring Boot 3.5</span><span>JPA</span><span>Redis</span><span>MySQL</span><span>SSE</span><span>Docker</span><span>GitHub Actions</span><span>Nginx</span><span>Prometheus · Grafana</span></div>
+            </section>
+            <section class="block"><h2 data-i18n="d.links">링크</h2>
+                <a class="text-link" href="https://github.com/knu-festival-80th/knu-festival-80th-server" target="_blank" rel="noopener">GitHub · server (Spring Boot)</a><br>
+                <a class="text-link" href="https://github.com/knu-festival-80th/knu-festival-80th-client" target="_blank" rel="noopener">GitHub · client (React)</a>
+            </section>
+        </div>
+        <a href="../index.html#projects" class="back-link bottom" data-i18n="common.back">← 메인으로</a>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-es es">Hecho con calma · Daegu, KR</p>
+        <p class="footer-credit">© 2026 이상민 · Sangmin Lee</p>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -56,9 +56,11 @@ const translations = {
         /* Projects (cards) */
         'proj.title': '프로젝트',
         'proj.featured': '대표 프로젝트',
+        'proj.festival.title': '경북대 대동제 80주년 웹앱',
+        'proj.festival.desc': '경북대 2026 대동제에서 실사용된 모바일 웹앱. 온라인 대기열·실시간 부스 랭킹·랜덤 매칭을 React + Spring Boot 풀스택으로 구축하고 프로덕션 운영을 맡았습니다.',
+        'proj.festival.meta': '경북대 2026 대동제 · 3일 실운영 · 1,500+ 동시접속 · 백엔드 커밋 53%',
         'proj.stock.title': '실시간 주식 데이터 파이프라인',
         'proj.stock.desc': '코스피·코스닥 전 종목의 실시간 시세를 처리하는 파이프라인. 기존 모놀리식이 부하를 감당하지 못해 MSA로 전면 재설계했습니다.',
-        'proj.stock.m1': '동시 종목 처리', 'proj.stock.m2': '실시간 지연', 'proj.stock.m3': '아키텍처 전환',
         'proj.fall.title': '낙상 예방 어시스턴트',
         'proj.fall.desc': '가정 내 이미지를 분석해 고령자의 낙상 위험을 감지하는 AI 서비스. 건강 설문과 맞춤형 안전 보고서 제공.',
         'proj.council.title': '경북대 학생회 통합 시스템',
@@ -84,6 +86,7 @@ const translations = {
         'awards.rond.t': 'ROND 11기 전문사관 후보생 선발', 'awards.rond.d': '국방과학연구소(ADD) R&D 인력 양성',
         'awards.mili.t': '밀리테크 챌린지 2025 · 대상', 'awards.mili.d': '과학기술정보통신부 장관상',
         'awards.topcit.t': 'TOPCIT 제22회 · 대상 (1등)', 'awards.topcit.d': '805점 · 경북대학교 총장상',
+        'awards.essay.t': 'AI·SW중심대학 에세이 공모전 2026 · 대상 + AI선정상', 'awards.essay.d': 'AI·SW중심대학 협의회장상 · 「사용설명서, 한 장씩 넘기는 중」', 'awards.essay.link': '에세이 읽기 →',
         'awards.hack1.t': 'SW교육원 아이디어 해커톤 · 대상 (1등)', 'awards.hack1.d': '대구·경북권 5개 대학',
         'awards.hack2.t': '대구를 빛내는 SW 해커톤 · 최우수상', 'awards.hack2.d': '블록체인 기반 교육권 침해 신고 서비스',
         'awards.wfk.t': 'WFK ICT 해외봉사단 · 원장상', 'awards.wfk.d': '인도네시아 · 소 품종·무게 감지 AI',
@@ -94,6 +97,9 @@ const translations = {
         'awards.ll.t': 'BE Officer', 'awards.ll.d': '멋쟁이사자처럼 11–13기 · Java/Spring 교육', 'awards.ll.y': '2023 — 2025',
         'awards.gdg.t': 'Backend Core Member', 'awards.gdg.d': 'GDG on Campus KNU', 'awards.gdg.y': '2023 — 2025',
         'awards.goorm.t': 'Backend Officer', 'awards.goorm.d': '9oormthon Univ KNU', 'awards.goorm.y': '2024 — 2025',
+
+        /* Press */
+        'press.label': '언론', 'press.text': '틴매일경제 — 「국방과학연구소에서 군 복무하며 첨단기술 연구」 (2026.03)',
 
         /* Timeline */
         'time.title': '학력 & 앞으로',
@@ -151,6 +157,14 @@ const translations = {
         'd.locker.solution': 'Ubuntu 22.04 물리서버를 세팅하고 ufw 방화벽, Nginx 리버스 프록시, SSL 인증서, Docker 컨테이너로 인프라를 직접 구성했습니다. 그 위에 Spring Boot 기반 사물함 관리 서비스를 배포했습니다.',
         'd.locker.impact': '학과 자체 인프라 위에서 사물함 배정·조회를 디지털화했습니다. 인프라부터 서비스까지 단독으로 구축·운영했습니다.',
 
+        /* Detail — Festival */
+        'd.festival.eyebrow': 'Project · 실서비스', 'd.festival.title': '경북대 대동제 80주년 웹앱',
+        'd.festival.role': '풀스택 개발 · 프로덕션 운영', 'd.festival.period': '2026.04 — 05 · 경북대학교 2026 대동제',
+        'd.festival.context': '경북대학교 80주년 대동제(2026.05.20–22)에서 실제 관람객이 사용한 모바일 웹앱입니다. 부스·주막 정보, 온라인 대기열, 실시간 부스 랭킹, 롤링페이퍼, 랜덤 매칭을 제공합니다.',
+        'd.festival.problem': '수천 명이 몰리는 축제 현장의 대기·정보·참여를, 한 번에 견디는 실서비스로 풀어야 했습니다.',
+        'd.festival.solution': 'React 19 + Spring Boot 3.5 풀스택으로 구축했습니다. 전화 인증·SMS 호출 알림 기반 온라인 대기열, SSE·Redis 실시간 부스 랭킹, 시간대별 랜덤 매칭(공정성 알고리즘), 관리자 콘솔을 구현하고, Docker Compose·GitHub Actions로 학과 서버에 배포·운영했습니다.',
+        'd.festival.impact': '대동제 사흘간 실제 운영 — 부스 59개, 롤링페이퍼 100보드, 실대기·매칭 데이터를 처리했습니다. 약 1,500 동시 접속을 대비해 용량을 설계하고, 런북·모니터링·장애 대응까지 프로덕션 운영을 맡았습니다. 백엔드 커밋의 약 53%를 담당한 최다 기여자였습니다.',
+
         /* Detail — Research page */
         'rs.eyebrow': 'Research', 'rs.title': '연구',
         'rs.intro': '시스템을 만드는 일과 함께, 시계열 표현학습과 국방 신호처리 연구를 해왔습니다.',
@@ -174,7 +188,27 @@ const translations = {
         'rs.sar.f3': 'Range-Doppler Algorithm으로 편파별(HH·HV·VH·VV) SAR 영상 생성',
         'rs.sar.f4': '위상 상관(phase correlation) 기반 공간 정합 + 상대 강도 정규화로 편파 채널 정밀 정렬',
         'rs.sar.f5': 'HH/HV/VV → 편광 RGB 합성 + 파울리 분해(표면·이중반사·체적 산란)로 표적과 지형 클러터 구분',
-        'rs.sar.f6': '단일 편파로는 보이지 않던 저피탐 표적을 합성 영상에서 명확히 탐지'
+        'rs.sar.f6': '단일 편파로는 보이지 않던 저피탐 표적을 합성 영상에서 명확히 탐지',
+
+        /* Essay (full text) */
+        'essay.eyebrow': 'Essay · 2026 AI·SW중심대학 에세이 공모전',
+        'essay.title': '사용설명서, 한 장씩 넘기는 중',
+        'essay.meta': '대상 · AI·SW중심대학 협의회장상 + AI선정상 · 경북대학교 컴퓨터학부 이상민',
+        'essay.s1': '1 · 입학 전',
+        'essay.s1p1': '컴퓨터가 없었습니다. 초등학생이던 저에게는 낡은 휴대폰 한 대가 전부였습니다. 그런데 이상하게도, 그 5인치 화면 안에서 코드를 한 줄씩 써 내려가는 일이 무엇보다 즐거웠습니다. 검색창에 모르는 것을 치고, 에러를 만나고, 다시 고치고. 누가 시킨 적 없습니다. 그저 재미있었습니다. 그렇게 혼자 만드는 것들이 늘었지만, 어느 날 진지하게 만들어 본 서비스에 아무도 들어오지 않는 걸 보며 깨달았습니다. 혼자서는 갈 수 있는 곳에 끝이 있다는 것. 기술만으로는 안 되는 것들이 있다는 것. 함께 부딪히고 피드백을 주고받을 환경이 절실했습니다.',
+        'essay.s1p2': '그래서 찾기 시작했습니다. 대학을 알아보던 중 경북대학교 컴퓨터학부가 SW중심대학으로 선정되어, 산학협력 프로젝트와 해외 인턴십, SW마일리지 같은 체계가 갖춰져 있다는 것을 알게 되었습니다. 혼자 더듬거리던 저에게 필요한 건 바로 이런 사용설명서였습니다. 2023년 봄, 입학했습니다.',
+        'essay.s2': '2 · 입학 후',
+        'essay.s2p1': '입학 후, 원칙을 하나 세웠습니다. SW중심대학이 여는 문이 있다면 무조건 들어가 보자.',
+        'essay.s2p2': '가장 먼저 눈에 들어온 것은 SW마일리지 제도였습니다. 활동을 기록하고 점수화하는 단순한 시스템처럼 보였지만, 저에게는 자신을 점검하는 거울이 되었습니다. TOPCIT 시험에 매 회차 응시하며 제가 어디쯤 서 있는지 확인했고, 부족한 영역을 발견할 때마다 그것이 다음 학기의 목표가 되었습니다. 매번 긴장했습니다. 그래도 계속 응시했습니다. 그 반복의 끝에 교내 1등, 총장상이라는 결과가 따라왔지만, 상보다 값진 건 꾸준히 자신을 측정하는 습관을 갖게 된 것이었습니다.',
+        'essay.s2p3': '입학 후 처음 나간 대회는 SW교육원이 주최한 창업해커톤이었습니다. 개발에는 자신 있었습니다. 그런데 발표 시간, 옆 팀의 발표자가 청중의 눈을 하나하나 훑으며 자신들의 아이디어를 설명하고 있었습니다. 같은 주제인데 그쪽에만 사람이 몰렸습니다. 저는 노트북을 펼쳐 코드를 보여주며 설명했지만, 심사위원의 시선이 이미 멀어지고 있다는 걸 느꼈습니다. 만들 줄만 알았지, 왜 만들었는지를 말하는 법은 몰랐던 것입니다. 사용설명서의 첫 페이지가 기술이라면, 두 번째 페이지는 소통이라는 걸 그때 알았습니다.',
+        'essay.s2p4': '그날 이후 저는 부족한 소통을 채우기 위해 움직였습니다. 전국 연합 IT 동아리 멋쟁이사자처럼에 들어갔고, 3년간 활동하며 나중에는 BE Officer로서 직접 대학생들에게 Java와 Spring Boot를 가르치는 자리에 섰습니다. 누군가에게 기술을 설명하려면, 내가 먼저 정확히 이해하고 있어야 합니다. 가르치는 일은 배우는 일의 연장이었고, 동시에 말하는 힘을 기르는 가장 확실한 훈련이었습니다. 그 훈련 덕분이었을까요. 과학기술전문사관 면접장에서 “왜 이 기술이 필요한가”를 설명했을 때 면접관이 고개를 끄덕이던 순간, 해커톤 무대에서의 그 막막함이 비로소 힘이 되었다는 걸 느꼈습니다.',
+        'essay.s2p5': '산학협력프로젝트에도 참여했습니다. (주)해피에이징과 함께 노인 낙상 방지 서비스를 개발하는 프로젝트였고, 저는 Technical Lead를 맡았습니다. 위험을 감지하는 AI부터 어르신의 손에 쥐어질 앱까지, 서비스의 처음과 끝을 직접 만들어 Google Play에 내놓았습니다. 테스트 중 실제 어르신 한 분이 앱의 알림을 보고 안심했다는 이야기를 전해 들었을 때, 코드 한 줄이 누군가의 안전과 직결되어 있다는 사실이 비로소 실감 났습니다. 교실 안의 과제와는 무게가 달랐습니다.',
+        'essay.s2p6': '그 무게를 더 넓은 곳에서 시험해 보고 싶었습니다. SW중심대학의 해외 인턴십 프로그램을 통해 베트남 소재 미국계 IT 기업에서 근무할 기회를 얻었습니다. 시니어 개발자가 제 코드를 리뷰하며 “Why did you choose this approach?”라고 물었을 때, 머릿속에서는 답이 맴도는데 입이 따라가질 않았습니다. 그날 밤 숙소에서 기술 영어 표현을 하나하나 정리하며 느꼈습니다. 세상은 생각보다 넓었습니다. 그리고 그 넓은 세상에서 소통할 수 있는 사람이 되어야 한다는 것을.',
+        'essay.s3': '3 · 진로 및 향후 계획',
+        'essay.s3p1': '돌아보면 저는 많은 것을 만들었습니다. 수십만 건의 실시간 데이터를 다루는 시스템부터 앱스토어에 올라간 서비스까지, 손이 닿는 곳마다 무언가를 만들었습니다. 그런데 어느 순간, 만드는 일 너머를 바라보게 되었습니다.',
+        'essay.s3p2': '기술은 하루가 다르게 바뀌고 있었습니다. 저는 주어진 것을 구현하는 사람이 아니라, 기술이 나아갈 방향을 고민하는 사람이 되고 싶었습니다. KAIST 차세대 SAR 연구실의 문을 두드렸습니다. 논문 한 편을 제대로 읽는 데 일주일이 걸렸습니다. 코드를 짜는 것과 기술의 원리를 탐구하는 것은 전혀 다른 종류의 몰입이었는데, 오히려 그 막막함이 좋았습니다. 연구실에서 쌓은 결과물을 들고 나간 밀리테크 챌린지에서 과학기술정보통신부 장관상을 받았을 때, 개발자가 아닌 연구자로서의 가능성을 처음 확인한 순간이었습니다.',
+        'essay.s3p3': '현재 과학기술전문사관 11기로 선발되어 졸업 후 국방과학연구소에서 근무하게 됩니다. 그곳에서 저는 확장현실(XR)을 연구하려 합니다. SW중심대학에서 산학협력과 해외 인턴십을 통해 기술이 현장에서 어떤 무게를 갖는지 배웠기에, 연구실 안에만 머무는 기술이 아니라 실제 현장의 문제를 해결하는 연구를 하고 싶습니다. 5인치 화면이 전부였던 아이가 이제는 현실 너머의 세계를 설계하겠다고 말하고 있습니다. SW중심대학이라는 사용설명서를 한 장 한 장 넘겨온 사람이기에 할 수 있는 말입니다.',
+        'essay.s3p4': 'SW중심대학은 저에게 사용설명서였습니다. 혼자 더듬거리며 걸어온 길 위에, 방향을 알려주고 속도를 내게 해준 안내서. 다만 이 사용설명서에는 한 가지 조건이 있습니다. 먼저 펼쳐야 읽을 수 있다는 것. 그리고 펼친 사람만이 다음 페이지를 쓸 수 있다는 것. 지금 이 글이, 누군가에게 사용설명서를 펼쳐볼 용기가 되었으면 합니다.'
     },
 
     en: {
@@ -224,9 +258,11 @@ const translations = {
         /* Projects */
         'proj.title': 'Projects',
         'proj.featured': 'Featured',
+        'proj.festival.title': 'KNU 80th Festival Web App',
+        'proj.festival.desc': 'A mobile web app used live at KNU\'s 2026 festival — online queuing, real-time booth ranking, and random matching, built full-stack on React + Spring Boot, with production operations.',
+        'proj.festival.meta': 'KNU 2026 Festival · 3 days live · 1,500+ concurrent · 53% of backend commits',
         'proj.stock.title': 'Real-time Stock Data Pipeline',
         'proj.stock.desc': 'A real-time price pipeline for every KOSPI/KOSDAQ ticker. Rebuilt from a monolith to MSA when the old system couldn\'t keep up.',
-        'proj.stock.m1': 'tickers, live', 'proj.stock.m2': 'real-time latency', 'proj.stock.m3': 'architecture shift',
         'proj.fall.title': 'Fall Prevention Assistant',
         'proj.fall.desc': 'An AI service that analyzes home images to detect fall hazards for elderly. Health surveys and tailored safety reports.',
         'proj.council.title': 'KNU Student Council System',
@@ -252,6 +288,7 @@ const translations = {
         'awards.rond.t': 'ROND 11th Defense-Research Cadet', 'awards.rond.d': 'R&D talent program, Agency for Defense Development',
         'awards.mili.t': 'Mili-Tech Challenge 2025 · Grand Prize', 'awards.mili.d': 'Minister of Science & ICT Award',
         'awards.topcit.t': 'TOPCIT 22nd · 1st Place', 'awards.topcit.d': 'Score 805 · KNU President\'s Award',
+        'awards.essay.t': 'SW University Essay Contest 2026 · Grand Prize + AI Award', 'awards.essay.d': 'Council Chair\'s Award · essay “A User Manual, Turning the Pages”', 'awards.essay.link': 'Read the essay →',
         'awards.hack1.t': 'SW Edu. Idea Hackathon · 1st Place', 'awards.hack1.d': '5 universities, Daegu·Gyeongbuk',
         'awards.hack2.t': 'Daegu SW Hackathon · Excellence Award', 'awards.hack2.d': 'Blockchain education-rights reporting service',
         'awards.wfk.t': 'WFK ICT Volunteer Corps · Director\'s Award', 'awards.wfk.d': 'Indonesia · cattle breed/weight detection AI',
@@ -262,6 +299,9 @@ const translations = {
         'awards.ll.t': 'BE Officer', 'awards.ll.d': 'LikeLion 11–13th · Java/Spring teaching', 'awards.ll.y': '2023 — 2025',
         'awards.gdg.t': 'Backend Core Member', 'awards.gdg.d': 'GDG on Campus KNU', 'awards.gdg.y': '2023 — 2025',
         'awards.goorm.t': 'Backend Officer', 'awards.goorm.d': '9oormthon Univ KNU', 'awards.goorm.y': '2024 — 2025',
+
+        /* Press */
+        'press.label': 'Press', 'press.text': 'Teen Maeil Business — “Researching advanced tech while serving at the ADD” (Mar 2026)',
 
         /* Timeline */
         'time.title': 'Education & Ahead',
@@ -314,6 +354,13 @@ const translations = {
         'd.locker.solution': 'I set up an Ubuntu 22.04 server with a ufw firewall, an Nginx reverse proxy, SSL certificates, and Docker containers, then deployed a Spring Boot locker service on top.',
         'd.locker.impact': 'Digitized locker assignment on the department\'s own infrastructure — built and operated end to end, from server to service.',
 
+        'd.festival.eyebrow': 'Project · Production', 'd.festival.title': 'KNU 80th Festival Web App',
+        'd.festival.role': 'Full-stack · Production ops', 'd.festival.period': 'Apr — May 2026 · KNU 2026 Festival',
+        'd.festival.context': 'A mobile web app used by real attendees at KNU\'s 80th-anniversary festival (May 20–22, 2026) — booth/tavern info, online queuing, real-time booth ranking, a rolling-paper canvas, and a random matching game.',
+        'd.festival.problem': 'A festival drawing thousands needed one service that could handle waiting, information, and participation at once, under real load.',
+        'd.festival.solution': 'Built full-stack on React 19 + Spring Boot 3.5: an online queue with phone verification and SMS call notifications, real-time booth ranking over SSE + Redis, time-windowed random matching with a fairness algorithm, and operator consoles — deployed and operated on the department server via Docker Compose and GitHub Actions.',
+        'd.festival.impact': 'Ran live across the three festival days — 59 booths, 100 canvas boards, and real waiting/matching data. Capacity was planned for ~1,500 concurrent users, and I owned production operations end to end (runbook, monitoring, incident response). I was the top contributor, with ~53% of backend commits.',
+
         'rs.eyebrow': 'Research', 'rs.title': 'Research',
         'rs.intro': 'Alongside building systems, I\'ve worked on time-series representation learning and defense signal processing.',
         'rs.ts.title': 'Clusterability of Time-series Embeddings',
@@ -336,7 +383,27 @@ const translations = {
         'rs.sar.f3': 'Per-polarization (HH·HV·VH·VV) SAR imaging via the Range-Doppler Algorithm',
         'rs.sar.f4': 'Phase-correlation spatial registration + relative intensity normalization to align polarization channels',
         'rs.sar.f5': 'HH/HV/VV → polarimetric RGB synthesis + Pauli decomposition (surface / double-bounce / volume) to separate targets from clutter',
-        'rs.sar.f6': 'Low-observable targets invisible in single polarization became clearly detectable in the synthesized image'
+        'rs.sar.f6': 'Low-observable targets invisible in single polarization became clearly detectable in the synthesized image',
+
+        /* Essay (full text) */
+        'essay.eyebrow': 'Essay · 2026 SW-Oriented University Essay Contest',
+        'essay.title': 'A User Manual, Turning the Pages',
+        'essay.meta': 'Grand Prize · Council Chair\'s Award + AI Award · Sangmin Lee, CSE, Kyungpook National University',
+        'essay.s1': '1 · Before I Enrolled',
+        'essay.s1p1': 'There was no computer. For me, an elementary-school kid, a single worn-out phone was everything. And yet, strangely, writing code line by line inside that five-inch screen was more fun than anything. I\'d type what I didn\'t know into the search bar, hit an error, fix it, and try again. No one made me. It was simply fun. The things I built alone kept piling up — until one day, watching a service I\'d earnestly made sit empty with no visitors, I realized: there\'s a limit to how far you can go alone. There are things technology alone can\'t solve. I desperately needed an environment where I could push against others and trade feedback.',
+        'essay.s1p2': 'So I started looking. While researching universities, I learned that Kyungpook National University\'s School of Computer Science had been designated a Software-Oriented University, with structures already in place — industry–academia projects, overseas internships, an SW Mileage system. What I, fumbling along on my own, needed was exactly this kind of user manual. In the spring of 2023, I enrolled.',
+        'essay.s2': '2 · After I Enrolled',
+        'essay.s2p1': 'After enrolling, I set myself one rule. If the Software-Oriented University opens a door, walk through it — no matter what.',
+        'essay.s2p2': 'The first thing that caught my eye was the SW Mileage system. It looked like a simple scheme that logged activities and turned them into points, but for me it became a mirror to check myself against. I sat the TOPCIT exam every single round to see where I stood, and whenever I found a weak spot, it became the next semester\'s goal. I was nervous every time. Still, I kept taking it. At the end of all that repetition came first place in the university and a President\'s Award — but more valuable than the award was the habit I\'d gained of measuring myself, steadily.',
+        'essay.s2p3': 'The first competition I entered was a startup hackathon hosted by the Software Education Center. I was confident about the building. But during the presentations, the speaker from the team beside us was explaining their idea while meeting the eyes of the audience one by one. Same topic — yet the crowd gathered only on their side. I opened my laptop and explained by showing code, but I could feel the judges\' attention already drifting away. I knew how to build, but not how to say why I\'d built it. If the first page of the manual is technology, the second page — I learned right then — is communication.',
+        'essay.s2p4': 'From that day on, I moved to fill the communication I lacked. I joined Like Lion, a nationwide IT club, and over three years I eventually stood as a BE Officer, teaching Java and Spring Boot to university students myself. To explain a technology to someone, you first have to understand it precisely. Teaching was an extension of learning, and at the same time the surest training for building the power to speak. Maybe that\'s what did it — in the Science & Technology Officer interview, the moment the interviewer nodded as I explained “why this technology is needed,” I felt that the helplessness from that hackathon stage had finally turned into strength.',
+        'essay.s2p5': 'I also took part in an industry–academia project: building a fall-prevention service for the elderly together with Happy Aging, where I served as Technical Lead. From the AI that detects danger to the app placed in an elder\'s hand, I built the service from beginning to end and released it on Google Play. When I heard during testing that an elderly user had felt reassured by the app\'s alert, the fact that a single line of code is tied directly to someone\'s safety finally hit home. It carried a different weight from any assignment inside a classroom.',
+        'essay.s2p6': 'I wanted to test that weight somewhere wider. Through the university\'s overseas internship program, I had the chance to work at an American IT company based in Vietnam. When a senior developer reviewed my code and asked, “Why did you choose this approach?”, the answer circled in my head but my mouth couldn\'t keep up. That night at the dorm, organizing technical-English expressions one by one, I felt it: the world was wider than I\'d thought. And that I had to become someone who could communicate in that wide world.',
+        'essay.s3': '3 · Path & What\'s Next',
+        'essay.s3p1': 'Looking back, I\'ve built a lot. From systems handling hundreds of thousands of real-time records to a service up on the app store, I built something wherever my hands reached. But at some point, I began to look beyond the act of building.',
+        'essay.s3p2': 'Technology was changing by the day. I wanted to be not someone who implements what\'s handed to him, but someone who considers where technology should head. I knocked on the door of KAIST\'s next-generation SAR lab. It took a week to properly read a single paper. Writing code and exploring the principles of a technology were entirely different kinds of immersion — and oddly, I liked that difficulty. When I won the Minister of Science and ICT\'s Award at the Mili-Tech Challenge with what I\'d built up in the lab, it was the moment I first confirmed my potential not as a developer, but as a researcher.',
+        'essay.s3p3': 'I\'ve now been selected for the 11th cohort of the Science & Technology Officer program, and after graduation I\'ll serve at the Agency for Defense Development. There, I intend to research extended reality (XR). Because the Software-Oriented University taught me — through industry projects and an overseas internship — what weight technology carries in the field, I want to do research that solves real, on-the-ground problems, not technology that stays inside the lab. A kid for whom a five-inch screen was everything is now saying he\'ll design a world beyond reality. It\'s something I can say precisely because I\'m someone who has turned the pages of that user manual — a Software-Oriented University — one by one.',
+        'essay.s3p4': 'The Software-Oriented University was a user manual to me. A guide that, on the road I\'d walked fumbling alone, told me the direction and let me pick up speed. This manual has one condition, though: you can only read it if you open it first. And only the one who opens it gets to write the next page. I hope these words, right now, become for someone the courage to open their own manual.'
     }
 };
 

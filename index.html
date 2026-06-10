@@ -187,47 +187,57 @@
                 <h2 class="section-title" data-i18n="proj.title">프로젝트</h2>
             </div>
 
-            <a class="project-featured reveal" href="projects/realtime-stock.html">
-                <div class="featured-body">
-                    <p class="featured-label" data-i18n="proj.featured">대표 프로젝트</p>
-                    <h3 class="featured-title" data-i18n="proj.stock.title">실시간 주식 데이터 파이프라인</h3>
-                    <p class="featured-desc" data-i18n="proj.stock.desc">코스피·코스닥 전 종목의 실시간 시세를 처리하는 파이프라인. 기존 모놀리식이 부하를 감당하지 못해 MSA로 전면 재설계했습니다.</p>
-                    <div class="tags"><span>Spring WebFlux</span><span>RabbitMQ</span><span>InfluxDB</span><span>WebSocket</span></div>
-                    <span class="featured-more" data-i18n="proj.readmore">자세히 보기 →</span>
-                </div>
-                <div class="featured-aside">
-                    <div class="metric"><strong>3,000+</strong><span data-i18n="proj.stock.m1">동시 종목 처리</span></div>
-                    <div class="metric"><strong>&lt;1s</strong><span data-i18n="proj.stock.m2">실시간 지연</span></div>
-                    <div class="metric"><strong>MSA</strong><span data-i18n="proj.stock.m3">아키텍처 전환</span></div>
-                </div>
+            <a class="feature reveal" href="projects/knu-festival.html">
+                <p class="feature-kicker" data-i18n="proj.featured">대표 프로젝트</p>
+                <h3 class="feature-title" data-i18n="proj.festival.title">경북대 대동제 80주년 웹앱</h3>
+                <p class="feature-desc" data-i18n="proj.festival.desc">경북대 2026 대동제에서 실사용된 모바일 웹앱. 온라인 대기열·실시간 부스 랭킹·랜덤 매칭을 React + Spring Boot 풀스택으로 구축하고 프로덕션 운영을 맡았습니다.</p>
+                <p class="feature-meta" data-i18n="proj.festival.meta">경북대 2026 대동제 · 3일 실운영 · 1,500+ 동시접속 · 백엔드 커밋 53%</p>
+                <div class="tags"><span>React</span><span>Spring Boot</span><span>Redis</span><span>SSE</span><span>Docker</span></div>
+                <span class="feature-go" data-i18n="proj.readmore">자세히 보기 →</span>
             </a>
 
-            <div class="projects-grid">
-                <a class="card reveal" href="projects/fall-prevention.html">
-                    <h4 class="card-title" data-i18n="proj.fall.title">낙상 예방 어시스턴트</h4>
-                    <p class="card-desc" data-i18n="proj.fall.desc">가정 내 이미지를 분석해 고령자의 낙상 위험을 감지하는 AI 서비스. 건강 설문과 맞춤형 안전 보고서 제공.</p>
-                    <div class="tags"><span>Spring Boot</span><span>Kotlin</span><span>OpenAI</span></div>
-                    <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
-                </a>
-                <a class="card reveal" href="projects/knu-council.html">
-                    <h4 class="card-title" data-i18n="proj.council.title">경북대 학생회 통합 시스템</h4>
-                    <p class="card-desc" data-i18n="proj.council.desc">재학생 2,000명+ 대상 통합 관리 시스템. SSO 인증, QR 학생증 인증, 관리자 페이지를 물리서버에 직접 구축.</p>
-                    <div class="tags"><span>Spring Boot</span><span>MySQL</span><span>Docker</span></div>
-                    <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
-                </a>
-                <a class="card reveal" href="projects/techtalk-hub.html">
-                    <h4 class="card-title" data-i18n="proj.techtalk.title">TechTalk Hub</h4>
-                    <p class="card-desc" data-i18n="proj.techtalk.desc">Slack 기반 투표·일정 관리 챗봇. 베트남 인턴십에서 개발, 쿼리·UI 최적화로 응답시간 38% 단축.</p>
-                    <div class="tags"><span>Node.js</span><span>TypeScript</span><span>Slack API</span></div>
-                    <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
-                </a>
-                <a class="card reveal" href="projects/locker.html">
-                    <h4 class="card-title" data-i18n="proj.locker.title">사물함 통합 관리 서비스</h4>
-                    <p class="card-desc" data-i18n="proj.locker.desc">학과 사물함 관리 웹 서비스. Ubuntu 물리서버에 방화벽·SSL·Nginx·Docker로 인프라를 직접 구성.</p>
-                    <div class="tags"><span>Spring Boot</span><span>Nginx</span><span>Ubuntu</span></div>
-                    <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
-                </a>
-            </div>
+            <ol class="proj-index">
+                <li><a class="proj-row reveal" href="projects/realtime-stock.html">
+                    <span class="proj-row-no">01</span>
+                    <span class="proj-row-main">
+                        <span class="proj-row-title"><span data-i18n="proj.stock.title">실시간 주식 데이터 파이프라인</span><span class="arrow" aria-hidden="true">→</span></span>
+                        <span class="proj-row-desc" data-i18n="proj.stock.desc">코스피·코스닥 전 종목의 실시간 시세를 처리하는 파이프라인. 기존 모놀리식이 부하를 감당하지 못해 MSA로 전면 재설계했습니다.</span>
+                        <span class="tags"><span>Spring WebFlux</span><span>RabbitMQ</span><span>InfluxDB</span></span>
+                    </span>
+                </a></li>
+                <li><a class="proj-row reveal" href="projects/fall-prevention.html">
+                    <span class="proj-row-no">02</span>
+                    <span class="proj-row-main">
+                        <span class="proj-row-title"><span data-i18n="proj.fall.title">낙상 예방 어시스턴트</span><span class="arrow" aria-hidden="true">→</span></span>
+                        <span class="proj-row-desc" data-i18n="proj.fall.desc">가정 내 이미지를 분석해 고령자의 낙상 위험을 감지하는 AI 서비스. 건강 설문과 맞춤형 안전 보고서 제공.</span>
+                        <span class="tags"><span>Spring Boot</span><span>Kotlin</span><span>OpenAI</span></span>
+                    </span>
+                </a></li>
+                <li><a class="proj-row reveal" href="projects/knu-council.html">
+                    <span class="proj-row-no">03</span>
+                    <span class="proj-row-main">
+                        <span class="proj-row-title"><span data-i18n="proj.council.title">경북대 학생회 통합 시스템</span><span class="arrow" aria-hidden="true">→</span></span>
+                        <span class="proj-row-desc" data-i18n="proj.council.desc">재학생 2,000명+ 대상 통합 관리 시스템. SSO 인증, QR 학생증 인증, 관리자 페이지를 물리서버에 직접 구축.</span>
+                        <span class="tags"><span>Spring Boot</span><span>MySQL</span><span>Docker</span></span>
+                    </span>
+                </a></li>
+                <li><a class="proj-row reveal" href="projects/techtalk-hub.html">
+                    <span class="proj-row-no">04</span>
+                    <span class="proj-row-main">
+                        <span class="proj-row-title"><span data-i18n="proj.techtalk.title">TechTalk Hub</span><span class="arrow" aria-hidden="true">→</span></span>
+                        <span class="proj-row-desc" data-i18n="proj.techtalk.desc">Slack 기반 투표·일정 관리 챗봇. 베트남 인턴십에서 개발, 쿼리·UI 최적화로 응답시간 38% 단축.</span>
+                        <span class="tags"><span>Node.js</span><span>TypeScript</span><span>Slack API</span></span>
+                    </span>
+                </a></li>
+                <li><a class="proj-row reveal" href="projects/locker.html">
+                    <span class="proj-row-no">05</span>
+                    <span class="proj-row-main">
+                        <span class="proj-row-title"><span data-i18n="proj.locker.title">사물함 통합 관리 서비스</span><span class="arrow" aria-hidden="true">→</span></span>
+                        <span class="proj-row-desc" data-i18n="proj.locker.desc">학과 사물함 관리 웹 서비스. Ubuntu 물리서버에 방화벽·SSL·Nginx·Docker로 인프라를 직접 구성.</span>
+                        <span class="tags"><span>Spring Boot</span><span>Nginx</span><span>Ubuntu</span></span>
+                    </span>
+                </a></li>
+            </ol>
         </section>
 
         <!-- Research -->
@@ -272,6 +282,7 @@
                         <li><span class="award-year">2024</span><div><h4 data-i18n="awards.rond.t">ROND 11기 전문사관 후보생 선발</h4><p data-i18n="awards.rond.d">국방과학연구소(ADD) R&amp;D 인력 양성</p></div></li>
                         <li><span class="award-year">2025</span><div><h4 data-i18n="awards.mili.t">밀리테크 챌린지 2025 · 대상</h4><p data-i18n="awards.mili.d">과학기술정보통신부 장관상</p></div></li>
                         <li><span class="award-year">2025</span><div><h4 data-i18n="awards.topcit.t">TOPCIT 제22회 · 대상 (1등)</h4><p data-i18n="awards.topcit.d">805점 · 경북대학교 총장상</p></div></li>
+                        <li><span class="award-year">2026</span><div><h4 data-i18n="awards.essay.t">AI·SW중심대학 에세이 공모전 2026 · 대상 + AI선정상</h4><p data-i18n="awards.essay.d">AI·SW중심대학 협의회장상 · 「사용설명서, 한 장씩 넘기는 중」</p><a class="award-link" href="essay.html" data-i18n="awards.essay.link">에세이 읽기 →</a></div></li>
                         <li><span class="award-year">2024</span><div><h4 data-i18n="awards.hack1.t">SW교육원 아이디어 해커톤 · 대상 (1등)</h4><p data-i18n="awards.hack1.d">대구·경북권 5개 대학</p></div></li>
                         <li><span class="award-year">2023</span><div><h4 data-i18n="awards.hack2.t">대구를 빛내는 SW 해커톤 · 최우수상</h4><p data-i18n="awards.hack2.d">블록체인 기반 교육권 침해 신고 서비스</p></div></li>
                         <li><span class="award-year">2024</span><div><h4 data-i18n="awards.wfk.t">WFK ICT 해외봉사단 · 원장상</h4><p data-i18n="awards.wfk.d">인도네시아 · 소 품종·무게 감지 AI</p></div></li>
@@ -289,6 +300,10 @@
                     </ul>
                 </div>
             </div>
+            <p class="press-note reveal">
+                <span class="press-label" data-i18n="press.label">Press</span>
+                <a href="https://teen.mk.co.kr/youth/youth01_01_view.php?c1=4&amp;c2=105&amp;c3=&amp;idx=699" target="_blank" rel="noopener" data-i18n="press.text">틴매일경제 — 「국방과학연구소에서 군 복무하며 첨단기술 연구」 (2026.03)</a>
+            </p>
         </section>
 
         <!-- Timeline -->
