@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1d1a16" media="(prefers-color-scheme: dark)">
     <meta name="description" content="이상민 (Sangmin Lee) — 소프트웨어 공학, 백엔드·인프라, 연구. 경북대 컴퓨터학부 제17대 학생회장 · 과학기술전문사관 11기 기수 대표.">
     <meta name="author" content="Sangmin Lee">
     <meta name="keywords" content="이상민, Sangmin Lee, 소프트웨어 공학, Backend, 백엔드, ROND, ADD, 학생회장, 시계열 연구, Portfolio">
@@ -12,8 +14,35 @@
     <meta property="og:description" content="Sin prisa, pero sin pausa. — 소프트웨어 공학 · 백엔드·인프라 · 연구">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lsmin3388.github.io">
+    <meta property="og:image" content="https://lsmin3388.github.io/assets/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://lsmin3388.github.io/">
 
     <title>이상민 · Sangmin Lee</title>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sangmin Lee",
+        "alternateName": "이상민",
+        "url": "https://lsmin3388.github.io",
+        "email": "mailto:sjsb4838@gmail.com",
+        "jobTitle": "Backend Engineer",
+        "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Kyungpook National University"
+        },
+        "knowsAbout": ["Backend Engineering", "Distributed Systems", "DevOps", "Time-series Representation Learning", "SAR Signal Processing"],
+        "sameAs": [
+            "https://github.com/lsmin3388",
+            "https://www.linkedin.com/in/sangminn0",
+            "https://velog.io/@sangminn"
+        ]
+    }
+    </script>
 
     <!-- Favicon (terracotta dot) -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23faf7f2'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23c4634a'/%3E%3C/svg%3E">
@@ -22,12 +51,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#content">본문으로 건너뛰기</a>
     <!-- Navigation -->
     <header class="nav" id="nav">
         <div class="nav-inner">
@@ -61,16 +91,17 @@
         </nav>
     </div>
 
-    <main class="main">
+    <main class="main" id="content">
         <!-- Hero -->
         <section class="hero" id="hero">
             <h1 class="hero-name reveal" data-i18n="hero.kicker">이상민 · Sangmin Lee</h1>
             <p class="hero-statement reveal"><span class="es">Sin prisa,<br>pero sin pausa.</span></p>
             <p class="hero-gloss reveal" data-i18n="hero.gloss">서두르지 않되, 멈추지 않는다.</p>
-            <p class="hero-identity reveal" data-i18n="hero.identity">소프트웨어 공학, 그리고 백엔드와 인프라, 그리고 연구.</p>
+            <p class="hero-identity reveal" data-i18n="hero.identity">트래픽이 몰려도 무너지지 않는 백엔드를 만듭니다.</p>
+            <p class="hero-proof reveal" data-i18n="hero.proof">1,500+ 동시접속 실서비스 운영 · 3,000+ 종목 실시간 파이프라인 · 논문 2편 · 과기정통부 장관상</p>
             <p class="hero-cred reveal" data-i18n="hero.cred">경북대학교 컴퓨터학부 제17대 학생회장 · 과학기술전문사관 11기 기수 대표</p>
             <div class="hero-cta reveal">
-                <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.work">작업 보기</a>
+                <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.work">프로젝트 보기</a>
                 <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta.contact">연락하기</a>
             </div>
         </section>
@@ -83,11 +114,11 @@
             </div>
             <div class="about-grid">
                 <div class="about-text reveal">
-                    <p data-i18n="about.p1">안녕하십니까. 컴퓨터 과학을 전공하는 이상민입니다.</p>
-                    <p data-i18n="about.p2" data-i18n-html><span class="es">Sin prisa, pero sin pausa.</span> 서두르지 않되, 멈추지 않는다 — 제가 일과 공부를 대하는 태도입니다. 아직 부족한 점이 많지만, 배움을 멈추지 않고 한 걸음씩 나아가 최신 기술을 선도하는 기업의 <span class="mark">CTO</span>가 되는 것을 목표로 합니다.</p>
-                    <p data-i18n="about.p3" data-i18n-html>경북대학교 컴퓨터학부에서 학사 과정을 마무리하고 있으며, 앞으로 대한민국 국군의 장교이자 <span class="mark">국방과학연구소(ADD)</span>의 연구원으로서 사명감을 잃지 않고 맡은 일에 최선을 다하겠습니다.</p>
+                    <p data-i18n="about.p1">첫 컴퓨터는 없었습니다. 초등학생 때 5인치 휴대폰 화면에서 한 줄씩 코드를 쓰며 시작했고, 그 재미가 지금까지 이어져 사람들이 실제로 쓰는 서비스를 만들고 운영하는 백엔드 엔지니어가 됐습니다.</p>
+                    <p data-i18n="about.p2" data-i18n-html><span class="es">Sin prisa, pero sin pausa.</span> 서두르지 않되, 멈추지 않는다 — 일과 공부를 대하는 제 태도입니다. 한 걸음씩 꾸준히 나아가, 최신 기술을 선도하는 기업의 <span class="mark">CTO</span>가 되는 것이 목표입니다.</p>
+                    <p data-i18n="about.p3" data-i18n-html>지금은 경북대학교 컴퓨터학부 학사 과정을 마무리하고 있습니다. 졸업 후에는 대한민국 국군의 장교이자 <span class="mark">국방과학연구소(ADD)</span> 연구원으로 복무하고, 그 다음 페이지로 미국 박사과정을 준비합니다.</p>
 
-                    <p class="about-stack-label" data-i18n="about.stackLabel">주로 쓰는 기술</p>
+                    <p class="about-stack-label" data-i18n="about.stackLabel">주로 쓰는 기술 — 실서비스에서 검증한 것만</p>
                     <ul class="about-stack">
                         <li>Java · Spring Boot</li>
                         <li>Node.js · TypeScript</li>
@@ -157,7 +188,7 @@
                         <ul class="exp-points">
                             <li data-i18n="exp.ha.d1">노인 낙상 예방 어시스턴트 서버 개발 총괄</li>
                             <li data-i18n="exp.ha.d2">OpenAI 기반 가정 내 위험요소 감지 구현</li>
-                            <li data-i18n="exp.ha.d3">Kotlin 안드로이드 앱 개발, AWS EC2 · Docker 배포</li>
+                            <li data-i18n="exp.ha.d3" data-i18n-html>Kotlin 안드로이드 앱 개발 · <strong>Google Play 출시</strong>, AWS EC2 · Docker 배포</li>
                         </ul>
                         <div class="tags"><span>Spring Boot</span><span>Kotlin</span><span>OpenAI</span><span>AWS</span></div>
                     </div>
@@ -171,8 +202,8 @@
                         <h3 class="exp-role" data-i18n="exp.st.role">DevOps · 서버 개발자</h3>
                         <p class="exp-org" data-i18n="exp.st.org">주식·금융 교육 스타트업</p>
                         <ul class="exp-points">
-                            <li data-i18n="exp.st.d1">코스피·코스닥 전 종목 실시간 시세 처리 인프라 설계</li>
-                            <li data-i18n="exp.st.d2" data-i18n-html>모놀리식 → <strong>MSA 전환 주도</strong></li>
+                            <li data-i18n="exp.st.d1" data-i18n-html>코스피·코스닥 전 종목(<strong>3,000+</strong>) 실시간 시세 처리 인프라 설계</li>
+                            <li data-i18n="exp.st.d2" data-i18n-html>모놀리식 → <strong>MSA 전환 주도</strong> — 3,000+ 동시 WebSocket을 1초 미만 지연으로 처리</li>
                         </ul>
                         <div class="tags"><span>Spring WebFlux</span><span>RabbitMQ</span><span>InfluxDB</span></div>
                     </div>
@@ -201,7 +232,7 @@
                     <span class="proj-row-no">01</span>
                     <span class="proj-row-main">
                         <span class="proj-row-title"><span data-i18n="proj.stock.title">실시간 주식 데이터 파이프라인</span><span class="arrow" aria-hidden="true">→</span></span>
-                        <span class="proj-row-desc" data-i18n="proj.stock.desc">코스피·코스닥 전 종목의 실시간 시세를 처리하는 파이프라인. 기존 모놀리식이 부하를 감당하지 못해 MSA로 전면 재설계했습니다.</span>
+                        <span class="proj-row-desc" data-i18n="proj.stock.desc">코스피·코스닥 전 종목(3,000+)의 실시간 시세를 1초 미만 지연으로 처리하는 파이프라인. 모놀리식이 부하를 감당하지 못해 MSA로 전면 재설계했습니다.</span>
                         <span class="tags"><span>Spring WebFlux</span><span>RabbitMQ</span><span>InfluxDB</span></span>
                     </span>
                 </a></li>
@@ -209,7 +240,7 @@
                     <span class="proj-row-no">02</span>
                     <span class="proj-row-main">
                         <span class="proj-row-title"><span data-i18n="proj.fall.title">낙상 예방 어시스턴트</span><span class="arrow" aria-hidden="true">→</span></span>
-                        <span class="proj-row-desc" data-i18n="proj.fall.desc">가정 내 이미지를 분석해 고령자의 낙상 위험을 감지하는 AI 서비스. 건강 설문과 맞춤형 안전 보고서 제공.</span>
+                        <span class="proj-row-desc" data-i18n="proj.fall.desc">가정 내 이미지를 분석해 고령자의 낙상 위험을 감지하는 AI 서비스. 건강 설문과 맞춤형 안전 보고서까지 담아 Google Play에 출시했습니다.</span>
                         <span class="tags"><span>Spring Boot</span><span>Kotlin</span><span>OpenAI</span></span>
                     </span>
                 </a></li>
@@ -217,7 +248,7 @@
                     <span class="proj-row-no">03</span>
                     <span class="proj-row-main">
                         <span class="proj-row-title"><span data-i18n="proj.council.title">경북대 학생회 통합 시스템</span><span class="arrow" aria-hidden="true">→</span></span>
-                        <span class="proj-row-desc" data-i18n="proj.council.desc">재학생 2,000명+ 대상 통합 관리 시스템. SSO 인증, QR 학생증 인증, 관리자 페이지를 물리서버에 직접 구축.</span>
+                        <span class="proj-row-desc" data-i18n="proj.council.desc">재학생 2,000명+이 실제로 쓰는 통합 관리 시스템. SSO 인증, QR 학생증, 관리자 페이지를 학교 망의 물리서버에 직접 구축해 운영합니다.</span>
                         <span class="tags"><span>Spring Boot</span><span>MySQL</span><span>Docker</span></span>
                     </span>
                 </a></li>
@@ -334,6 +365,7 @@
                     <a href="https://www.linkedin.com/in/sangminn0" target="_blank" rel="noopener">LinkedIn</a>
                     <a href="https://velog.io/@sangminn" target="_blank" rel="noopener">velog</a>
                 </div>
+                <button class="print-cv" type="button" onclick="window.print()" data-i18n="contact.print">이 페이지를 인쇄하면 그대로 CV가 됩니다 · 인쇄하기</button>
             </div>
         </section>
     </main>

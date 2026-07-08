@@ -20,17 +20,18 @@ const translations = {
         /* Hero */
         'hero.kicker': '이상민 · Sangmin Lee',
         'hero.gloss': '서두르지 않되, 멈추지 않는다.',
-        'hero.identity': '소프트웨어 공학, 그리고 백엔드와 인프라, 그리고 연구.',
+        'hero.identity': '트래픽이 몰려도 무너지지 않는 백엔드를 만듭니다.',
+        'hero.proof': '1,500+ 동시접속 실서비스 운영 · 3,000+ 종목 실시간 파이프라인 · 논문 2편 · 과기정통부 장관상',
         'hero.cred': '경북대학교 컴퓨터학부 제17대 학생회장 · 과학기술전문사관 11기 기수 대표',
-        'hero.cta.work': '작업 보기',
+        'hero.cta.work': '프로젝트 보기',
         'hero.cta.contact': '연락하기',
 
         /* About */
         'about.title': '소개',
-        'about.p1': '안녕하십니까. 컴퓨터 과학을 전공하는 이상민입니다.',
-        'about.p2': '<span class="es">Sin prisa, pero sin pausa.</span> 서두르지 않되, 멈추지 않는다 — 제가 일과 공부를 대하는 태도입니다. 아직 부족한 점이 많지만, 배움을 멈추지 않고 한 걸음씩 나아가 최신 기술을 선도하는 기업의 <span class="mark">CTO</span>가 되는 것을 목표로 합니다.',
-        'about.p3': '경북대학교 컴퓨터학부에서 학사 과정을 마무리하고 있으며, 앞으로 대한민국 국군의 장교이자 <span class="mark">국방과학연구소(ADD)</span>의 연구원으로서 사명감을 잃지 않고 맡은 일에 최선을 다하겠습니다.',
-        'about.stackLabel': '주로 쓰는 기술',
+        'about.p1': '첫 컴퓨터는 없었습니다. 초등학생 때 5인치 휴대폰 화면에서 한 줄씩 코드를 쓰며 시작했고, 그 재미가 지금까지 이어져 사람들이 실제로 쓰는 서비스를 만들고 운영하는 백엔드 엔지니어가 됐습니다.',
+        'about.p2': '<span class="es">Sin prisa, pero sin pausa.</span> 서두르지 않되, 멈추지 않는다 — 일과 공부를 대하는 제 태도입니다. 한 걸음씩 꾸준히 나아가, 최신 기술을 선도하는 기업의 <span class="mark">CTO</span>가 되는 것이 목표입니다.',
+        'about.p3': '지금은 경북대학교 컴퓨터학부 학사 과정을 마무리하고 있습니다. 졸업 후에는 대한민국 국군의 장교이자 <span class="mark">국방과학연구소(ADD)</span> 연구원으로 복무하고, 그 다음 페이지로 미국 박사과정을 준비합니다.',
+        'about.stackLabel': '주로 쓰는 기술 — 실서비스에서 검증한 것만',
 
         /* Experience */
         'exp.title': '경력',
@@ -47,11 +48,11 @@ const translations = {
         'exp.ha.role': 'DevOps 테크리드', 'exp.ha.org': '해피에이징',
         'exp.ha.d1': '노인 낙상 예방 어시스턴트 서버 개발 총괄',
         'exp.ha.d2': 'OpenAI 기반 가정 내 위험요소 감지 구현',
-        'exp.ha.d3': 'Kotlin 안드로이드 앱 개발, AWS EC2 · Docker 배포',
+        'exp.ha.d3': 'Kotlin 안드로이드 앱 개발 · <strong>Google Play 출시</strong>, AWS EC2 · Docker 배포',
         'exp.st.date': '2023.06 — 2024.03', 'exp.st.place': '서울',
         'exp.st.role': 'DevOps · 서버 개발자', 'exp.st.org': '주식·금융 교육 스타트업',
-        'exp.st.d1': '코스피·코스닥 전 종목 실시간 시세 처리 인프라 설계',
-        'exp.st.d2': '모놀리식 → <strong>MSA 전환 주도</strong>',
+        'exp.st.d1': '코스피·코스닥 전 종목(<strong>3,000+</strong>) 실시간 시세 처리 인프라 설계',
+        'exp.st.d2': '모놀리식 → <strong>MSA 전환 주도</strong> — 3,000+ 동시 WebSocket을 1초 미만 지연으로 처리',
 
         /* Projects (cards) */
         'proj.title': '프로젝트',
@@ -60,11 +61,11 @@ const translations = {
         'proj.festival.desc': '경북대 2026 대동제에서 실사용된 모바일 웹앱. 온라인 대기열·실시간 부스 랭킹·랜덤 매칭을 React + Spring Boot 풀스택으로 구축하고 프로덕션 운영을 맡았습니다.',
         'proj.festival.meta': '경북대 2026 대동제 · 3일 실운영 · 1,500+ 동시접속 · 백엔드 커밋 53%',
         'proj.stock.title': '실시간 주식 데이터 파이프라인',
-        'proj.stock.desc': '코스피·코스닥 전 종목의 실시간 시세를 처리하는 파이프라인. 기존 모놀리식이 부하를 감당하지 못해 MSA로 전면 재설계했습니다.',
+        'proj.stock.desc': '코스피·코스닥 전 종목(3,000+)의 실시간 시세를 1초 미만 지연으로 처리하는 파이프라인. 모놀리식이 부하를 감당하지 못해 MSA로 전면 재설계했습니다.',
         'proj.fall.title': '낙상 예방 어시스턴트',
-        'proj.fall.desc': '가정 내 이미지를 분석해 고령자의 낙상 위험을 감지하는 AI 서비스. 건강 설문과 맞춤형 안전 보고서 제공.',
+        'proj.fall.desc': '가정 내 이미지를 분석해 고령자의 낙상 위험을 감지하는 AI 서비스. 건강 설문과 맞춤형 안전 보고서까지 담아 Google Play에 출시했습니다.',
         'proj.council.title': '경북대 학생회 통합 시스템',
-        'proj.council.desc': '재학생 2,000명+ 대상 통합 관리 시스템. SSO 인증, QR 학생증 인증, 관리자 페이지를 물리서버에 직접 구축.',
+        'proj.council.desc': '재학생 2,000명+이 실제로 쓰는 통합 관리 시스템. SSO 인증, QR 학생증, 관리자 페이지를 학교 망의 물리서버에 직접 구축해 운영합니다.',
         'proj.techtalk.title': 'TechTalk Hub',
         'proj.techtalk.desc': 'Slack 기반 투표·일정 관리 챗봇. 베트남 인턴십에서 개발, 쿼리·UI 최적화로 응답시간 38% 단축.',
         'proj.locker.title': '사물함 통합 관리 서비스',
@@ -112,6 +113,7 @@ const translations = {
         /* Contact */
         'contact.title': '연락해요',
         'contact.text': '제안이든 협업이든, 그냥 인사든 편하게 연락 주세요.',
+        'contact.print': '이 페이지를 인쇄하면 그대로 CV가 됩니다 · 인쇄하기',
 
         /* ===== Detail pages ===== */
         'd.role': '역할', 'd.period': '기간', 'd.stack': '기술 스택', 'd.links': '링크',
@@ -222,17 +224,18 @@ const translations = {
         /* Hero */
         'hero.kicker': 'Sangmin Lee',
         'hero.gloss': 'Without haste, but without pause.',
-        'hero.identity': 'Software engineering — backend, infrastructure, and research.',
+        'hero.identity': 'I build backends that hold up when traffic spikes.',
+        'hero.proof': 'Live service at 1,500+ concurrent · real-time pipeline for 3,000+ tickers · 2 papers · Minister of Science & ICT Grand Prize',
         'hero.cred': '17th CSE Student Council President, KNU · ROND 11th cohort representative',
-        'hero.cta.work': 'See my work',
+        'hero.cta.work': 'See projects',
         'hero.cta.contact': 'Get in touch',
 
         /* About */
         'about.title': 'About',
-        'about.p1': 'Hello. I\'m Sangmin Lee, studying computer science.',
-        'about.p2': '<span class="es">Sin prisa, pero sin pausa.</span> Without haste, but without pause — that\'s how I approach my work and my study. I still have much to learn, but by never stopping and moving forward one step at a time, I aim to become the <span class="mark">CTO</span> of a company at the forefront of technology.',
-        'about.p3': 'I\'m finishing my B.S. at Kyungpook National University\'s School of Computer Science. Ahead lies my duty as an officer of the Republic of Korea Armed Forces and a researcher at the <span class="mark">Agency for Defense Development (ADD)</span> — one I intend to meet with steadfast commitment.',
-        'about.stackLabel': 'Core stack',
+        'about.p1': 'There was no computer at first. As a kid I wrote code line by line on a 5-inch phone screen — and that same fun carried me here: a backend engineer who builds and operates services people actually use.',
+        'about.p2': '<span class="es">Sin prisa, pero sin pausa.</span> Without haste, but without pause — that\'s how I approach my work and my study. Moving forward one steady step at a time, I aim to become the <span class="mark">CTO</span> of a company at the forefront of technology.',
+        'about.p3': 'I\'m finishing my B.S. at Kyungpook National University\'s School of Computer Science. After graduation I\'ll serve as an officer of the Republic of Korea Armed Forces and a researcher at the <span class="mark">Agency for Defense Development (ADD)</span> — and the page after that is a PhD in the United States.',
+        'about.stackLabel': 'Core stack — only what I\'ve run in production',
 
         /* Experience */
         'exp.title': 'Experience',
@@ -249,11 +252,11 @@ const translations = {
         'exp.ha.role': 'DevOps Technical Lead', 'exp.ha.org': 'Happy Aging',
         'exp.ha.d1': 'Led the elderly fall-prevention assistant server',
         'exp.ha.d2': 'Built AI home-hazard detection on OpenAI',
-        'exp.ha.d3': 'Shipped a Kotlin Android app; deployed on AWS EC2 · Docker',
+        'exp.ha.d3': 'Shipped a Kotlin Android app to <strong>Google Play</strong>; deployed on AWS EC2 · Docker',
         'exp.st.date': 'Jun 2023 — Mar 2024', 'exp.st.place': 'Seoul',
         'exp.st.role': 'DevOps · Server Developer', 'exp.st.org': 'Fintech education startup',
-        'exp.st.d1': 'Designed real-time price infra for all KOSPI/KOSDAQ tickers',
-        'exp.st.d2': 'Led the <strong>monolith → MSA migration</strong>',
+        'exp.st.d1': 'Designed real-time price infra for all <strong>3,000+</strong> KOSPI/KOSDAQ tickers',
+        'exp.st.d2': 'Led the <strong>monolith → MSA migration</strong> — 3,000+ concurrent WebSockets at sub-second latency',
 
         /* Projects */
         'proj.title': 'Projects',
@@ -262,11 +265,11 @@ const translations = {
         'proj.festival.desc': 'A mobile web app used live at KNU\'s 2026 festival — online queuing, real-time booth ranking, and random matching, built full-stack on React + Spring Boot, with production operations.',
         'proj.festival.meta': 'KNU 2026 Festival · 3 days live · 1,500+ concurrent · 53% of backend commits',
         'proj.stock.title': 'Real-time Stock Data Pipeline',
-        'proj.stock.desc': 'A real-time price pipeline for every KOSPI/KOSDAQ ticker. Rebuilt from a monolith to MSA when the old system couldn\'t keep up.',
+        'proj.stock.desc': 'A pipeline processing live prices for all 3,000+ KOSPI/KOSDAQ tickers at sub-second latency. Rebuilt from a monolith to MSA when the old system couldn\'t keep up.',
         'proj.fall.title': 'Fall Prevention Assistant',
-        'proj.fall.desc': 'An AI service that analyzes home images to detect fall hazards for elderly. Health surveys and tailored safety reports.',
+        'proj.fall.desc': 'An AI service that analyzes home images to detect fall hazards for the elderly — shipped to Google Play with health surveys and tailored safety reports.',
         'proj.council.title': 'KNU Student Council System',
-        'proj.council.desc': 'An integrated system for 2,000+ students — SSO, QR student-ID auth, and an admin console, built on a physical server.',
+        'proj.council.desc': 'An integrated system 2,000+ students actually use — SSO, QR student-ID auth, and an admin console, built and operated on a physical server on the campus network.',
         'proj.techtalk.title': 'TechTalk Hub',
         'proj.techtalk.desc': 'A Slack voting & scheduling bot built during my Vietnam internship; 38% faster responses via query · UI optimization.',
         'proj.locker.title': 'Locker Management Service',
@@ -314,6 +317,7 @@ const translations = {
         /* Contact */
         'contact.title': 'Let\'s talk',
         'contact.text': 'Open to ideas, collaboration, or just a hello — reach out any time.',
+        'contact.print': 'Print this page and it\'s my CV · Print',
 
         /* ===== Detail pages ===== */
         'd.role': 'Role', 'd.period': 'Period', 'd.stack': 'Tech stack', 'd.links': 'Links',
