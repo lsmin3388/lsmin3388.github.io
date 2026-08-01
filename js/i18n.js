@@ -21,7 +21,6 @@ const translations = {
         'hero.kicker': '이상민 · Sangmin Lee',
         'hero.gloss': '서두르지 않되, 멈추지 않는다.',
         'hero.identity': '직접 만들고, 직접 운영하고, 연구합니다.',
-        'hero.proof': '서버·앱·인프라 직접 구축 · 2,000+ 사용자 실서비스 운영 · 연구 3건 · 과기정통부 장관상',
         'hero.cred': '경북대학교 컴퓨터학부 제17대 학생회장 · 과학기술전문사관 11기 기수 대표',
         'hero.cta.work': '프로젝트 보기',
         'hero.cta.contact': '연락하기',
@@ -30,8 +29,7 @@ const translations = {
         'about.title': '소개',
         'about.p1': '첫 컴퓨터는 없었습니다. 초등학생 때 5인치 휴대폰 화면에서 한 줄씩 코드를 쓰며 시작했고, 그 재미가 지금까지 이어졌습니다. 지금은 서버든 앱이든 인프라든 필요한 곳을 직접 만들고, 만든 것을 직접 운영합니다.',
         'about.p2': '<span class="es">Sin prisa, pero sin pausa.</span> 서두르지 않되, 멈추지 않는다 — 일과 공부를 대하는 제 태도입니다. 목표는 <span class="mark">만들어 본 사람으로 남는 연구자</span>입니다. 연구실의 결과가 실제 사용자 앞에서 어디부터 흔들리는지 아는 사람이고 싶습니다.',
-        'about.p3': '지금은 경북대학교 컴퓨터학부 학사 과정을 마무리하고 있습니다. 졸업 후에는 대한민국 국군의 장교이자 <span class="mark">국방과학연구소(ADD)</span> 연구원으로 복무하며, 센서 신호와 <span class="mark">인공지능</span>을 결합해 사람이 놓치는 것을 기계가 먼저 알아채게 만드는 연구를 하려 합니다.',
-        'about.stackLabel': '주로 쓰는 기술 — 실서비스에서 검증한 것만',
+        'about.p3': '지금은 경북대학교 컴퓨터학부 학사 과정을 마무리하고 있습니다. 졸업 후에는 대한민국 국군의 장교이자 <span class="mark">국방과학연구소(ADD)</span> 연구원으로 복무합니다. 하려는 연구는 가상 환경에서 학습한 <span class="mark">인공지능</span>이 현실에서도 제 몫을 하게 만드는 일입니다.',
 
         /* Experience */
         'exp.title': '경력',
@@ -114,7 +112,7 @@ const translations = {
         'time.t2': '경북대학교 컴퓨터학부 졸업 예정',
         'time.t3': '국방과학연구소(ADD) 연구장교 복무 시작',
         'time.t4': 'ADD 복무 완료',
-        'time.t5': '센서 신호와 인공지능 — 국방 연구 계속',
+        'time.t5': '국방 AI 연구 계속',
 
         /* Contact */
         'contact.title': '연락해요',
@@ -241,7 +239,6 @@ const translations = {
         'hero.kicker': 'Sangmin Lee',
         'hero.gloss': 'Without haste, but without pause.',
         'hero.identity': 'I build it, I run it, and I research it.',
-        'hero.proof': 'Server, app, and infra built by hand · live service for 2,000+ users · 3 research projects · Minister of Science & ICT Grand Prize',
         'hero.cred': '17th CSE Student Council President, KNU · ROND 11th cohort representative',
         'hero.cta.work': 'See projects',
         'hero.cta.contact': 'Get in touch',
@@ -250,8 +247,7 @@ const translations = {
         'about.title': 'About',
         'about.p1': 'There was no computer at first. As a kid I wrote code line by line on a 5-inch phone screen, and that same fun carried me here. Today I build whatever a service needs — server, app, or infrastructure — and I run what I build.',
         'about.p2': '<span class="es">Sin prisa, pero sin pausa.</span> Without haste, but without pause — that\'s how I approach my work and my study. My goal is to stay <span class="mark">a researcher who has actually built things</span>: someone who knows where a lab result starts to give way once a real user touches it.',
-        'about.p3': 'I\'m finishing my B.S. at Kyungpook National University\'s School of Computer Science. After graduation I\'ll serve as an officer of the Republic of Korea Armed Forces and a researcher at the <span class="mark">Agency for Defense Development (ADD)</span>, combining sensor signals with <span class="mark">AI</span> so machines notice first what people would miss.',
-        'about.stackLabel': 'Core stack — only what I\'ve run in production',
+        'about.p3': 'I\'m finishing my B.S. at Kyungpook National University\'s School of Computer Science. After graduation I\'ll serve as an officer of the Republic of Korea Armed Forces and a researcher at the <span class="mark">Agency for Defense Development (ADD)</span>. The research I want to do is making <span class="mark">AI</span> that learned inside a virtual world hold its own in the real one.',
 
         /* Experience */
         'exp.title': 'Experience',
@@ -334,7 +330,7 @@ const translations = {
         'time.t2': 'Graduating from KNU CSE (expected)',
         'time.t3': 'Begin service as a research officer at the Agency for Defense Development (ADD)',
         'time.t4': 'Complete ADD service',
-        'time.t5': 'Sensor signals and AI — continuing defense research',
+        'time.t5': 'Continuing defense AI research',
 
         /* Contact */
         'contact.title': 'Let\'s talk',
