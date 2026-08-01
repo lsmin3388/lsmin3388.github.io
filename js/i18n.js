@@ -20,17 +20,17 @@ const translations = {
         /* Hero */
         'hero.kicker': '이상민 · Sangmin Lee',
         'hero.gloss': '서두르지 않되, 멈추지 않는다.',
-        'hero.identity': '트래픽이 몰려도 무너지지 않는 백엔드를 만듭니다.',
-        'hero.proof': '1,500+ 동시접속 실서비스 운영 · 3,000+ 종목 실시간 파이프라인 · 논문 2편 · 과기정통부 장관상',
+        'hero.identity': '직접 만들고, 직접 운영하고, 연구합니다.',
+        'hero.proof': '서버·앱·인프라 직접 구축 · 2,000+ 사용자 실서비스 운영 · 연구 3건 · 과기정통부 장관상',
         'hero.cred': '경북대학교 컴퓨터학부 제17대 학생회장 · 과학기술전문사관 11기 기수 대표',
         'hero.cta.work': '프로젝트 보기',
         'hero.cta.contact': '연락하기',
 
         /* About */
         'about.title': '소개',
-        'about.p1': '첫 컴퓨터는 없었습니다. 초등학생 때 5인치 휴대폰 화면에서 한 줄씩 코드를 쓰며 시작했고, 그 재미가 지금까지 이어져 사람들이 실제로 쓰는 서비스를 만들고 운영하는 백엔드 엔지니어가 됐습니다.',
-        'about.p2': '<span class="es">Sin prisa, pero sin pausa.</span> 서두르지 않되, 멈추지 않는다 — 일과 공부를 대하는 제 태도입니다. 한 걸음씩 꾸준히 나아가, 최신 기술을 선도하는 기업의 <span class="mark">CTO</span>가 되는 것이 목표입니다.',
-        'about.p3': '지금은 경북대학교 컴퓨터학부 학사 과정을 마무리하고 있습니다. 졸업 후에는 대한민국 국군의 장교이자 <span class="mark">국방과학연구소(ADD)</span> 연구원으로 복무하고, 그 다음 페이지로 미국 박사과정을 준비합니다.',
+        'about.p1': '첫 컴퓨터는 없었습니다. 초등학생 때 5인치 휴대폰 화면에서 한 줄씩 코드를 쓰며 시작했고, 그 재미가 지금까지 이어졌습니다. 지금은 서버든 앱이든 인프라든 필요한 곳을 직접 만들고, 만든 것을 직접 운영합니다.',
+        'about.p2': '<span class="es">Sin prisa, pero sin pausa.</span> 서두르지 않되, 멈추지 않는다 — 일과 공부를 대하는 제 태도입니다. 목표는 <span class="mark">만들어 본 사람으로 남는 연구자</span>입니다. 연구실의 결과가 실제 사용자 앞에서 어디부터 흔들리는지 아는 사람이고 싶습니다.',
+        'about.p3': '지금은 경북대학교 컴퓨터학부 학사 과정을 마무리하고 있습니다. 졸업 후에는 대한민국 국군의 장교이자 <span class="mark">국방과학연구소(ADD)</span> 연구원으로 복무하며, 센서 신호와 <span class="mark">인공지능</span>을 결합해 사람이 놓치는 것을 기계가 먼저 알아채게 만드는 연구를 하려 합니다.',
         'about.stackLabel': '주로 쓰는 기술 — 실서비스에서 검증한 것만',
 
         /* Experience */
@@ -46,7 +46,7 @@ const translations = {
         'exp.rond.d1': '웹 풀스택 제품 개발 (프론트엔드 · 백엔드)',
         'exp.ha.date': '2024.07 — 2025.03', 'exp.ha.place': '산학 프로젝트',
         'exp.ha.role': 'DevOps 테크리드', 'exp.ha.org': '해피에이징',
-        'exp.ha.d1': '노인 낙상 예방 어시스턴트 서버 개발 총괄',
+        'exp.ha.d1': '고령자 낙상 예방 서비스 기술 총괄 — 서버 · AI · 앱 전 영역',
         'exp.ha.d2': 'OpenAI 기반 가정 내 위험요소 감지 구현',
         'exp.ha.d3': 'Kotlin 안드로이드 앱 개발 · <strong>Google Play 출시</strong>, AWS EC2 · Docker 배포',
         'exp.st.date': '2023.06 — 2024.03', 'exp.st.place': '서울',
@@ -59,7 +59,7 @@ const translations = {
         'proj.featured': '대표 프로젝트',
         'proj.festival.title': '경북대 대동제 80주년 웹앱',
         'proj.festival.desc': '경북대 2026 대동제에서 실사용된 모바일 웹앱. 온라인 대기열·실시간 부스 랭킹·랜덤 매칭을 React + Spring Boot 풀스택으로 구축하고 프로덕션 운영을 맡았습니다.',
-        'proj.festival.meta': '경북대 2026 대동제 · 3일 실운영 · 1,500+ 동시접속 · 백엔드 커밋 53%',
+        'proj.festival.meta': '경북대 2026 대동제 · 3일 실운영 · 동시접속 1,500 설계 · 백엔드 커밋 53%',
         'proj.stock.title': '실시간 주식 데이터 파이프라인',
         'proj.stock.desc': '코스피·코스닥 전 종목(3,000+)의 실시간 시세를 1초 미만 지연으로 처리하는 파이프라인. 모놀리식이 부하를 감당하지 못해 MSA로 전면 재설계했습니다.',
         'proj.fall.title': '낙상 예방 어시스턴트',
@@ -73,7 +73,7 @@ const translations = {
 
         /* Research (root summary) */
         'research.title': '연구',
-        'research.intro': '시스템을 만드는 일과 함께, 연구도 합니다.',
+        'research.intro': '만드는 일과 연구하는 일을 함께 해왔습니다. 국방 신호처리부터 시계열·AI까지.',
         'research.ts.title': '시계열 임베딩의 군집화 가능성 연구',
         'research.ts.paper': '「비군집화 임베딩의 군집화 가능성 탐구: 다중 도메인 다변량 시계열 데이터 기반 임베딩 모델 비교 연구」 · 공저자',
         'research.ts.desc': 'TS2Vec · PatchTST · MERIT · TimeCMA · TimeKD 5종 시계열 임베딩의 비지도 군집화 성능을 UEA 4개 데이터셋에서 체계적으로 비교. LLM 기반 방법의 군집 붕괴(NMI≈0) 현상을 규명하고, 데이터 특성별 방법 선택 가이드라인을 제시.',
@@ -92,11 +92,12 @@ const translations = {
         'awards.topcit.t': 'TOPCIT 제23회 · 대상 (1등)', 'awards.topcit.d': '805점 · 경북대학교 총장상',
         'awards.essay.t': 'AI·SW중심대학 에세이 공모전 2026 · 대상 + AI선정상', 'awards.essay.d': 'AI·SW중심대학 협의회장상 · 「사용설명서, 한 장씩 넘기는 중」', 'awards.essay.link': '에세이 읽기 →',
         'awards.kit.t': '대학생논문경진대회 · 동상', 'awards.kit.d': '2026 한국정보기술학회 하계종합학술대회',
+        'awards.icp.t': '산학협력프로젝트 경진대회 · 인기상', 'awards.icp.d': '경북대학교 소프트웨어교육원 · 드론 버티포트 CCTV 감시 시스템',
         'awards.hack1.t': 'SW교육원 아이디어 해커톤 · 대상 (1등)', 'awards.hack1.d': '대구·경북권 5개 대학',
         'awards.hack2.t': '대구를 빛내는 SW 해커톤 · 최우수상', 'awards.hack2.d': '블록체인 기반 교육권 침해 신고 서비스',
         'awards.wfk.t': 'WFK ICT 해외봉사단 · 원장상', 'awards.wfk.d': '인도네시아 · 소 품종·무게 감지 AI',
         'awards.sch.t': '이공계 국가우수장학금 · 샘 인재 장학기금', 'awards.sch.d': '한국장학재단 · 경북대 컴퓨터학부',
-        'awards.cert.t': 'SQLD · 프로그래밍기능사', 'awards.cert.d': '자격증',
+        'awards.cert.t': 'NVIDIA DLI · SQLD · 프로그래밍기능사', 'awards.cert.d': 'LLM 응용개발(RAD) · 한국데이터산업진흥원 · 한국산업인력공단',
         'awards.leadership': '리더십 · 커뮤니티',
         'awards.vp.t': '학생회장', 'awards.vp.d': '경북대 컴퓨터학부 17대 학생회 Do:IT', 'awards.vp.y': '2026 — 현재',
         'awards.ll.t': 'BE Officer', 'awards.ll.d': '멋쟁이사자처럼 11–13기 · Java/Spring 교육', 'awards.ll.y': '2023 — 2025',
@@ -109,10 +110,11 @@ const translations = {
         /* Timeline */
         'time.title': '학력 & 앞으로',
         'time.t1': '경북대학교 컴퓨터학부 입학 (플랫폼SW·데이터과학)',
+        'time.t1b': '산호세주립대학교 실리콘밸리 프로그램 수료 (LLM 응용개발)',
         'time.t2': '경북대학교 컴퓨터학부 졸업 예정',
-        'time.t3': '국방과학연구소(ADD) 복무 시작',
+        'time.t3': '국방과학연구소(ADD) 연구장교 복무 시작',
         'time.t4': 'ADD 복무 완료',
-        'time.t5': '미국 박사과정 진학 예정',
+        'time.t5': '센서 신호와 인공지능 — 국방 연구 계속',
 
         /* Contact */
         'contact.title': '연락해요',
@@ -173,7 +175,7 @@ const translations = {
 
         /* Detail — Research page */
         'rs.eyebrow': 'Research', 'rs.title': '연구',
-        'rs.intro': '시스템을 만드는 일과 함께, 시계열 표현학습과 국방 신호처리 연구를 해왔습니다.',
+        'rs.intro': '만드는 일과 연구하는 일을 함께 해왔습니다. 국방 신호처리, 시계열 표현학습, 그리고 도심항공교통 관제까지.',
         'rs.ts.title': '시계열 임베딩의 군집화 가능성 연구',
         'rs.ts.venue': '2025 한국소프트웨어종합학술대회 (KSC 2025) · 공저자',
         'rs.ts.paper': '비군집화 임베딩의 군집화 가능성 탐구: 다중 도메인 다변량 시계열 데이터 기반 임베딩 모델 비교 연구',
@@ -238,17 +240,17 @@ const translations = {
         /* Hero */
         'hero.kicker': 'Sangmin Lee',
         'hero.gloss': 'Without haste, but without pause.',
-        'hero.identity': 'I build backends that hold up when traffic spikes.',
-        'hero.proof': 'Live service at 1,500+ concurrent · real-time pipeline for 3,000+ tickers · 2 papers · Minister of Science & ICT Grand Prize',
+        'hero.identity': 'I build it, I run it, and I research it.',
+        'hero.proof': 'Server, app, and infra built by hand · live service for 2,000+ users · 3 research projects · Minister of Science & ICT Grand Prize',
         'hero.cred': '17th CSE Student Council President, KNU · ROND 11th cohort representative',
         'hero.cta.work': 'See projects',
         'hero.cta.contact': 'Get in touch',
 
         /* About */
         'about.title': 'About',
-        'about.p1': 'There was no computer at first. As a kid I wrote code line by line on a 5-inch phone screen — and that same fun carried me here: a backend engineer who builds and operates services people actually use.',
-        'about.p2': '<span class="es">Sin prisa, pero sin pausa.</span> Without haste, but without pause — that\'s how I approach my work and my study. Moving forward one steady step at a time, I aim to become the <span class="mark">CTO</span> of a company at the forefront of technology.',
-        'about.p3': 'I\'m finishing my B.S. at Kyungpook National University\'s School of Computer Science. After graduation I\'ll serve as an officer of the Republic of Korea Armed Forces and a researcher at the <span class="mark">Agency for Defense Development (ADD)</span> — and the page after that is a PhD in the United States.',
+        'about.p1': 'There was no computer at first. As a kid I wrote code line by line on a 5-inch phone screen, and that same fun carried me here. Today I build whatever a service needs — server, app, or infrastructure — and I run what I build.',
+        'about.p2': '<span class="es">Sin prisa, pero sin pausa.</span> Without haste, but without pause — that\'s how I approach my work and my study. My goal is to stay <span class="mark">a researcher who has actually built things</span>: someone who knows where a lab result starts to give way once a real user touches it.',
+        'about.p3': 'I\'m finishing my B.S. at Kyungpook National University\'s School of Computer Science. After graduation I\'ll serve as an officer of the Republic of Korea Armed Forces and a researcher at the <span class="mark">Agency for Defense Development (ADD)</span>, combining sensor signals with <span class="mark">AI</span> so machines notice first what people would miss.',
         'about.stackLabel': 'Core stack — only what I\'ve run in production',
 
         /* Experience */
@@ -264,7 +266,7 @@ const translations = {
         'exp.rond.d1': 'Built web products end to end (frontend · backend)',
         'exp.ha.date': 'Jul 2024 — Mar 2025', 'exp.ha.place': 'Industry–academia',
         'exp.ha.role': 'DevOps Technical Lead', 'exp.ha.org': 'Happy Aging',
-        'exp.ha.d1': 'Led the elderly fall-prevention assistant server',
+        'exp.ha.d1': 'Technical lead for the elderly fall-prevention service — server, AI, and app',
         'exp.ha.d2': 'Built AI home-hazard detection on OpenAI',
         'exp.ha.d3': 'Shipped a Kotlin Android app to <strong>Google Play</strong>; deployed on AWS EC2 · Docker',
         'exp.st.date': 'Jun 2023 — Mar 2024', 'exp.st.place': 'Seoul',
@@ -277,7 +279,7 @@ const translations = {
         'proj.featured': 'Featured',
         'proj.festival.title': 'KNU 80th Festival Web App',
         'proj.festival.desc': 'A mobile web app used live at KNU\'s 2026 festival — online queuing, real-time booth ranking, and random matching, built full-stack on React + Spring Boot, with production operations.',
-        'proj.festival.meta': 'KNU 2026 Festival · 3 days live · 1,500+ concurrent · 53% of backend commits',
+        'proj.festival.meta': 'KNU 2026 Festival · 3 days live · designed for 1,500 concurrent · 53% of backend commits',
         'proj.stock.title': 'Real-time Stock Data Pipeline',
         'proj.stock.desc': 'A pipeline processing live prices for all 3,000+ KOSPI/KOSDAQ tickers at sub-second latency. Rebuilt from a monolith to MSA when the old system couldn\'t keep up.',
         'proj.fall.title': 'Fall Prevention Assistant',
@@ -291,7 +293,7 @@ const translations = {
 
         /* Research (root) */
         'research.title': 'Research',
-        'research.intro': 'Alongside building systems, I do research.',
+        'research.intro': 'I\'ve done both — building and researching, from defense signal processing to time series and AI.',
         'research.ts.title': 'Clusterability of Time-series Embeddings',
         'research.ts.paper': '"Exploring the Clusterability of Unclustered Embeddings: Multi-Domain Multivariate Time Series" · Co-author',
         'research.ts.desc': 'A systematic comparison of five time-series embeddings (TS2Vec, PatchTST, MERIT, TimeCMA, TimeKD) on unsupervised clustering across four UEA datasets — surfacing the cluster-collapse (NMI≈0) of LLM-based methods and a method-selection guideline.',
@@ -310,11 +312,12 @@ const translations = {
         'awards.topcit.t': 'TOPCIT 23rd · 1st Place', 'awards.topcit.d': 'Score 805 · KNU President\'s Award',
         'awards.essay.t': 'SW University Essay Contest 2026 · Grand Prize + AI Award', 'awards.essay.d': 'Council Chair\'s Award · essay “A User Manual, Turning the Pages”', 'awards.essay.link': 'Read the essay →',
         'awards.kit.t': 'Undergraduate Paper Competition · Bronze Prize', 'awards.kit.d': 'KIT Summer Annual Conference 2026',
+        'awards.icp.t': 'Industry–Academia Project Competition · Popularity Award', 'awards.icp.d': 'KNU Software Education Center · drone vertiport CCTV surveillance',
         'awards.hack1.t': 'SW Edu. Idea Hackathon · 1st Place', 'awards.hack1.d': '5 universities, Daegu·Gyeongbuk',
         'awards.hack2.t': 'Daegu SW Hackathon · Excellence Award', 'awards.hack2.d': 'Blockchain education-rights reporting service',
         'awards.wfk.t': 'WFK ICT Volunteer Corps · Director\'s Award', 'awards.wfk.d': 'Indonesia · cattle breed/weight detection AI',
         'awards.sch.t': 'National Science Scholarship · Saem Talent Fund', 'awards.sch.d': 'KOSAF · KNU CSE',
-        'awards.cert.t': 'SQLD · Craftsman Programming', 'awards.cert.d': 'Certifications',
+        'awards.cert.t': 'NVIDIA DLI · SQLD · Craftsman Programming', 'awards.cert.d': 'Rapid App Development with LLMs · KDATA · HRD Korea',
         'awards.leadership': 'Leadership & Community',
         'awards.vp.t': 'President', 'awards.vp.d': 'KNU CSE 17th Student Council Do:IT', 'awards.vp.y': '2026 — present',
         'awards.ll.t': 'BE Officer', 'awards.ll.d': 'LikeLion 11–13th · Java/Spring teaching', 'awards.ll.y': '2023 — 2025',
@@ -327,10 +330,11 @@ const translations = {
         /* Timeline */
         'time.title': 'Education & Ahead',
         'time.t1': 'Entered KNU, School of Computer Science & Engineering',
+        'time.t1b': 'Completed the Silicon Valley program at San José State University (LLM app development)',
         'time.t2': 'Graduating from KNU CSE (expected)',
-        'time.t3': 'Begin service at the Agency for Defense Development (ADD)',
+        'time.t3': 'Begin service as a research officer at the Agency for Defense Development (ADD)',
         'time.t4': 'Complete ADD service',
-        'time.t5': 'Planning a PhD in the United States',
+        'time.t5': 'Sensor signals and AI — continuing defense research',
 
         /* Contact */
         'contact.title': 'Let\'s talk',
@@ -384,7 +388,7 @@ const translations = {
         'd.festival.impact': 'Ran live across the three festival days — 59 booths, 100 canvas boards, and real waiting/matching data. Capacity was planned for ~1,500 concurrent users, and I owned production operations end to end (runbook, monitoring, incident response). I was the top contributor, with ~53% of backend commits.',
 
         'rs.eyebrow': 'Research', 'rs.title': 'Research',
-        'rs.intro': 'Alongside building systems, I\'ve worked on time-series representation learning and defense signal processing.',
+        'rs.intro': 'I\'ve done both — building and researching: defense signal processing, time-series representation learning, and urban air mobility surveillance.',
         'rs.ts.title': 'Clusterability of Time-series Embeddings',
         'rs.ts.venue': '2025 Korea Software Congress (KSC 2025) · Co-author',
         'rs.ts.paper': 'Exploring the Clusterability of Unclustered Embeddings: A Comparative Study of Embedding Models Based on Multi-Domain Multivariate Time Series Data',
@@ -472,7 +476,7 @@ function setLanguage(lang) {
     const ogTitle = document.querySelector('meta[property="og:title"]');
     const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogTitle) ogTitle.content = lang === 'ko' ? '이상민 · Sangmin Lee' : 'Sangmin Lee · Portfolio';
-    if (ogDesc) ogDesc.content = lang === 'ko' ? 'Sin prisa, pero sin pausa. — 소프트웨어 공학 · 백엔드·인프라 · 연구' : 'Sin prisa, pero sin pausa. — Software engineering · backend · research';
+    if (ogDesc) ogDesc.content = lang === 'ko' ? 'Sin prisa, pero sin pausa. — 직접 만들고, 직접 운영하고, 연구합니다.' : 'Sin prisa, pero sin pausa. — I build it, I run it, and I research it.';
 }
 
 function toggleLanguage() {
