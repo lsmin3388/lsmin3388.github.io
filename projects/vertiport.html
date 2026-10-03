@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="드론 버티포트 환경을 위한 웹 기반 CCTV 통합 감시 시스템 설계 및 구현. 2026 한국정보기술학회 대학생논문경진대회 동상.">
+    <title>드론 버티포트 CCTV 통합 감시 시스템 · 이상민</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ffffff'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%230a0a0a'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#content">본문으로 건너뛰기</a>
+    <header class="nav detail-nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand" data-i18n="nav.brand">이상민</a>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail" id="content">
+        <a href="../research.html" class="back-link" data-i18n="pg.back.research">← 연구 목록</a>
+        <header class="detail-head">
+            <span class="eyebrow" data-i18n="p.vertiport.eyebrow">Research · 산학협력</span>
+            <h1 class="detail-title" data-i18n="p.vertiport.title">드론 버티포트 CCTV 통합 감시 시스템</h1>
+            <p class="detail-venue" data-i18n="p.vertiport.venue">「드론 버티포트 환경을 위한 웹 기반 CCTV 통합 감시 시스템 설계 및 구현」 · 2026 한국정보기술학회 하계종합학술대회 대학생논문경진대회 동상</p>
+            <div class="detail-meta"><div><span class="dm-label" data-i18n="d.role">역할</span><span data-i18n="p.vertiport.role">동등 기여 저자. 기획·논문 작성, 프론트엔드 개발</span></div><div><span class="dm-label" data-i18n="d.period">기간</span><span data-i18n="p.vertiport.period">2026.03 ~ 06 · ㈜엠엠피 산학협력, 6인 팀</span></div></div>
+        </header>
+        <div class="detail-body">
+            <section class="block"><h2 data-i18n="pg.summary">요약</h2><p data-i18n="p.vertiport.s0.0">드론 버티포트용 웹 기반 CCTV 통합 관제 시스템 설계·구현. RTSP 영상 수집, 웹 스트리밍, ONVIF PTZ 원격 제어, 24시간 녹화 포함.</p></section>
+            <section class="block"><h2 data-i18n="pg.context">배경</h2><p data-i18n="p.vertiport.s1.0">드론 물류·도심항공교통(UAM) 실증 확대로 버티포트 안전관리·보안 통제 요구 증가. 도심형 버티포트에 맞춘 CCTV 감시 기준과 설계 사례는 부족.</p></section>
+            <section class="block"><h2 data-i18n="pg.problem">문제</h2><p data-i18n="p.vertiport.s2.0">수동 모니터링 중심 운영이라 인적 오류 가능성이 크고 위험 상황에 즉각 대응하기 어려움. 브라우저는 RTSP를 직접 재생하지 못해 프로토콜 변환 필요.</p></section>
+            <section class="block"><h2 data-i18n="pg.figure">그림</h2><figure><img src="../assets/figs/vertiport-architecture.jpg" alt="" loading="lazy"><figcaption data-i18n="p.vertiport.s3.cap">4계층 구조: Camera, Media Processing, Application, Client (포스터)</figcaption></figure></section>
+            <section class="block"><h2 data-i18n="pg.method">방법</h2><ol class="steps"><li data-i18n="p.vertiport.s4.0">IP 카메라가 H.264 영상을 RTSP로 미디어 서버(MediaMTX)에 전송</li><li data-i18n="p.vertiport.s4.1">재인코딩 없이 트랜스먹싱해 실시간 시청은 WebRTC, 녹화 재생은 HLS로 출력</li><li data-i18n="p.vertiport.s4.2">FFmpeg로 1시간 단위 MP4 분할 저장, 타임라인 탐색 지원</li><li data-i18n="p.vertiport.s4.3">ONVIF Profile S 기반 PTZ 원격 제어, 프리셋 위치 저장</li><li data-i18n="p.vertiport.s4.4">기상청 API 연동 기상 대시보드(풍속·시정·강수량)와 전파 환경 표시</li><li data-i18n="p.vertiport.s4.5">JWT 인증, TLS, WebRTC SRTP. Docker Compose 기반 온프레미스 배포</li></ol></section>
+            <section class="block"><h2 data-i18n="pg.results">결과</h2><ul class="findings"><li data-i18n="p.vertiport.s5.0">IP 카메라 3대(고정형·PTZ) 기반 프로토타입 구현, 실시간 지연 목표 0.5초 이하</li><li data-i18n="p.vertiport.s5.1">카메라 수에 따라 바뀌는 반응형 다중 화면, 확대 화면 PTZ 제어</li><li data-i18n="p.vertiport.s5.2">과거 영상 조회, 저장 공간 부족 시 오래된 영상부터 자동 삭제</li><li data-i18n="p.vertiport.s5.3">이벤트·접근·설정 변경 로그, 사람 진입 자동 감지와 시각·이미지 저장</li><li data-i18n="p.vertiport.s5.4">대학생논문경진대회 동상(2026.06.06), 경북대 소프트웨어교육원 산학협력프로젝트 경진대회 인기상</li></ul></section>
+            <section class="block"><h2 data-i18n="pg.role">기여</h2><ul class="findings"><li data-i18n="p.vertiport.s6.0">기획과 논문 작성</li><li data-i18n="p.vertiport.s6.1">프론트엔드: 관제 UI 레이아웃, 실시간 영상 뷰어, PTZ 제어 UI, 녹화 영상 검색·재생, 날씨·전파 대시보드</li></ul></section>
+            <section class="block"><h2 data-i18n="pg.stack">기술 스택</h2><div class="tags"><span>React</span><span>NestJS</span><span>MySQL</span><span>MediaMTX</span><span>WebRTC</span><span>HLS</span><span>FFmpeg</span><span>ONVIF</span><span>Docker Compose</span></div></section>
+            <section class="block"><h2 data-i18n="pg.note">참고</h2><p data-i18n="p.vertiport.s8.0">연구 지원: 과학기술정보통신부·정보통신기획평가원 SW중심대학사업(2021-0-01082). 관련 SW 저작권 등록 C-2026-030871(저작자 경북대학교 산학협력단).</p></section>
+        </div>
+        <a href="../research.html" class="back-link bottom" data-i18n="pg.back.research">← 연구 목록</a>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-es es">Hecho con calma · Daegu, KR</p>
+        <p class="footer-credit">© 2026 이상민 · Sangmin Lee</p>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

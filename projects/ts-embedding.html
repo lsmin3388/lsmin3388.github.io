@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="비군집화 임베딩의 군집화 가능성 탐구: 다중 도메인 다변량 시계열 데이터 기반 임베딩 모델 비교 연구. KSC 2025.">
+    <title>시계열 임베딩의 군집화 가능성 연구 · 이상민</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ffffff'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%230a0a0a'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#content">본문으로 건너뛰기</a>
+    <header class="nav detail-nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand" data-i18n="nav.brand">이상민</a>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail" id="content">
+        <a href="../research.html" class="back-link" data-i18n="pg.back.research">← 연구 목록</a>
+        <header class="detail-head">
+            <span class="eyebrow" data-i18n="p.ts-embedding.eyebrow">Research · 시계열 표현학습</span>
+            <h1 class="detail-title" data-i18n="p.ts-embedding.title">시계열 임베딩의 군집화 가능성 연구</h1>
+            <p class="detail-venue" data-i18n="p.ts-embedding.venue">「비군집화 임베딩의 군집화 가능성 탐구: 다중 도메인 다변량 시계열 데이터 기반 임베딩 모델 비교 연구」 · KSC 2025 학부생 논문</p>
+            <div class="detail-meta"><div><span class="dm-label" data-i18n="d.role">역할</span><span data-i18n="p.ts-embedding.role">공저자(9명 중 3저자)</span></div><div><span class="dm-label" data-i18n="d.period">기간</span><span data-i18n="p.ts-embedding.period">2025</span></div></div>
+        </header>
+        <div class="detail-body">
+            <section class="block"><h2 data-i18n="pg.summary">요약</h2><p data-i18n="p.ts-embedding.s0.0">최신 시계열 임베딩 모델 5종의 비지도 군집화 성능을 UEA 다변량 데이터셋 4종에서 비교.</p></section>
+            <section class="block"><h2 data-i18n="pg.context">배경</h2><p data-i18n="p.ts-embedding.s1.0">의료, 산업 공정 등에서 다변량 시계열 데이터 급증. 도메인마다 구조와 스케일이 달라 도메인별 임베딩 모델의 개발·유지보수 비용 증가. LLM·자기지도학습 기반 범용 임베딩 연구 증가.</p></section>
+            <section class="block"><h2 data-i18n="pg.problem">문제</h2><p data-i18n="p.ts-embedding.s2.0">범용 임베딩을 군집화 같은 완전 비지도 과제에 적용한 연구는 드묾. 레이블 없는 데이터에서 표현의 유용성에 대한 실증 근거 부족.</p></section>
+            <section class="block"><h2 data-i18n="pg.setup">실험 설정</h2><ul class="findings"><li data-i18n="p.ts-embedding.s3.0">모델: TS2Vec, PatchTST(Non-LLM) / MERIT, TimeCMA, TimeKD(LLM 기반)</li><li data-i18n="p.ts-embedding.s3.1">데이터셋: BasicMotions, Epilepsy, Libras, HandMovementDirection</li><li data-i18n="p.ts-embedding.s3.2">군집화: K-Means, Spectral(k-최근접 이웃 그래프, k=15). 군집 수는 클래스 수와 동일</li><li data-i18n="p.ts-embedding.s3.3">지표: RI, NMI. 정답 레이블은 최종 평가에만 사용. 임베딩 차원 320 고정</li></ul></section>
+            <section class="block"><h2 data-i18n="pg.results">결과</h2><table class="data"><thead><tr><th>모델 · Model</th><th>K-Means RI / NMI</th><th>Spectral RI / NMI</th></tr></thead><tbody><tr><td>TS2Vec</td><td class="num">0.768 / 0.430</td><td class="num">0.808 / 0.568</td></tr><tr><td>PatchTST</td><td class="num">0.752 / 0.353</td><td class="num">0.794 / 0.395</td></tr><tr><td>MERIT</td><td class="num">0.578 / 0.212</td><td class="num">0.725 / 0.203</td></tr><tr><td>TimeCMA</td><td class="num">0.574 / 0.042</td><td class="num">0.563 / 0.015</td></tr><tr><td>TimeKD</td><td class="num">0.465 / 0.002</td><td class="num">0.480 / 0.005</td></tr></tbody></table><p class="block-note" data-i18n="p.ts-embedding.s4.note">데이터셋 4종 평균.</p></section>
+            <section class="block"><h2 data-i18n="pg.figure">그림</h2><figure><img src="../assets/figs/ksc-results.jpg" alt="" loading="lazy"><figcaption data-i18n="p.ts-embedding.s5.cap">데이터셋별 RI·NMI (포스터). K: K-Means, S: Spectral</figcaption></figure></section>
+            <section class="block"><h2 data-i18n="pg.takeaway">시사점</h2><ul class="findings"><li data-i18n="p.ts-embedding.s6.0">TS2Vec이 두 군집화 방법 모두에서 최고 성능</li><li data-i18n="p.ts-embedding.s6.1">LLM 기반 TimeKD·TimeCMA는 NMI 0.05 미만. 군집은 생기지만 실제 클래스 정보는 반영하지 못하는 RI·NMI 불균형</li><li data-i18n="p.ts-embedding.s6.2">주기적 패턴에는 TS2Vec, 비선형 구조의 의료·센서 데이터에는 PatchTST·MERIT와 Spectral 조합 권장</li><li data-i18n="p.ts-embedding.s6.3">순수 비지도 환경에서는 지식 증류·모달 정렬보다 대조학습·자기지도학습 방식이 적합</li></ul></section>
+            <section class="block"><h2 data-i18n="pg.note">참고</h2><p data-i18n="p.ts-embedding.s7.0">연구 지원: 과학기술정보통신부·정보통신기획평가원 SW중심대학사업(2021-0-01082). 관련 SW 저작권 등록 C-2026-000148(저작자 경북대학교 산학협력단).</p></section>
+        </div>
+        <a href="../research.html" class="back-link bottom" data-i18n="pg.back.research">← 연구 목록</a>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-es es">Hecho con calma · Daegu, KR</p>
+        <p class="footer-credit">© 2026 이상민 · Sangmin Lee</p>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

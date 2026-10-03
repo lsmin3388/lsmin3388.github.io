@@ -442,3 +442,30 @@ a.card-in:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--
 
 .foot a { color: var(--ink); text-decoration: none; font-weight: 600; }
 .foot a:hover { text-decoration: underline; }
+
+/* 상세 페이지 그림 */
+.block figure { margin: 0; }
+.block figure img { width: 100%; height: auto; border: 2px solid var(--ink); background: #fff; }
+.block figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+.steps { list-style: none; counter-reset: step; }
+.steps li { position: relative; padding-left: 30px; color: var(--soft); }
+.steps li + li { margin-top: 8px; }
+.steps li::before {
+    counter-increment: step;
+    content: counter(step, decimal-leading-zero);
+    position: absolute; left: 0; top: 1px;
+    font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--ink);
+}
+.data { border-collapse: collapse; font-size: 14px; width: 100%; max-width: 560px; }
+.data th, .data td { text-align: left; padding: 7px 12px 7px 0; border-bottom: 1px solid var(--hair); }
+.data th { font-weight: 700; border-bottom: 2px solid var(--ink); }
+.data td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.research-list { list-style: none; border-top: var(--thick) solid var(--ink); }
+.research-list li { border-bottom: 1px solid var(--hair); }
+.research-list a { display: grid; grid-template-columns: var(--col) minmax(0, 1fr); column-gap: 40px; padding: 22px 0; text-decoration: none; }
+.research-list a:hover .rl-title { text-decoration: underline; }
+.rl-meta { font-family: var(--mono); font-size: 13px; font-weight: 600; }
+.rl-title { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.4; }
+.rl-desc { font-size: 15px; color: var(--soft); margin-top: 6px; max-width: 62ch; }
+.rl-venue { font-size: 13px; color: var(--muted); margin-top: 8px; }
+@media (max-width: 720px) { .research-list a { grid-template-columns: 1fr; row-gap: 6px; } }
