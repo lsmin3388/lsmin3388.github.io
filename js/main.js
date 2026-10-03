@@ -1,153 +1,92 @@
-/**
- * Portfolio — interactions
- * Shared across the root page and detail pages.
- */
-
-/* Own the scroll position so every page load is predictable
-   (no browser scroll restoration carrying over between pages). */
-if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-}
+/* 이상민 · Sangmin Lee — 모든 페이지 공용 */
 
 document.addEventListener('DOMContentLoaded', () => {
     initI18n();
-    initReveal();
-    initNav();
-    initMobileMenu();
-    initActiveLink();
-    initAnchorScroll();
-    initInitialScroll();
+    initFilters();
+    initCards();
+    initRail();
+    document.querySelectorAll('.js-print').forEach(b => b.addEventListener('click', () => window.print()));
 });
 
-window.addEventListener('load', () => {
-    // Re-correct the hash position once fonts/images settle the layout.
-    if (window.location.hash) positionToHash(false);
-});
+/* 기록 분류 필터. 항목이 하나도 안 남은 연도는 통째로 숨긴다. */
+function initFilters() {
+    const buttons = document.querySelectorAll('.filters [data-filter]');
+    if (!buttons.length) return;
+    const entries = document.querySelectorAll('.entry');
+    const years = document.querySelectorAll('.year');
 
-/* ---- Scroll helpers ---- */
-function prefersReducedMotion() {
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-}
-function navOffset() {
-    const nav = document.getElementById('nav');
-    return (nav ? nav.offsetHeight : 0) + 20;
-}
-function scrollToTarget(target, smooth) {
-    const y = target.getBoundingClientRect().top + window.scrollY - navOffset();
-    window.scrollTo({
-        top: Math.max(0, y),
-        behavior: (smooth && !prefersReducedMotion()) ? 'smooth' : 'auto'
-    });
-}
-function positionToHash(smooth) {
-    const hash = window.location.hash;
-    if (!hash || hash.length < 2) return false;
-    let target = null;
-    try { target = document.querySelector(decodeURIComponent(hash)); } catch (e) { return false; }
-    if (!target) return false;
-    scrollToTarget(target, smooth);
-    return true;
-}
-
-/* On first load: jump to the hash (instant, offset-corrected) or reset to top. */
-function initInitialScroll() {
-    if (window.location.hash) {
-        requestAnimationFrame(() => requestAnimationFrame(() => positionToHash(false)));
-    } else {
-        window.scrollTo(0, 0);
-    }
-}
-
-/* Smooth, offset-aware scrolling for same-page anchor links. */
-function initAnchorScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        const href = a.getAttribute('href');
-        if (!href || href === '#') return;
-        a.addEventListener('click', (e) => {
-            let target = null;
-            try { target = document.querySelector(href); } catch (err) { return; }
-            if (!target) return;
-            e.preventDefault();
-            scrollToTarget(target, true);
-            history.pushState(null, '', href);
+    const apply = (kind) => {
+        buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === kind)));
+        entries.forEach(el => {
+            const kinds = (el.dataset.kind || '').split(' ');
+            el.hidden = kind !== 'all' && !kinds.includes(kind);
+            el.classList.remove('is-first', 'is-last');
         });
-    });
-}
-
-/* Reveal on scroll */
-function initReveal() {
-    const reveals = document.querySelectorAll('.reveal');
-    if (!('IntersectionObserver' in window) || !reveals.length) {
-        reveals.forEach(el => el.classList.add('active'));
-        return;
-    }
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                obs.unobserve(entry.target);
-            }
+        years.forEach(y => {
+            const visible = y.querySelectorAll('.entry:not([hidden])');
+            y.classList.toggle('is-empty', visible.length === 0);
+            const railItem = document.querySelector(`.rail a[href="#${y.id}"]`);
+            if (railItem) railItem.parentElement.hidden = visible.length === 0;
+            if (visible.length) visible[visible.length - 1].classList.add('is-last');
+            if (y.dataset.year === '2026' && visible.length) visible[0].classList.add('is-first');
         });
-    }, { threshold: 0.12 });
-
-    reveals.forEach(el => observer.observe(el));
-
-    // Hero reveals fire immediately
-    requestAnimationFrame(() => {
-        document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('active'));
-    });
-}
-
-/* Nav border on scroll */
-function initNav() {
-    const nav = document.getElementById('nav');
-    if (!nav) return;
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-}
-
-/* Mobile menu */
-function initMobileMenu() {
-    const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('mobile-menu');
-    if (!hamburger || !menu) return;
-
-    const close = () => {
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        menu.classList.remove('active');
-        menu.setAttribute('aria-hidden', 'true');
-    };
-    const toggle = () => {
-        const open = menu.classList.toggle('active');
-        hamburger.classList.toggle('active', open);
-        hamburger.setAttribute('aria-expanded', String(open));
-        menu.setAttribute('aria-hidden', String(!open));
     };
 
-    hamburger.addEventListener('click', toggle);
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+    buttons.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter)));
+    // 인쇄는 항상 전체 기록으로
+    window.addEventListener('beforeprint', () => apply('all'));
 }
 
-/* Active nav link (root page only) */
-function initActiveLink() {
-    const links = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('main section[id]');
-    if (!links.length || !sections.length) return;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const id = entry.target.getAttribute('id');
-            links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+/* 대표 카드: 버튼으로 한 장씩, 끝에 닿으면 버튼 비활성 */
+function initCards() {
+    const track = document.querySelector('.cards');
+    if (!track) return;
+    const btns = document.querySelectorAll('.feat-btn');
+    const step = () => {
+        const card = track.querySelector('.card');
+        return card ? card.getBoundingClientRect().width + 16 : 300;
+    };
+    const ctrl = document.querySelector('.feat-ctrl');
+    const update = () => {
+        const max = track.scrollWidth - track.clientWidth - 2;
+        if (ctrl) ctrl.hidden = max <= 0;
+        btns.forEach(b => {
+            b.disabled = b.dataset.dir === '-1' ? track.scrollLeft <= 2 : track.scrollLeft >= max;
         });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-
-    sections.forEach(s => observer.observe(s));
+    };
+    btns.forEach(b => b.addEventListener('click', () => {
+        track.scrollBy({ left: step() * Number(b.dataset.dir), behavior: 'smooth' });
+    }));
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
 }
 
-/* Spanish console note */
-console.log('%cHecho con calma. ¡Hola! 👋', 'font-family: Georgia, serif; font-style: italic; font-size: 18px; color: #c4634a;');
-console.log('%cgithub.com/lsmin3388', 'font-size: 13px; color: #8c867c;');
+/* 왼쪽 목차: 화면 위쪽 40% 선을 지난 마지막 섹션·연도를 표시 */
+function initRail() {
+    const links = [...document.querySelectorAll('.rail a[href^="#"]')];
+    if (!links.length) return;
+    const pairs = links
+        .map(a => [a, document.getElementById(a.getAttribute('href').slice(1))])
+        .filter(([, t]) => t);
+    let ticking = false;
+
+    const mark = () => {
+        ticking = false;
+        const line = window.innerHeight * 0.4;
+        let section = null, year = null;
+        pairs.forEach(([a, t]) => {
+            if (t.offsetParent === null || t.getBoundingClientRect().top > line) return;
+            if (t.classList.contains('year')) year = a; else section = a;
+        });
+        links.forEach(a => a.classList.remove('is-active'));
+        if (section) section.classList.add('is-active');
+        if (year && section && section.getAttribute('href') === '#log') year.classList.add('is-active');
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(mark); }
+    }, { passive: true });
+    mark();
+}
+
+console.log('%cHecho con calma.', 'font-family: Georgia, serif; font-style: italic; font-size: 16px; color: #c4634a;');

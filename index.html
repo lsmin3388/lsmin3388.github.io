@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1d1a16" media="(prefers-color-scheme: dark)">
-    <meta name="description" content="이상민 (Sangmin Lee) — 직접 만들고, 직접 운영하고, 연구합니다. SyncRun Labs 공동창업자·CTO · 경북대 컴퓨터학부 제17대 학생회장 · 과학기술전문사관 11기 기수 대표 · 국방과학연구소 연구장교 예정.">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="이상민(Sangmin Lee). SyncRun Labs 공동창업자·CTO, 경북대 컴퓨터학부 제17대 학생회장, 과학기술전문사관 11기. 2027년 국방과학연구소 연구장교 복무 예정.">
     <meta name="author" content="Sangmin Lee">
-    <meta name="keywords" content="이상민, Sangmin Lee, SyncRun, 싱크런, 소프트웨어 엔지니어, 풀스택, 인프라, AI 연구, ROND, 과학기술전문사관, ADD, 국방과학연구소, 학생회장, SAR 신호처리, Portfolio">
-
-    <!-- Open Graph -->
     <meta property="og:title" content="이상민 · Sangmin Lee">
-    <meta property="og:description" content="Sin prisa, pero sin pausa. — 직접 만들고, 직접 운영하고, 연구합니다.">
+    <meta property="og:description" content="Sin prisa, pero sin pausa. SyncRun Labs 공동창업자·CTO, 경북대 컴퓨터학부, 과학기술전문사관 11기.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lsmin3388.github.io">
     <meta property="og:image" content="https://lsmin3388.github.io/assets/og.png">
@@ -19,382 +15,167 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://lsmin3388.github.io/">
-
     <title>이상민 · Sangmin Lee</title>
-
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Sangmin Lee",
-        "alternateName": "이상민",
-        "url": "https://lsmin3388.github.io",
-        "email": "mailto:sjsb4838@gmail.com",
-        "jobTitle": "Co-founder & CTO",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "SyncRun Labs"
-        },
-        "affiliation": {
-            "@type": "CollegeOrUniversity",
-            "name": "Kyungpook National University"
-        },
-        "knowsAbout": ["Full-Stack Engineering", "Infrastructure & DevOps", "Applied AI", "SAR Signal Processing", "Time-series Representation Learning"],
-        "sameAs": [
-            "https://github.com/lsmin3388",
-            "https://www.linkedin.com/in/sangminn0",
-            "https://velog.io/@sangminn"
-        ]
-    }
+    {"@context": "https://schema.org", "@type": "Person", "name": "Sangmin Lee", "alternateName": "이상민", "url": "https://lsmin3388.github.io", "email": "mailto:sjsb4838@gmail.com", "jobTitle": "Co-founder & CTO", "worksFor": {"@type": "Organization", "name": "SyncRun Labs"}, "affiliation": {"@type": "CollegeOrUniversity", "name": "Kyungpook National University"}, "sameAs": ["https://github.com/lsmin3388", "https://www.linkedin.com/in/sangminn0", "https://velog.io/@sangminn"]}
     </script>
-
-    <!-- Favicon (terracotta dot) -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23faf7f2'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23c4634a'/%3E%3C/svg%3E">
-
-    <!-- Fonts -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ffffff'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%230a0a0a'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <a class="skip-link" href="#content">본문으로 건너뛰기</a>
-    <!-- Navigation -->
-    <header class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="#hero" class="nav-brand" data-i18n="nav.brand">Curriculum Vitae</a>
-            <nav class="nav-links" aria-label="주요 메뉴">
-                <a href="#about" class="nav-link" data-i18n="nav.about">소개</a>
-                <a href="#experience" class="nav-link" data-i18n="nav.experience">경력</a>
-                <a href="#projects" class="nav-link" data-i18n="nav.projects">프로젝트</a>
-                <a href="#research" class="nav-link" data-i18n="nav.research">연구</a>
-                <a href="#awards" class="nav-link" data-i18n="nav.awards">수상</a>
-                <a href="#contact" class="nav-link" data-i18n="nav.contact">연락</a>
-            </nav>
-            <div class="nav-actions">
-                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">EN</button>
-                <button class="nav-hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false">
-                    <span></span><span></span>
-                </button>
-            </div>
-        </div>
+    <header class="bar">
+        <a href="#top" class="bar-name" data-i18n="nav.brand">이상민</a>
+        <nav class="bar-links" aria-label="메뉴">
+            <a href="research.html" data-i18n="nav.research">연구</a>
+            <a href="essay.html" data-i18n="nav.essay">에세이</a>
+            <button type="button" class="js-print" data-i18n="nav.print">CV 인쇄</button>
+            <button type="button" class="lang-toggle" aria-label="Switch language">EN</button>
+        </nav>
     </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-        <nav class="mobile-links" aria-label="모바일 메뉴">
-            <a href="#about" class="mobile-link" data-i18n="nav.about">소개</a>
-            <a href="#experience" class="mobile-link" data-i18n="nav.experience">경력</a>
-            <a href="#projects" class="mobile-link" data-i18n="nav.projects">프로젝트</a>
-            <a href="#research" class="mobile-link" data-i18n="nav.research">연구</a>
-            <a href="#awards" class="mobile-link" data-i18n="nav.awards">수상</a>
-            <a href="#contact" class="mobile-link" data-i18n="nav.contact">연락</a>
+    <div class="page">
+        <nav class="rail" aria-label="목차">
+            <ol>
+                <li><a href="#featured" data-i18n="feat.label">대표 프로젝트</a></li>
+                <li><a href="#log" data-i18n="log.title">이력</a><ol class="rail-sub"><li><a href="#y-next" data-i18n="y.next">예정</a></li><li><a href="#y-2026">2026</a></li><li><a href="#y-2025">2025</a></li><li><a href="#y-2024">2024</a></li><li><a href="#y-2023">2023</a></li></ol></li>
+                <li><a href="#personal" data-i18n="rail.personal">취미·언어</a></li>
+                <li><a href="#contact" data-i18n="contact.label">연락</a></li>
+            </ol>
         </nav>
-    </div>
-
-    <main class="main" id="content">
-        <!-- Hero -->
-        <section class="hero" id="hero">
-            <h1 class="hero-name reveal" data-i18n="hero.kicker">이상민 · Sangmin Lee</h1>
-            <p class="hero-statement reveal"><span class="es">Sin prisa,<br>pero sin pausa.</span></p>
-            <p class="hero-gloss reveal" data-i18n="hero.gloss">서두르지 않되, 멈추지 않는다.</p>
-            <p class="hero-identity reveal" data-i18n="hero.identity">직접 만들고, 직접 운영하고, 연구합니다.</p>
-            <p class="hero-cred reveal" data-i18n="hero.cred">SyncRun Labs 공동창업자 · CTO — 경북대학교 컴퓨터학부 제17대 학생회장 · 과학기술전문사관 11기 기수 대표</p>
-            <div class="hero-cta reveal">
-                <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.work">프로젝트 보기</a>
-                <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta.contact">연락하기</a>
-            </div>
-        </section>
-
-        <!-- About -->
-        <section class="section about" id="about">
-            <div class="section-head reveal">
-                <span class="eyebrow">About</span>
-                <h2 class="section-title" data-i18n="about.title">소개</h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <p data-i18n="about.p1">첫 컴퓨터는 없었습니다. 초등학생 때 5인치 휴대폰 화면에서 한 줄씩 코드를 쓰며 시작했고, 그 재미가 지금까지 이어졌습니다. 지금은 서버든 앱이든 인프라든 필요한 곳을 직접 만들고, 만든 것을 직접 운영합니다.</p>
-                    <p data-i18n="about.p2" data-i18n-html><span class="es">Sin prisa, pero sin pausa.</span> 서두르지 않되, 멈추지 않는다 — 일과 공부를 대하는 제 태도입니다. 목표는 <span class="mark">만들어 본 사람으로 남는 연구자</span>입니다. 연구실의 결과가 실제 사용자 앞에서 어디부터 흔들리는지 아는 사람이고 싶습니다.</p>
-                    <p data-i18n="about.p3" data-i18n-html>지금은 경북대학교 컴퓨터학부 학사 과정을 마무리하고 있습니다. 졸업 후에는 대한민국 국군의 장교이자 <span class="mark">국방과학연구소(ADD)</span> 연구원으로 복무합니다. 하려는 연구는 가상 환경에서 학습한 <span class="mark">인공지능</span>이 현실에서도 제 몫을 하게 만드는 일입니다.</p>
+    <main id="content">
+        <section class="hero" id="top">
+            <img class="hero-photo" src="assets/profile.jpg" alt="이상민" width="1280" height="1707">
+            <div class="hero-main">
+                <h1 class="hero-name">이상민 <span lang="en">Sangmin Lee</span></h1>
+                <p class="hero-es">Sin prisa, pero sin pausa.</p>
+                <div class="hero-text">
+                    <p data-i18n="hero.p1">러닝 앱 SyncRun을 만드는 SyncRun Labs 공동창업자, CTO.</p>
+                    <p data-i18n="hero.p2">앱, 서버, 인프라를 직접 만들고 직접 운영. 레이다 신호처리와 시계열 AI 연구 병행.</p>
+                    <p data-i18n="hero.p3">경북대 컴퓨터학부 4학년, 제17대 학생회장. 과학기술전문사관 11기로 2027년 6월부터 국방과학연구소(ADD) 연구장교 복무 예정.</p>
                 </div>
-                <figure class="about-photo reveal">
-                    <div class="photo-frame">
-                        <img src="assets/profile.jpg" alt="이상민 프로필 사진" loading="lazy"
-                             onerror="this.closest('.photo-frame').classList.add('photo-failed')">
-                        <span class="photo-fallback">이미지 다운로드 실패<br><code>assets/profile.jpg</code></span>
-                    </div>
-                    <figcaption class="es-caption">Hecho con calma · Daegu</figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <!-- Experience -->
-        <section class="section experience" id="experience">
-            <div class="section-head reveal">
-                <span class="eyebrow">Experience</span>
-                <h2 class="section-title" data-i18n="exp.title">경력</h2>
-            </div>
-            <ol class="exp-list">
-                <li class="exp-item reveal">
-                    <div class="exp-meta">
-                        <span class="exp-date" data-i18n="exp.sr.date">2026.07 — 현재</span>
-                        <span class="exp-place" data-i18n="exp.sr.place">창업</span>
-                    </div>
-                    <div class="exp-body">
-                        <h3 class="exp-role" data-i18n="exp.sr.role">공동창업자 · CTO</h3>
-                        <p class="exp-org" data-i18n="exp.sr.org">SyncRun Labs (싱크런 랩스)</p>
-                        <ul class="exp-points">
-                            <li data-i18n="exp.sr.d1">폰을 맞대면 그 자리에서 함께 뛰는 크루가 되는 러닝 앱 ‘SyncRun’ — 기술 총괄</li>
-                            <li data-i18n="exp.sr.d2" data-i18n-html>iOS 앱 · 서버 · 인프라 설계와 개발, <strong>App Store 정식 출시</strong>(2026.09)</li>
-                            <li data-i18n="exp.sr.d3">GPS·만보기 융합 거리 측정, 실시간 그룹 러닝 동기화</li>
-                        </ul>
-                        <div class="tags"><span>SwiftUI</span><span>NestJS</span><span>Socket.IO</span><span>GCP</span></div>
-                        <a class="award-link" href="https://apps.apple.com/us/app/syncrun-solo-crew-running/id6803402900" target="_blank" rel="noopener" data-i18n="exp.sr.link">App Store에서 보기 →</a>
-                    </div>
-                </li>
-                <li class="exp-item reveal">
-                    <div class="exp-meta">
-                        <span class="exp-date" data-i18n="exp.dh.date">2026.01 — 02</span>
-                        <span class="exp-place" data-i18n="exp.dh.place">다낭, 베트남</span>
-                    </div>
-                    <div class="exp-body">
-                        <h3 class="exp-role" data-i18n="exp.dh.role" data-i18n-html>백엔드 개발자 <span class="exp-type">인턴</span></h3>
-                        <p class="exp-org" data-i18n="exp.dh.org">DataHouse Vietnam</p>
-                        <ul class="exp-points">
-                            <li data-i18n="exp.dh.d1">Node.js · TypeScript 기반 백엔드 개발</li>
-                            <li data-i18n="exp.dh.d2">Slack 기반 투표·일정 챗봇 ‘TechTalk Hub’ 개발</li>
-                            <li data-i18n="exp.dh.d3" data-i18n-html>쿼리·UI 최적화로 응답시간 <strong>38% 단축</strong></li>
-                        </ul>
-                        <div class="tags"><span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span></div>
-                    </div>
-                </li>
-                <li class="exp-item reveal">
-                    <div class="exp-meta">
-                        <span class="exp-date" data-i18n="exp.rond.date">2025.05 — 2026.02</span>
-                        <span class="exp-place" data-i18n="exp.rond.place">서울</span>
-                    </div>
-                    <div class="exp-body">
-                        <h3 class="exp-role" data-i18n="exp.rond.role" data-i18n-html>풀스택 개발자 <span class="exp-type">정규직</span></h3>
-                        <p class="exp-org" data-i18n="exp.rond.org">론드코퍼레이션</p>
-                        <p class="exp-badge" data-i18n="exp.rond.badge">청년창업사관학교 선정 기업</p>
-                        <ul class="exp-points">
-                            <li data-i18n="exp.rond.d1">웹 풀스택 제품 개발 (프론트엔드 · 백엔드)</li>
-                        </ul>
-                        <div class="tags"><span>Spring Boot</span><span>React</span><span>AWS</span></div>
-                    </div>
-                </li>
-                <li class="exp-item reveal">
-                    <div class="exp-meta">
-                        <span class="exp-date" data-i18n="exp.ha.date">2024.07 — 2025.03</span>
-                        <span class="exp-place" data-i18n="exp.ha.place">산학 프로젝트</span>
-                    </div>
-                    <div class="exp-body">
-                        <h3 class="exp-role" data-i18n="exp.ha.role">DevOps 테크리드</h3>
-                        <p class="exp-org" data-i18n="exp.ha.org">해피에이징</p>
-                        <ul class="exp-points">
-                            <li data-i18n="exp.ha.d1">고령자 낙상 예방 서비스 기술 총괄 — 서버 · AI · 앱 전 영역</li>
-                            <li data-i18n="exp.ha.d2">OpenAI 기반 가정 내 위험요소 감지 구현</li>
-                            <li data-i18n="exp.ha.d3" data-i18n-html>Kotlin 안드로이드 앱 개발 · <strong>Google Play 출시</strong>, AWS EC2 · Docker 배포</li>
-                        </ul>
-                        <div class="tags"><span>Spring Boot</span><span>Kotlin</span><span>OpenAI</span><span>AWS</span></div>
-                    </div>
-                </li>
-                <li class="exp-item reveal">
-                    <div class="exp-meta">
-                        <span class="exp-date" data-i18n="exp.st.date">2023.06 — 2024.03</span>
-                        <span class="exp-place" data-i18n="exp.st.place">서울</span>
-                    </div>
-                    <div class="exp-body">
-                        <h3 class="exp-role" data-i18n="exp.st.role">DevOps · 서버 개발자</h3>
-                        <p class="exp-org" data-i18n="exp.st.org">주식·금융 교육 스타트업</p>
-                        <ul class="exp-points">
-                            <li data-i18n="exp.st.d1" data-i18n-html>코스피·코스닥 전 종목(<strong>3,000+</strong>) 실시간 시세 처리 인프라 설계</li>
-                            <li data-i18n="exp.st.d2" data-i18n-html>모놀리식 → <strong>MSA 전환 주도</strong> — 3,000+ 동시 WebSocket을 1초 미만 지연으로 처리</li>
-                        </ul>
-                        <div class="tags"><span>Spring WebFlux</span><span>RabbitMQ</span><span>InfluxDB</span></div>
-                    </div>
-                </li>
-            </ol>
-        </section>
-
-        <!-- Projects -->
-        <section class="section projects" id="projects">
-            <div class="section-head reveal">
-                <span class="eyebrow">Projects</span>
-                <h2 class="section-title" data-i18n="proj.title">프로젝트</h2>
-            </div>
-
-            <a class="feature reveal" href="projects/knu-festival.html">
-                <p class="feature-kicker" data-i18n="proj.featured">대표 프로젝트</p>
-                <h3 class="feature-title" data-i18n="proj.festival.title">경북대 대동제 80주년 웹앱</h3>
-                <p class="feature-desc" data-i18n="proj.festival.desc">경북대 2026 대동제에서 실사용된 모바일 웹앱. 온라인 대기열·실시간 부스 랭킹·랜덤 매칭을 React + Spring Boot 풀스택으로 구축하고 프로덕션 운영을 맡았습니다.</p>
-                <p class="feature-meta" data-i18n="proj.festival.meta">경북대 2026 대동제 · 3일 실운영 · 동시접속 1,500 설계 · 백엔드 커밋 53%</p>
-                <div class="tags"><span>React</span><span>Spring Boot</span><span>Redis</span><span>SSE</span><span>Docker</span></div>
-                <span class="feature-go" data-i18n="proj.readmore">자세히 보기 →</span>
-            </a>
-
-            <ol class="proj-index">
-                <li><a class="proj-row reveal" href="projects/realtime-stock.html">
-                    <span class="proj-row-no">01</span>
-                    <span class="proj-row-main">
-                        <span class="proj-row-title"><span data-i18n="proj.stock.title">실시간 주식 데이터 파이프라인</span><span class="arrow" aria-hidden="true">→</span></span>
-                        <span class="proj-row-desc" data-i18n="proj.stock.desc">코스피·코스닥 전 종목(3,000+)의 실시간 시세를 1초 미만 지연으로 처리하는 파이프라인. 모놀리식이 부하를 감당하지 못해 MSA로 전면 재설계했습니다.</span>
-                        <span class="tags"><span>Spring WebFlux</span><span>RabbitMQ</span><span>InfluxDB</span></span>
-                    </span>
-                </a></li>
-                <li><a class="proj-row reveal" href="projects/fall-prevention.html">
-                    <span class="proj-row-no">02</span>
-                    <span class="proj-row-main">
-                        <span class="proj-row-title"><span data-i18n="proj.fall.title">낙상 예방 어시스턴트</span><span class="arrow" aria-hidden="true">→</span></span>
-                        <span class="proj-row-desc" data-i18n="proj.fall.desc">가정 내 이미지를 분석해 고령자의 낙상 위험을 감지하는 AI 서비스. 건강 설문과 맞춤형 안전 보고서까지 담아 Google Play에 출시했습니다.</span>
-                        <span class="tags"><span>Spring Boot</span><span>Kotlin</span><span>OpenAI</span></span>
-                    </span>
-                </a></li>
-                <li><a class="proj-row reveal" href="projects/knu-council.html">
-                    <span class="proj-row-no">03</span>
-                    <span class="proj-row-main">
-                        <span class="proj-row-title"><span data-i18n="proj.council.title">경북대 학생회 통합 시스템</span><span class="arrow" aria-hidden="true">→</span></span>
-                        <span class="proj-row-desc" data-i18n="proj.council.desc">학부 재학생 1,483명을 대상으로 운영하는 통합 관리 시스템. SSO 인증, QR 학생증, 관리자 페이지를 학교 망의 물리서버에 직접 구축해 운영합니다.</span>
-                        <span class="tags"><span>Spring Boot</span><span>MySQL</span><span>Docker</span></span>
-                    </span>
-                </a></li>
-                <li><a class="proj-row reveal" href="projects/techtalk-hub.html">
-                    <span class="proj-row-no">04</span>
-                    <span class="proj-row-main">
-                        <span class="proj-row-title"><span data-i18n="proj.techtalk.title">TechTalk Hub</span><span class="arrow" aria-hidden="true">→</span></span>
-                        <span class="proj-row-desc" data-i18n="proj.techtalk.desc">Slack 기반 투표·일정 관리 챗봇. 베트남 인턴십에서 개발, 쿼리·UI 최적화로 응답시간 38% 단축.</span>
-                        <span class="tags"><span>Node.js</span><span>TypeScript</span><span>Slack API</span></span>
-                    </span>
-                </a></li>
-                <li><a class="proj-row reveal" href="projects/locker.html">
-                    <span class="proj-row-no">05</span>
-                    <span class="proj-row-main">
-                        <span class="proj-row-title"><span data-i18n="proj.locker.title">사물함 통합 관리 서비스</span><span class="arrow" aria-hidden="true">→</span></span>
-                        <span class="proj-row-desc" data-i18n="proj.locker.desc">학과 사물함 관리 웹 서비스. Ubuntu 물리서버에 방화벽·SSL·Nginx·Docker로 인프라를 직접 구성.</span>
-                        <span class="tags"><span>Spring Boot</span><span>Nginx</span><span>Ubuntu</span></span>
-                    </span>
-                </a></li>
-            </ol>
-        </section>
-
-        <!-- Research -->
-        <section class="section research" id="research">
-            <div class="section-head reveal">
-                <span class="eyebrow">Research</span>
-                <h2 class="section-title" data-i18n="research.title">연구</h2>
-            </div>
-            <p class="research-intro reveal" data-i18n="research.intro">만드는 일과 연구하는 일을 함께 해왔습니다. 국방 신호처리부터 시계열·AI까지.</p>
-
-            <a class="research-item reveal" href="research.html#ts">
-                <div class="research-head">
-                    <h3 class="research-title" data-i18n="research.ts.title">시계열 임베딩의 군집화 가능성 연구</h3>
-                    <span class="research-venue">KSC 2025</span>
-                </div>
-                <p class="research-paper" data-i18n="research.ts.paper">「비군집화 임베딩의 군집화 가능성 탐구: 다중 도메인 다변량 시계열 데이터 기반 임베딩 모델 비교 연구」 · 공저자</p>
-                <p class="research-desc" data-i18n="research.ts.desc">TS2Vec · PatchTST · MERIT · TimeCMA · TimeKD 5종 시계열 임베딩의 비지도 군집화 성능을 UEA 4개 데이터셋에서 체계적으로 비교. LLM 기반 방법의 군집 붕괴(NMI≈0) 현상을 규명하고, 데이터 특성별 방법 선택 가이드라인을 제시.</p>
-                <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
-            </a>
-
-            <a class="research-item reveal" href="research.html#sar">
-                <div class="research-head">
-                    <h3 class="research-title" data-i18n="research.sar.title">편광 SAR 기반 저피탐 표적 탐지</h3>
-                    <span class="research-venue">KAIST · 2025</span>
-                </div>
-                <p class="research-paper" data-i18n="research.sar.paper">「편광 SAR 신호 합성을 통한 저피탐 표적 탐지 기법」 · 밀리테크 챌린지 2025 대상</p>
-                <p class="research-desc" data-i18n="research.sar.desc">KAIST 차세대 SAR 연구실 지도 하에 수행한 국방 연구. 단일 편파로는 탐지가 어려운 저피탐 표적을, 서로 다른 편파 영상을 위상 상관으로 정합·합성해 탐지하는 기법입니다. X-band FMCW 레이다 야외 실측에서 단일 편파로 보이지 않던 표적을 편광 RGB 합성 영상으로 탐지, 과기정통부 장관상(대상)을 수상.</p>
-                <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
-            </a>
-
-            <a class="research-item reveal" href="research.html#uam">
-                <div class="research-head">
-                    <h3 class="research-title" data-i18n="research.uam.title">드론 버티포트 CCTV 통합 감시 시스템</h3>
-                    <span class="research-venue">KIIT 2026</span>
-                </div>
-                <p class="research-paper" data-i18n="research.uam.paper">「드론 버티포트 환경을 위한 웹 기반 CCTV 통합 감시 시스템 설계 및 구현」 · 공동저자 · 대학생논문경진대회 동상</p>
-                <p class="research-desc" data-i18n="research.uam.desc">도심항공교통(UAM)의 핵심 거점인 버티포트를 위한 실시간 관제 연구. PTZ 카메라와 RTSP·ONVIF·HLS를 활용해, 제한된 수의 카메라만으로 버티포트 전체를 저지연으로 관제하는 웹 기반 모델을 제안하고 구현했습니다.</p>
-                <span class="card-more" data-i18n="proj.readmore">자세히 보기 →</span>
-            </a>
-        </section>
-
-        <!-- Awards & Leadership -->
-        <section class="section awards" id="awards">
-            <div class="section-head reveal">
-                <span class="eyebrow">Honors</span>
-                <h2 class="section-title" data-i18n="awards.title">수상 &amp; 리더십</h2>
-            </div>
-            <div class="awards-grid">
-                <div class="awards-col reveal">
-                    <h3 class="awards-sub" data-i18n="awards.honors">수상 · 선발</h3>
-                    <ul class="award-list">
-                        <li><span class="award-year">2024</span><div><h4 data-i18n="awards.rond.t">ROND 11기 전문사관 후보생 선발</h4><p data-i18n="awards.rond.d">국방과학연구소(ADD) R&amp;D 인력 양성</p></div></li>
-                        <li><span class="award-year">2025</span><div><h4 data-i18n="awards.mili.t">제6회 밀리테크 챌린지 · 대상 + 모범상</h4><p data-i18n="awards.mili.d">과학기술정보통신부 장관상 · 과학기술전문사관지원센터장상</p></div></li>
-                        <li><span class="award-year">2025</span><div><h4 data-i18n="awards.topcit.t">TOPCIT 제23회 · 특별상 (교내 1위)</h4><p data-i18n="awards.topcit.d">805점 · 경북대학교 총장상</p></div></li>
-                        <li><span class="award-year">2026</span><div><h4 data-i18n="awards.essay.t">AI·SW중심대학 에세이 공모전 2026 · 대상 + AI선정상</h4><p data-i18n="awards.essay.d">AI·SW중심대학 협의회장상 · 「사용설명서, 한 장씩 넘기는 중」</p><a class="award-link" href="essay.html" data-i18n="awards.essay.link">에세이 읽기 →</a></div></li>
-                        <li><span class="award-year">2026</span><div><h4 data-i18n="awards.kit.t">대학생논문경진대회 · 동상</h4><p data-i18n="awards.kit.d">2026 한국정보기술학회 하계종합학술대회</p></div></li>
-                        <li><span class="award-year">2026</span><div><h4 data-i18n="awards.icp.t">산학협력프로젝트 경진대회 · 인기상</h4><p data-i18n="awards.icp.d">경북대학교 소프트웨어교육원 · 드론 버티포트 CCTV 감시 시스템</p></div></li>
-                        <li><span class="award-year">2023</span><div><h4 data-i18n="awards.hack1.t">SW교육원 아이디어 해커톤 · 대상 (1등)</h4><p data-i18n="awards.hack1.d">대구·경북권 5개 대학</p></div></li>
-                        <li><span class="award-year">2023</span><div><h4 data-i18n="awards.hack2.t">대구를 빛내는 SW 해커톤 · 최우수상</h4><p data-i18n="awards.hack2.d">블록체인 기반 교육권 침해 신고 서비스</p></div></li>
-                        <li><span class="award-year">2024</span><div><h4 data-i18n="awards.wfk.t">월드프렌즈코리아 IT봉사단 · 장려상</h4><p data-i18n="awards.wfk.d">한국지능정보사회진흥원장상 · 인도네시아 · 소 품종·무게 감지 서비스</p></div></li>
-                        <li><span class="award-year">—</span><div><h4 data-i18n="awards.sch.t">이공계 국가우수장학금 · 샘 인재 발전기금</h4><p data-i18n="awards.sch.d">한국장학재단 · 경북대 컴퓨터학부</p></div></li>
-                        <li><span class="award-year">26·25·24</span><div><h4 data-i18n="awards.cert.t">NVIDIA DLI · SQLD · 프로그래밍기능사</h4><p data-i18n="awards.cert.d">LLM 응용개발(RAD) · 한국데이터산업진흥원 · 한국산업인력공단</p></div></li>
-                    </ul>
-                </div>
-                <div class="awards-col reveal">
-                    <h3 class="awards-sub" data-i18n="awards.leadership">리더십 · 커뮤니티</h3>
-                    <ul class="lead-list">
-                        <li><h4 data-i18n="awards.vp.t">학생회장</h4><p data-i18n="awards.vp.d">경북대 컴퓨터학부 17대 학생회 Do:IT</p><span data-i18n="awards.vp.y">2026 — 현재</span></li>
-                        <li><h4 data-i18n="awards.ll.t">BE Officer</h4><p data-i18n="awards.ll.d">멋쟁이사자처럼 11–13기 · Java/Spring 교육</p><span data-i18n="awards.ll.y">2023 — 2025</span></li>
-                        <li><h4 data-i18n="awards.gdg.t">Backend Core Member</h4><p data-i18n="awards.gdg.d">GDG on Campus KNU</p><span data-i18n="awards.gdg.y">2023 — 2026</span></li>
-                        <li><h4 data-i18n="awards.goorm.t">Backend Officer</h4><p data-i18n="awards.goorm.d">9oormthon Univ KNU</p><span data-i18n="awards.goorm.y">2024 — 2025</span></li>
-                    </ul>
-                </div>
-            </div>
-            <p class="press-note reveal">
-                <span class="press-label" data-i18n="press.label">Press</span>
-                <a href="https://teen.mk.co.kr/youth/youth01_01_view.php?c1=4&amp;c2=105&amp;c3=&amp;idx=699" target="_blank" rel="noopener" data-i18n="press.text">틴매일경제 — 「국방과학연구소에서 군 복무하며 첨단기술 연구」 (2026.03)</a>
-            </p>
-        </section>
-
-        <!-- Timeline -->
-        <section class="section timeline" id="timeline">
-            <div class="section-head reveal">
-                <span class="eyebrow">Path</span>
-                <h2 class="section-title" data-i18n="time.title">학력 &amp; 복무</h2>
-            </div>
-            <ol class="time-list reveal">
-                <li><span class="time-year">2023.03</span><span class="time-text" data-i18n="time.t1">경북대학교 컴퓨터학부 입학 (플랫폼SW·데이터과학)</span></li>
-                <li><span class="time-year">2026.07</span><span class="time-text" data-i18n="time.t1b">산호세주립대학교 실리콘밸리 프로그램 수료 (LLM 응용개발)</span></li>
-                <li><span class="time-year">2027.02</span><span class="time-text" data-i18n="time.t2">경북대학교 컴퓨터학부 졸업 예정</span></li>
-                <li><span class="time-year">2027.06</span><span class="time-text" data-i18n="time.t3">국방과학연구소(ADD) 연구장교 복무 시작</span></li>
-                <li><span class="time-year">2030.06</span><span class="time-text" data-i18n="time.t4">ADD 복무 완료</span></li>
-            </ol>
-        </section>
-
-        <!-- Contact -->
-        <section class="section contact" id="contact">
-            <div class="reveal">
-                <span class="eyebrow">Contact</span>
-                <h2 class="contact-title" data-i18n="contact.title">연락해요</h2>
-                <p class="contact-text" data-i18n="contact.text">제안이든 협업이든, 그냥 인사든 편하게 연락 주세요.</p>
-                <p class="contact-es es">¿Hablamos?</p>
-                <a href="mailto:sjsb4838@gmail.com" class="btn btn-primary btn-lg">sjsb4838@gmail.com</a>
-                <div class="contact-socials">
+                <p class="hero-links">
+                    <a href="mailto:sjsb4838@gmail.com">sjsb4838@gmail.com</a>
                     <a href="https://github.com/lsmin3388" target="_blank" rel="noopener">GitHub</a>
                     <a href="https://www.linkedin.com/in/sangminn0" target="_blank" rel="noopener">LinkedIn</a>
                     <a href="https://velog.io/@sangminn" target="_blank" rel="noopener">velog</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="featured" id="featured" aria-labelledby="feat-label">
+            <div class="feat-head">
+                <h2 class="label" id="feat-label" data-i18n="feat.label">대표 프로젝트</h2>
+                <div class="feat-ctrl">
+                    <button type="button" class="feat-btn" data-dir="-1" aria-label="이전"><span aria-hidden="true">←</span></button>
+                    <button type="button" class="feat-btn" data-dir="1" aria-label="다음"><span aria-hidden="true">→</span></button>
                 </div>
-                <button class="print-cv" type="button" onclick="window.print()" data-i18n="contact.print">이 페이지를 인쇄하면 그대로 CV가 됩니다 · 인쇄하기</button>
+            </div>
+            <ol class="cards" tabindex="0" aria-label="대표 프로젝트와 활동">
+                <li class="card"><a class="card-in" href="research.html#sar"><div class="c-thumb"><img src="assets/cards/sar.jpg" alt="" width="800" height="450" loading="lazy"></div><div class="c-body"><h3 class="c-title" data-i18n="c.sar.t">편광 SAR 저피탐 표적 탐지</h3><p class="c-desc" data-i18n="c.sar.d">제6회 밀리테크 챌린지 대상(과기정통부 장관상), 모범상. 편광이 다른 SAR 영상을 정합·합성해 단일 영상에서 안 보이던 저피탐 표적 탐지. KAIST 차세대 SAR 연구실 지도, 5인 연합팀.</p><p class="c-date">2025 · <span data-i18n="k.research">연구</span></p></div><div class="c-foot"><span class="c-stack">X-band FMCW · Range-Doppler · 편광 합성</span><span class="c-go" data-i18n="c.more">자세히 →</span></div></a></li>
+            </ol>
+        </section>
+
+        <section class="log" id="log" aria-labelledby="log-title">
+            <div class="log-head">
+                <h2 class="label" id="log-title" data-i18n="log.title">이력</h2>
+                <div class="filters" role="group" aria-label="분류">
+                    <button type="button" data-filter="all" aria-pressed="true" data-i18n="f.all">전체</button>
+                    <button type="button" data-filter="build" aria-pressed="false" data-i18n="f.build">프로젝트</button>
+                    <button type="button" data-filter="work" aria-pressed="false" data-i18n="f.work">경력</button>
+                    <button type="button" data-filter="research" aria-pressed="false" data-i18n="f.research">연구</button>
+                    <button type="button" data-filter="award" aria-pressed="false" data-i18n="f.award">수상</button>
+                    <button type="button" data-filter="activity" aria-pressed="false" data-i18n="f.activity">활동</button>
+                </div>
+            </div>
+<section class="year is-next" id="y-next" data-year="next">
+  <h2 class="y-num"><span data-i18n="y.next">예정</span></h2>
+  <ol class="entries">
+    <li class="entry" data-kind="next"><p class="e-meta"><span class="e-date">2027.06</span><span class="e-kind" data-i18n="k.next">예정</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.add.t">국방과학연구소(ADD) 연구장교 복무 시작</h3><p class="e-desc" data-i18n="e.add.d">과학기술전문사관 11기. 2030년 6월까지 3년.</p></div></li>
+    <li class="entry" data-kind="next"><p class="e-meta"><span class="e-date">2027.02</span><span class="e-kind" data-i18n="k.next">예정</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.grad.t">경북대학교 컴퓨터학부 졸업 예정</h3><p class="e-desc" data-i18n="e.grad.d">플랫폼SW·데이터과학 전공.</p></div></li>
+  </ol>
+</section>
+<section class="year" id="y-2026" data-year="2026">
+  <h2 class="y-num">2026</h2>
+  <ol class="entries">
+    <li class="entry" data-kind="build"><p class="e-meta"><span class="e-date">09</span><span class="e-kind" data-i18n="k.build">프로젝트</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.srl.t">SyncRun App Store 출시</h3><p class="e-desc" data-i18n="e.srl.d">폰끼리 맞대면 그 자리에서 같이 뛰는 크루가 되는 러닝 앱. SwiftUI, NestJS, Socket.IO, GCP.</p><a class="e-link" href="https://apps.apple.com/us/app/syncrun-solo-crew-running/id6803402900" target="_blank" rel="noopener"><span data-i18n="e.srl.l">App Store</span> ↗</a></div></li>
+    <li class="entry" data-kind="work"><p class="e-meta"><span class="e-date">07</span><span class="e-kind" data-i18n="k.work">경력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.srf.t">SyncRun Labs 공동창업, CTO</h3><p class="e-desc" data-i18n="e.srf.d">iOS 앱·서버·인프라 설계와 개발 담당. GPS·만보기 융합 거리 측정, 실시간 그룹 러닝 동기화.</p></div></li>
+    <li class="entry" data-kind="edu"><p class="e-meta"><span class="e-date">07</span><span class="e-kind" data-i18n="k.edu">학력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.sjsu.t">산호세주립대 실리콘밸리 프로그램 수료</h3><p class="e-desc" data-i18n="e.sjsu.d">NVIDIA DLI ‘Rapid Application Development with LLMs’ 수료.</p></div></li>
+    <li class="entry" data-kind="research award"><p class="e-meta"><span class="e-date">06</span><span class="e-kind" data-i18n="k.research">연구</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.kiit.t">대학생논문경진대회 동상, 한국정보기술학회</h3><p class="e-desc" data-i18n="e.kiit.d">드론 버티포트용 웹 기반 CCTV 통합 감시 시스템 설계·구현. PTZ 카메라와 RTSP·ONVIF·HLS로 적은 카메라로 전체 관제. SW 저작권 등록 C-2026-030871.</p><a class="e-link" href="research.html#uam"><span data-i18n="e.kiit.l">연구 보기</span> →</a></div></li>
+    <li class="entry" data-kind="build"><p class="e-meta"><span class="e-date">05</span><span class="e-kind" data-i18n="k.build">프로젝트</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.fest.t">경북대 대동제 80주년 웹앱 실운영</h3><p class="e-desc" data-i18n="e.fest.d">사흘간 실제 관람객이 쓴 모바일 웹앱. 온라인 대기열, 실시간 부스 랭킹, 랜덤 매칭. 부스 59개, 동시접속 1,500 대비 설계, 백엔드 커밋 53%.</p><a class="e-link" href="projects/knu-festival.html"><span data-i18n="e.fest.l">자세히</span> →</a></div></li>
+    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date">05</span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.essay.t">AI·SW중심대학 에세이 공모전 대상, AI선정상</h3><p class="e-desc" data-i18n="e.essay.d">「사용설명서, 한 장씩 넘기는 중」. AI·SW중심대학 협의회장상.</p><a class="e-link" href="essay.html"><span data-i18n="e.essay.l">에세이 읽기</span> →</a></div></li>
+    <li class="entry" data-kind="press"><p class="e-meta"><span class="e-date">03</span><span class="e-kind" data-i18n="k.press">언론</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.press.t">틴매일경제 인터뷰</h3><p class="e-desc" data-i18n="e.press.d">「국방과학연구소에서 군 복무하며 첨단기술 연구」.</p><a class="e-link" href="https://teen.mk.co.kr/youth/youth01_01_view.php?c1=4&amp;c2=105&amp;c3=&amp;idx=699" target="_blank" rel="noopener"><span data-i18n="e.press.l">기사</span> ↗</a></div></li>
+    <li class="entry" data-kind="work"><p class="e-meta"><span class="e-date">01</span><span class="e-kind" data-i18n="k.work">경력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.dh.t">DataHouse Vietnam 백엔드 인턴, 다낭</h3><p class="e-desc" data-i18n="e.dh.d">Node.js·TypeScript로 Slack 챗봇 TechTalk Hub 개발. 쿼리와 UI 개선으로 응답시간 38% 단축.</p><a class="e-link" href="projects/techtalk-hub.html"><span data-i18n="e.dh.l">자세히</span> →</a></div></li>
+    <li class="entry" data-kind="activity"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.activity">활동</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.pres.t">컴퓨터학부 제17대 학생회장</h3><p class="e-desc" data-i18n="e.pres.d">학생회 Do:IT. 학부생 약 1,500명.</p></div></li>
+    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.icp.t">산학협력프로젝트 경진대회 인기상</h3><p class="e-desc" data-i18n="e.icp.d">경북대 소프트웨어교육원. 드론 버티포트 CCTV 감시 시스템.</p></div></li>
+  </ol>
+</section>
+<section class="year" id="y-2025" data-year="2025">
+  <h2 class="y-num">2025</h2>
+  <ol class="entries">
+    <li class="entry" data-kind="research award"><p class="e-meta"><span class="e-date">12</span><span class="e-kind" data-i18n="k.research">연구</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.mili.t">제6회 밀리테크 챌린지 대상, 모범상</h3><p class="e-desc" data-i18n="e.mili.d">편광이 다른 SAR 영상을 정합·합성해 단일 영상에서 안 보이던 저피탐 표적 탐지. KAIST 차세대 SAR 연구실 지도. 과기정통부 장관상.</p><a class="e-link" href="research.html#sar"><span data-i18n="e.mili.l">연구 보기</span> →</a></div></li>
+    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date">07</span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.topcit.t">제23회 TOPCIT 특별상, 교내 1위</h3><p class="e-desc" data-i18n="e.topcit.d">805점. 경북대 총장상.</p></div></li>
+    <li class="entry" data-kind="work"><p class="e-meta"><span class="e-date">05</span><span class="e-kind" data-i18n="k.work">경력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.rond.t">론드코퍼레이션 풀스택 개발자, 정규직</h3><p class="e-desc" data-i18n="e.rond.d">청년창업사관학교 선정 기업. 웹 제품 프론트엔드·백엔드 개발. 2026년 2월까지.</p></div></li>
+    <li class="entry" data-kind="research"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.research">연구</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.ksc.t">KSC 2025 논문, 시계열 임베딩 군집화 비교</h3><p class="e-desc" data-i18n="e.ksc.d">TS2Vec, PatchTST 등 임베딩 5종을 데이터셋 4개에서 비교. LLM 기반 모델의 군집 붕괴(NMI≈0) 확인. 공저. SW 저작권 등록 C-2026-000148.</p><a class="e-link" href="research.html#ts"><span data-i18n="e.ksc.l">연구 보기</span> →</a></div></li>
+  </ol>
+</section>
+<section class="year" id="y-2024" data-year="2024">
+  <h2 class="y-num">2024</h2>
+  <ol class="entries">
+    <li class="entry" data-kind="activity"><p class="e-meta"><span class="e-date">12</span><span class="e-kind" data-i18n="k.activity">활동</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.rondsel.t">과학기술전문사관(ROND) 11기 선발</h3><p class="e-desc" data-i18n="e.rondsel.d">국방과학연구소 R&amp;D 인력 양성 과정. 11기 기수 대표.</p></div></li>
+    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date">12</span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.sam.t">샘 인재 발전기금</h3><p class="e-desc" data-i18n="e.sam.d">경북대 컴퓨터학부 발전기금 장학.</p></div></li>
+    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date">11</span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.wfk.t">월드프렌즈코리아 IT봉사단 장려상</h3><p class="e-desc" data-i18n="e.wfk.d">인도네시아 3주 파견. 소 품종·무게 감지 서비스 COWELL 개발·배포. 한국지능정보사회진흥원장상.</p></div></li>
+    <li class="entry" data-kind="work build"><p class="e-meta"><span class="e-date">07</span><span class="e-kind" data-i18n="k.work">경력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.ha.t">해피에이징 산학 프로젝트, DevOps 테크리드</h3><p class="e-desc" data-i18n="e.ha.d">노인 낙상 예방 앱. 집 안 사진을 OpenAI로 분석해 위험 요소 탐지. Spring Boot 서버, Kotlin 앱, Google Play 출시. 2025년 3월까지.</p><a class="e-link" href="projects/fall-prevention.html"><span data-i18n="e.ha.l">자세히</span> →</a></div></li>
+    <li class="entry" data-kind="build"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.build">프로젝트</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.council.t">컴퓨터학부 학생회 통합 시스템</h3><p class="e-desc" data-i18n="e.council.d">학부생 1,483명 대상. SSO 인증, QR 학생증, 관리자 페이지. 학교 망 물리서버에서 직접 운영 중.</p><a class="e-link" href="projects/knu-council.html"><span data-i18n="e.council.l">자세히</span> →</a></div></li>
+    <li class="entry" data-kind="build"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.build">프로젝트</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.locker.t">사물함 통합 관리 서비스</h3><p class="e-desc" data-i18n="e.locker.d">Ubuntu 물리서버에 방화벽, Nginx, SSL, Docker 직접 구성 후 Spring Boot 서비스 배포.</p><a class="e-link" href="projects/locker.html"><span data-i18n="e.locker.l">자세히</span> →</a></div></li>
+    <li class="entry" data-kind="activity"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.activity">활동</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.goorm.t">구름톤 KNU 3·4기 백엔드 운영진</h3></div></li>
+    <li class="entry" data-kind="activity"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.activity">활동</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.rep.t">심화컴퓨터 전공 과대표</h3><p class="e-desc" data-i18n="e.rep.d">2학년, 3학년 두 해.</p></div></li>
+  </ol>
+</section>
+<section class="year" id="y-2023" data-year="2023">
+  <h2 class="y-num">2023</h2>
+  <ol class="entries">
+    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date">11</span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.dsh.t">대구를 빛내는 SW 해커톤 최우수상</h3><p class="e-desc" data-i18n="e.dsh.d">블록체인 기반 교육권 침해 신고 서비스.</p></div></li>
+    <li class="entry" data-kind="activity"><p class="e-meta"><span class="e-date">07</span><span class="e-kind" data-i18n="k.activity">활동</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.gdg.t">GDG on Campus KNU</h3><p class="e-desc" data-i18n="e.gdg.d">2026년까지. 4.5기 백엔드 코어 멤버.</p></div></li>
+    <li class="entry" data-kind="work build"><p class="e-meta"><span class="e-date">06</span><span class="e-kind" data-i18n="k.work">경력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.stock.t">주식·금융 교육 스타트업 DevOps·서버 개발자</h3><p class="e-desc" data-i18n="e.stock.d">코스피·코스닥 전 종목(3,000+) 실시간 시세 파이프라인. 모놀리식을 MSA로 전환, 1초 미만 지연. 2024년 3월까지.</p><a class="e-link" href="projects/realtime-stock.html"><span data-i18n="e.stock.l">자세히</span> →</a></div></li>
+    <li class="entry" data-kind="activity"><p class="e-meta"><span class="e-date">03</span><span class="e-kind" data-i18n="k.activity">활동</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.ll.t">멋쟁이사자처럼 11기</h3><p class="e-desc" data-i18n="e.ll.d">2025년까지 3년. 12·13기 BE 운영진으로 Java·Spring Boot 커리큘럼 설계·강의.</p></div></li>
+    <li class="entry" data-kind="edu"><p class="e-meta"><span class="e-date">03</span><span class="e-kind" data-i18n="k.edu">학력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.knu.t">경북대학교 컴퓨터학부 입학</h3></div></li>
+    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.hack.t">SW교육원 아이디어 해커톤 대상</h3><p class="e-desc" data-i18n="e.hack.d">대구·경북 5개 대학 참가. 사진 작가 전시 플랫폼 ‘우리 동네 사진 작가’.</p></div></li>
+  </ol>
+</section>
+            <p class="certs"><span class="certs-k" data-i18n="certs.k">자격증·장학</span><span data-i18n="certs.v">NVIDIA DLI LLM 응용개발(2026) · SQLD(2025) · 프로그래밍기능사(2024) · 국가우수장학금(이공계)</span></p>
+        </section>
+
+        <section class="off" id="personal" aria-label="취미, 언어">
+            <h2 class="label" data-i18n="off.hobby.k">취미</h2>
+            <p class="off-words"><span data-i18n="off.hobby.v1">러닝</span><span data-i18n="off.hobby.v2">수영</span></p>
+            <h2 class="label" data-i18n="off.lang.k">언어</h2>
+            <p class="off-words"><span lang="ko">한국어<small data-i18n="off.lang.note">모국어</small></span><span lang="en">English</span><span lang="es">Español</span></p>
+        </section>
+
+        <section class="contact" id="contact" aria-labelledby="contact-label">
+            <h2 class="label" id="contact-label" data-i18n="contact.label">연락</h2>
+            <div class="contact-grid">
+                <div>
+                    <a class="contact-mail" href="mailto:sjsb4838@gmail.com">sjsb4838@gmail.com</a>
+                    <p class="contact-links">
+                        <a href="https://github.com/lsmin3388" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/in/sangminn0" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://velog.io/@sangminn" target="_blank" rel="noopener">velog</a>
+                    </p>
+                </div>
             </div>
         </section>
     </main>
+    </div>
 
-    <footer class="footer">
-        <p class="footer-es es">Hecho con calma · Daegu, KR</p>
-        <p class="footer-credit">© 2026 이상민 · Sangmin Lee</p>
+    <footer class="foot">
+        <p class="es" data-i18n="foot.es">Hecho con calma · Daegu</p>
+        <p>© 2026 이상민 · Sangmin Lee</p>
     </footer>
 
     <script src="js/i18n.js"></script>

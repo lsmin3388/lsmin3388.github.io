@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1d1a16" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description" content="경북대 컴퓨터학부 학생회 통합 시스템 — 학부 재학생 1,483명 대상 SSO·QR 인증, 물리서버 직접 운영.">
     <title>경북대 학생회 통합 시스템 · 이상민</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23faf7f2'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23c4634a'/%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ffffff'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%230a0a0a'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet">
@@ -18,7 +17,7 @@
     <a class="skip-link" href="#content">본문으로 건너뛰기</a>
     <header class="nav detail-nav" id="nav">
         <div class="nav-inner">
-            <a href="../index.html" class="nav-brand" data-i18n="nav.brand">Curriculum Vitae</a>
+            <a href="../index.html" class="nav-brand" data-i18n="nav.brand">이상민</a>
             <div class="nav-actions">
                 <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">EN</button>
             </div>
@@ -26,25 +25,25 @@
     </header>
 
     <main class="detail" id="content">
-        <a href="../index.html#projects" class="back-link" data-i18n="common.back">← 메인으로</a>
+        <a href="../index.html#log" class="back-link" data-i18n="common.back">← 처음으로</a>
         <header class="detail-head">
             <span class="eyebrow" data-i18n="d.council.eyebrow">Project · 학생회</span>
             <h1 class="detail-title" data-i18n="d.council.title">경북대 컴퓨터학부 학생회 통합 시스템</h1>
             <div class="detail-meta">
                 <div><span class="dm-label" data-i18n="d.role">역할</span><span data-i18n="d.council.role">설계 · 구축 · 운영</span></div>
-                <div><span class="dm-label" data-i18n="d.period">기간</span><span data-i18n="d.council.period">2024 — 현재 · 학부 재학생 1,483명</span></div>
+                <div><span class="dm-label" data-i18n="d.period">기간</span><span data-i18n="d.council.period">2024 ~ 현재 · 학부 재학생 1,483명</span></div>
             </div>
         </header>
         <div class="detail-body">
-            <section class="block"><h2 data-i18n="d.h.context">배경</h2><p data-i18n="d.council.context">학부 학생회 운영을 위한 통합 웹 시스템을 직접 설계·구축하고 운영합니다.</p></section>
-            <section class="block"><h2 data-i18n="d.h.problem">문제</h2><p data-i18n="d.council.problem">학생 정보·인증·학생회비·사물함 등이 흩어져 수기로 관리되었습니다.</p></section>
-            <section class="block"><h2 data-i18n="d.h.solution">해결</h2><p data-i18n="d.council.solution">개인정보 DB, SSO 인증서버, QR 학생증 인증, 관리자 페이지를 구축하고 물리서버를 직접 운영합니다.</p></section>
-            <section class="block"><h2 data-i18n="d.h.impact">성과</h2><p data-i18n="d.council.impact">흩어진 업무를 하나의 인증 기반 시스템으로 통합, 학부 재학생 1,483명이 대상입니다.</p></section>
+            <section class="block"><h2 data-i18n="d.h.context">배경</h2><p data-i18n="d.council.context">학부 학생회 운영용 통합 웹 시스템 설계·구축·운영. 대상은 학부 재학생 1,483명.</p></section>
+            <section class="block"><h2 data-i18n="d.h.problem">문제</h2><p data-i18n="d.council.problem">학생 정보, 인증, 학생회비, 사물함 관리가 흩어진 채 수기로 진행. 비효율과 개인정보 유출 위험.</p></section>
+            <section class="block"><h2 data-i18n="d.h.solution">해결</h2><p data-i18n="d.council.solution">학부 학적 DB 설계(1,485건). SSO 인증서버, QR 학생증 인증, 학생회 관리자 페이지 구축. 학교 망 물리서버를 직접 운영하며 Docker·Nginx로 통합 배포.</p></section>
+            <section class="block"><h2 data-i18n="d.h.impact">성과</h2><p data-i18n="d.council.impact">흩어진 학사·학생회 업무를 인증 하나로 통합. 학부 재학생 1,483명 대상 서비스 직접 운영 중.</p></section>
             <section class="block"><h2 data-i18n="d.stack">기술 스택</h2>
                 <div class="tags"><span>Spring Boot</span><span>JPA</span><span>Spring Security</span><span>Thymeleaf</span><span>MySQL</span><span>Flyway</span><span>Docker</span><span>Nginx</span></div>
             </section>
         </div>
-        <a href="../index.html#projects" class="back-link bottom" data-i18n="common.back">← 메인으로</a>
+        <a href="../index.html#log" class="back-link bottom" data-i18n="common.back">← 처음으로</a>
     </main>
 
     <footer class="footer">
