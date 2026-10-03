@@ -42,7 +42,8 @@
         <nav class="rail" aria-label="목차">
             <ol>
                 <li><a href="#featured" data-i18n="feat.label">대표 프로젝트</a></li>
-                <li><a href="#log" data-i18n="log.title">이력</a><ol class="rail-sub"><li><a href="#y-next" data-i18n="y.next">예정</a></li><li><a href="#y-2026">2026</a></li><li><a href="#y-2025">2025</a></li><li><a href="#y-2024">2024</a></li><li><a href="#y-2023">2023</a></li></ol></li>
+                <li><a href="#work" data-i18n="sec.work">경력</a></li><li><a href="#projects" data-i18n="sec.projects">프로젝트</a></li><li><a href="#research" data-i18n="sec.research">연구</a></li><li><a href="#awards" data-i18n="sec.awards">수상</a></li><li><a href="#activity" data-i18n="sec.activity">활동</a></li><li><a href="#edu" data-i18n="sec.edu">학력</a></li>
+                <li><a href="#more" data-i18n="sec.more">기타</a></li>
             </ol>
         </nav>
     <main id="content">
@@ -82,75 +83,78 @@
             </ol>
         </section>
 
-        <section class="log" id="log" aria-labelledby="log-title">
-            <div class="log-head">
-                <h2 class="label" id="log-title" data-i18n="log.title">이력</h2>
-                <div class="filters" role="group" aria-label="분류">
-                    <button type="button" data-filter="all" aria-pressed="true" data-i18n="f.all">전체</button>
-                    <button type="button" data-filter="build" aria-pressed="false" data-i18n="f.build">프로젝트</button>
-                    <button type="button" data-filter="work" aria-pressed="false" data-i18n="f.work">경력</button>
-                    <button type="button" data-filter="research" aria-pressed="false" data-i18n="f.research">연구</button>
-                    <button type="button" data-filter="award" aria-pressed="false" data-i18n="f.award">수상</button>
-                    <button type="button" data-filter="activity" aria-pressed="false" data-i18n="f.activity">활동</button>
-                </div>
+        <section class="cv" id="work" aria-labelledby="h-work">
+            <h2 class="label" id="h-work" data-i18n="sec.work">경력</h2>
+            <ol class="rows">
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.srf.t">SyncRun Labs 공동창업, CTO</h3><p class="row-desc" data-i18n="e.srf.d">러닝 앱 SyncRun의 iOS 앱·서버·인프라 설계와 개발 담당. GPS·만보기 융합 거리 측정, 실시간 그룹 러닝 동기화. 2026년 9월 App Store 출시.</p><a class="row-link" href="projects/syncrun.html"><span data-i18n="e.srf.l">자세히</span> →</a></div><span class="row-date">2026.07 ~</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.dh.t">DataHouse Vietnam 백엔드 인턴, 다낭</h3><p class="row-desc" data-i18n="e.dh.d">Node.js·TypeScript로 Slack 챗봇 TechTalk Hub 개발. 쿼리와 UI 개선으로 응답시간 38% 단축.</p><a class="row-link" href="projects/techtalk-hub.html"><span data-i18n="e.dh.l">자세히</span> →</a></div><span class="row-date">2026.01 ~ 02</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.rond.t">론드코퍼레이션 풀스택 개발자, 정규직</h3><p class="row-desc" data-i18n="e.rond.d">청년창업사관학교 선정 기업. 웹 제품 프론트엔드·백엔드 개발.</p></div><span class="row-date">2025.05 ~ 2026.02</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.ha.t">해피에이징 산학 프로젝트, DevOps 테크리드</h3><p class="row-desc" data-i18n="e.ha.d">노인 낙상 예방 앱. 집 안 사진을 OpenAI로 분석해 위험 요소 탐지. Spring Boot 서버, Kotlin 앱, Google Play 출시.</p><a class="row-link" href="projects/fall-prevention.html"><span data-i18n="e.ha.l">자세히</span> →</a></div><span class="row-date">2024.07 ~ 2025.03</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.stock.t">주식·금융 교육 스타트업 DevOps·서버 개발자</h3><p class="row-desc" data-i18n="e.stock.d">코스피·코스닥 전 종목(3,000+) 실시간 시세 파이프라인. 모놀리식을 MSA로 전환, 1초 미만 지연.</p><a class="row-link" href="projects/realtime-stock.html"><span data-i18n="e.stock.l">자세히</span> →</a></div><span class="row-date">2023.06 ~ 2024.03</span></li>
+            </ol>
+        </section>
+
+        <section class="cv" id="projects" aria-labelledby="h-projects">
+            <h2 class="label" id="h-projects" data-i18n="sec.projects">프로젝트</h2>
+            <ol class="rows">
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.fest.t">경북대 대동제 80주년 웹앱 실운영</h3><p class="row-desc" data-i18n="e.fest.d">사흘간 실제 관람객이 쓴 모바일 웹앱. 온라인 대기열, 실시간 부스 랭킹, 랜덤 매칭. 부스 59개, 동시접속 1,500 대비 설계, 백엔드 커밋 53%.</p><a class="row-link" href="projects/knu-festival.html"><span data-i18n="e.fest.l">자세히</span> →</a></div><span class="row-date">2026.05</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.council.t">컴퓨터학부 학생회 통합 시스템</h3><p class="row-desc" data-i18n="e.council.d">학부생 1,483명 대상. SSO 인증, QR 학생증, 관리자 페이지. 학교 망 물리서버에서 직접 운영 중.</p><a class="row-link" href="projects/knu-council.html"><span data-i18n="e.council.l">자세히</span> →</a></div><span class="row-date">2024 ~</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.locker.t">사물함 통합 관리 서비스</h3><p class="row-desc" data-i18n="e.locker.d">Ubuntu 물리서버에 방화벽, Nginx, SSL, Docker 직접 구성 후 Spring Boot 서비스 배포.</p><a class="row-link" href="projects/locker.html"><span data-i18n="e.locker.l">자세히</span> →</a></div><span class="row-date">2024</span></li>
+            </ol>
+        </section>
+
+        <section class="cv" id="research" aria-labelledby="h-research">
+            <h2 class="label" id="h-research" data-i18n="sec.research">연구</h2>
+            <ol class="rows">
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.r_uam.t">드론 버티포트 CCTV 통합 감시 시스템</h3><p class="row-desc" data-i18n="e.r_uam.d">RTSP·WebRTC·HLS·ONVIF 기반 웹 관제 시스템 설계·구현. ㈜엠엠피 산학협력. 한국정보기술학회 논문, 동등 기여 저자.</p><a class="row-link" href="projects/vertiport.html"><span data-i18n="e.r_uam.l">자세히</span> →</a></div><span class="row-date">2026.06</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.r_sar.t">편광 SAR 저피탐 표적 탐지</h3><p class="row-desc" data-i18n="e.r_sar.d">편광 채널 정합, Pauli 분해, 편광 RGB 합성으로 단일 편파에서 안 보이던 표적 탐지. 중앙대·서울대·DGIST·경북대·공군사관학교 연합팀, KAIST 차세대 SAR 연구실 지도. 정합·Pauli 분해·RGB 합성 담당.</p><a class="row-link" href="projects/sar.html"><span data-i18n="e.r_sar.l">자세히</span> →</a></div><span class="row-date">2025.12</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.r_ksc.t">시계열 임베딩의 군집화 가능성 연구</h3><p class="row-desc" data-i18n="e.r_ksc.d">시계열 임베딩 모델 5종의 비지도 군집화 성능을 UEA 데이터셋 4종에서 비교. LLM 기반 모델의 NMI 붕괴 확인. KSC 2025, 공저.</p><a class="row-link" href="projects/ts-embedding.html"><span data-i18n="e.r_ksc.l">자세히</span> →</a></div><span class="row-date">2025</span></li>
+            </ol>
+        </section>
+
+        <section class="cv" id="awards" aria-labelledby="h-awards">
+            <h2 class="label" id="h-awards" data-i18n="sec.awards">수상</h2>
+            <ol class="rows">
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.mili.t">제6회 밀리테크 챌린지 대상 (과학기술정보통신부 장관상)</h3><p class="row-desc" data-i18n="e.mili.d">편광 SAR 저피탐 표적 탐지 연구. 모범상(과학기술전문사관지원센터장상) 함께 수상.</p><a class="row-link" href="projects/sar.html"><span data-i18n="e.mili.l">자세히</span> →</a></div><span class="row-date">2025.12</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.kiit.t">대학생논문경진대회 동상, 한국정보기술학회</h3><p class="row-desc" data-i18n="e.kiit.d">드론 버티포트 CCTV 통합 감시 시스템 논문.</p><a class="row-link" href="projects/vertiport.html"><span data-i18n="e.kiit.l">자세히</span> →</a></div><span class="row-date">2026.06</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.essay.t">AI·SW중심대학 에세이 공모전 대상, AI선정상</h3><p class="row-desc" data-i18n="e.essay.d">「사용설명서, 한 장씩 넘기는 중」. AI·SW중심대학 협의회장상.</p><a class="row-link" href="essay.html"><span data-i18n="e.essay.l">에세이 읽기</span> →</a></div><span class="row-date">2026.05</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.icp.t">산학협력프로젝트 경진대회 인기상</h3><p class="row-desc" data-i18n="e.icp.d">경북대 소프트웨어교육원. 드론 버티포트 CCTV 감시 시스템.</p></div><span class="row-date">2026</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.topcit.t">제23회 TOPCIT 특별상, 교내 1위</h3><p class="row-desc" data-i18n="e.topcit.d">805점. 경북대 총장상.</p></div><span class="row-date">2025.07</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.wfk.t">월드프렌즈코리아 IT봉사단 장려상</h3><p class="row-desc" data-i18n="e.wfk.d">인도네시아 3주 파견. 소 품종·무게 감지 서비스 COWELL 개발·배포. 한국지능정보사회진흥원장상.</p></div><span class="row-date">2024.11</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.dsh.t">대구를 빛내는 SW 해커톤 최우수상</h3><p class="row-desc" data-i18n="e.dsh.d">블록체인 기반 교육권 침해 신고 서비스.</p></div><span class="row-date">2023.11</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.hack.t">SW교육원 아이디어 해커톤 대상</h3><p class="row-desc" data-i18n="e.hack.d">대구·경북 5개 대학 참가. 사진 작가 전시 플랫폼 ‘우리 동네 사진 작가’.</p></div><span class="row-date">2023</span></li>
+            </ol>
+        </section>
+
+        <section class="cv" id="activity" aria-labelledby="h-activity">
+            <h2 class="label" id="h-activity" data-i18n="sec.activity">활동</h2>
+            <ol class="rows">
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.pres.t">컴퓨터학부 제17대 학생회장</h3><p class="row-desc" data-i18n="e.pres.d">학생회 Do:IT. 학부생 약 1,500명.</p></div><span class="row-date">2026</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.rondsel.t">과학기술전문사관(ROND) 11기 선발</h3><p class="row-desc" data-i18n="e.rondsel.d">국방과학연구소 R&amp;D 인력 양성 과정. 11기 기수 대표.</p></div><span class="row-date">2024.12 ~</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.rep.t">심화컴퓨터 전공 과대표</h3><p class="row-desc" data-i18n="e.rep.d">2학년, 3학년 두 해.</p></div><span class="row-date">2024 ~ 2025</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.goorm.t">구름톤 KNU 3·4기 백엔드 운영진</h3></div><span class="row-date">2024 ~ 2025</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.gdg.t">GDG on Campus KNU</h3><p class="row-desc" data-i18n="e.gdg.d">4.5기 백엔드 코어 멤버.</p></div><span class="row-date">2023 ~ 2026</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.ll.t">멋쟁이사자처럼 11~13기</h3><p class="row-desc" data-i18n="e.ll.d">12·13기 BE 운영진으로 Java·Spring Boot 커리큘럼 설계·강의.</p></div><span class="row-date">2023 ~ 2025</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.press.t">틴매일경제 인터뷰</h3><p class="row-desc" data-i18n="e.press.d">「국방과학연구소에서 군 복무하며 첨단기술 연구」.</p><a class="row-link" href="https://teen.mk.co.kr/youth/youth01_01_view.php?c1=4&amp;c2=105&amp;c3=&amp;idx=699" target="_blank" rel="noopener"><span data-i18n="e.press.l">기사</span> ↗</a></div><span class="row-date">2026.03</span></li>
+            </ol>
+        </section>
+
+        <section class="cv" id="edu" aria-labelledby="h-edu">
+            <h2 class="label" id="h-edu" data-i18n="sec.edu">학력</h2>
+            <ol class="rows">
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.grad.t">경북대학교 컴퓨터학부</h3><p class="row-desc" data-i18n="e.grad.d">플랫폼SW·데이터과학 전공. 2027년 2월 졸업 예정.</p></div><span class="row-date">2023.03 ~ 2027.02</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.add.t">국방과학연구소(ADD) 연구장교 복무 예정</h3><p class="row-desc" data-i18n="e.add.d">과학기술전문사관 11기. 2030년 6월까지 3년 복무 예정.</p></div><span class="row-date">2027.06 ~ 2030.06</span></li>
+                <li class="row"><div class="row-main"><h3 class="row-title" data-i18n="e.sjsu.t">산호세주립대 실리콘밸리 프로그램 수료</h3><p class="row-desc" data-i18n="e.sjsu.d">NVIDIA DLI ‘Rapid Application Development with LLMs’ 수료.</p></div><span class="row-date">2026.07</span></li>
+            </ol>
+        </section>
+
+        <section class="cv" id="more" aria-labelledby="h-more">
+            <h2 class="label" id="h-more" data-i18n="sec.more">기타</h2>
+            <div class="more">
+                <p class="certs"><span class="certs-k" data-i18n="certs.k">자격·장학</span><span data-i18n="certs.v">NVIDIA DLI LLM 응용개발(2026) · SQLD(2025) · 프로그래밍기능사(2024) · 국가우수장학금(이공계) · 샘 인재 발전기금(2024)</span></p>
+                <p class="certs"><span class="certs-k" data-i18n="off.hobby.k">취미</span><span><span data-i18n="off.hobby.v1">러닝</span>, <span data-i18n="off.hobby.v2">수영</span></span></p>
+                <p class="certs"><span class="certs-k" data-i18n="off.lang.k">언어</span><span>한국어(<span data-i18n="off.lang.note">모국어</span>), English, Español</span></p>
             </div>
-<section class="year is-next" id="y-next" data-year="next">
-  <h2 class="y-num"><span data-i18n="y.next">예정</span></h2>
-  <ol class="entries">
-    <li class="entry" data-kind="next"><p class="e-meta"><span class="e-date">2027.06</span><span class="e-kind" data-i18n="k.next">예정</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.add.t">국방과학연구소(ADD) 연구장교 복무 시작</h3><p class="e-desc" data-i18n="e.add.d">과학기술전문사관 11기. 2030년 6월까지 3년.</p></div></li>
-    <li class="entry" data-kind="next"><p class="e-meta"><span class="e-date">2027.02</span><span class="e-kind" data-i18n="k.next">예정</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.grad.t">경북대학교 컴퓨터학부 졸업 예정</h3><p class="e-desc" data-i18n="e.grad.d">플랫폼SW·데이터과학 전공.</p></div></li>
-  </ol>
-</section>
-<section class="year" id="y-2026" data-year="2026">
-  <h2 class="y-num">2026</h2>
-  <ol class="entries">
-    <li class="entry" data-kind="work"><p class="e-meta"><span class="e-date">07</span><span class="e-kind" data-i18n="k.work">경력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.srf.t">SyncRun Labs 공동창업, CTO</h3><p class="e-desc" data-i18n="e.srf.d">러닝 앱 SyncRun의 iOS 앱·서버·인프라 설계와 개발 담당. GPS·만보기 융합 거리 측정, 실시간 그룹 러닝 동기화. 2026년 9월 App Store 출시.</p><a class="e-link" href="projects/syncrun.html"><span data-i18n="e.srf.l">자세히</span> →</a></div></li>
-    <li class="entry" data-kind="edu"><p class="e-meta"><span class="e-date">07</span><span class="e-kind" data-i18n="k.edu">학력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.sjsu.t">산호세주립대 실리콘밸리 프로그램 수료</h3><p class="e-desc" data-i18n="e.sjsu.d">NVIDIA DLI ‘Rapid Application Development with LLMs’ 수료.</p></div></li>
-    <li class="entry" data-kind="research award"><p class="e-meta"><span class="e-date">06</span><span class="e-kind" data-i18n="k.research">연구</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.kiit.t">대학생논문경진대회 동상, 한국정보기술학회</h3><p class="e-desc" data-i18n="e.kiit.d">드론 버티포트용 웹 기반 CCTV 통합 감시 시스템 설계·구현. PTZ 카메라와 RTSP·ONVIF·HLS로 적은 카메라로 전체 관제. SW 저작권 등록 C-2026-030871.</p><a class="e-link" href="projects/vertiport.html"><span data-i18n="e.kiit.l">자세히</span> →</a></div></li>
-    <li class="entry" data-kind="build"><p class="e-meta"><span class="e-date">05</span><span class="e-kind" data-i18n="k.build">프로젝트</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.fest.t">경북대 대동제 80주년 웹앱 실운영</h3><p class="e-desc" data-i18n="e.fest.d">사흘간 실제 관람객이 쓴 모바일 웹앱. 온라인 대기열, 실시간 부스 랭킹, 랜덤 매칭. 부스 59개, 동시접속 1,500 대비 설계, 백엔드 커밋 53%.</p><a class="e-link" href="projects/knu-festival.html"><span data-i18n="e.fest.l">자세히</span> →</a></div></li>
-    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date">05</span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.essay.t">AI·SW중심대학 에세이 공모전 대상, AI선정상</h3><p class="e-desc" data-i18n="e.essay.d">「사용설명서, 한 장씩 넘기는 중」. AI·SW중심대학 협의회장상.</p><a class="e-link" href="essay.html"><span data-i18n="e.essay.l">에세이 읽기</span> →</a></div></li>
-    <li class="entry" data-kind="press"><p class="e-meta"><span class="e-date">03</span><span class="e-kind" data-i18n="k.press">언론</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.press.t">틴매일경제 인터뷰</h3><p class="e-desc" data-i18n="e.press.d">「국방과학연구소에서 군 복무하며 첨단기술 연구」.</p><a class="e-link" href="https://teen.mk.co.kr/youth/youth01_01_view.php?c1=4&amp;c2=105&amp;c3=&amp;idx=699" target="_blank" rel="noopener"><span data-i18n="e.press.l">기사</span> ↗</a></div></li>
-    <li class="entry" data-kind="work"><p class="e-meta"><span class="e-date">01</span><span class="e-kind" data-i18n="k.work">경력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.dh.t">DataHouse Vietnam 백엔드 인턴, 다낭</h3><p class="e-desc" data-i18n="e.dh.d">Node.js·TypeScript로 Slack 챗봇 TechTalk Hub 개발. 쿼리와 UI 개선으로 응답시간 38% 단축.</p><a class="e-link" href="projects/techtalk-hub.html"><span data-i18n="e.dh.l">자세히</span> →</a></div></li>
-    <li class="entry" data-kind="activity"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.activity">활동</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.pres.t">컴퓨터학부 제17대 학생회장</h3><p class="e-desc" data-i18n="e.pres.d">학생회 Do:IT. 학부생 약 1,500명.</p></div></li>
-    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.icp.t">산학협력프로젝트 경진대회 인기상</h3><p class="e-desc" data-i18n="e.icp.d">경북대 소프트웨어교육원. 드론 버티포트 CCTV 감시 시스템.</p></div></li>
-  </ol>
-</section>
-<section class="year" id="y-2025" data-year="2025">
-  <h2 class="y-num">2025</h2>
-  <ol class="entries">
-    <li class="entry" data-kind="research award"><p class="e-meta"><span class="e-date">12</span><span class="e-kind" data-i18n="k.research">연구</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.mili.t">제6회 밀리테크 챌린지 대상 (과학기술정보통신부 장관상)</h3><p class="e-desc" data-i18n="e.mili.d">편광이 다른 SAR 영상을 정합·합성해 단일 영상에서 안 보이던 저피탐 표적 탐지. KAIST 차세대 SAR 연구실 지도, 정합·Pauli 분해·RGB 합성 담당. 모범상(과학기술전문사관지원센터장상) 함께 수상.</p><a class="e-link" href="projects/sar.html"><span data-i18n="e.mili.l">자세히</span> →</a></div></li>
-    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date">07</span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.topcit.t">제23회 TOPCIT 특별상, 교내 1위</h3><p class="e-desc" data-i18n="e.topcit.d">805점. 경북대 총장상.</p></div></li>
-    <li class="entry" data-kind="work"><p class="e-meta"><span class="e-date">05</span><span class="e-kind" data-i18n="k.work">경력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.rond.t">론드코퍼레이션 풀스택 개발자, 정규직</h3><p class="e-desc" data-i18n="e.rond.d">청년창업사관학교 선정 기업. 웹 제품 프론트엔드·백엔드 개발. 2026년 2월까지.</p></div></li>
-    <li class="entry" data-kind="research"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.research">연구</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.ksc.t">KSC 2025 논문, 시계열 임베딩 군집화 비교</h3><p class="e-desc" data-i18n="e.ksc.d">TS2Vec, PatchTST 등 임베딩 5종을 데이터셋 4개에서 비교. LLM 기반 모델의 군집 붕괴(NMI≈0) 확인. 공저. SW 저작권 등록 C-2026-000148.</p><a class="e-link" href="projects/ts-embedding.html"><span data-i18n="e.ksc.l">자세히</span> →</a></div></li>
-  </ol>
-</section>
-<section class="year" id="y-2024" data-year="2024">
-  <h2 class="y-num">2024</h2>
-  <ol class="entries">
-    <li class="entry" data-kind="activity"><p class="e-meta"><span class="e-date">12</span><span class="e-kind" data-i18n="k.activity">활동</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.rondsel.t">과학기술전문사관(ROND) 11기 선발</h3><p class="e-desc" data-i18n="e.rondsel.d">국방과학연구소 R&amp;D 인력 양성 과정. 11기 기수 대표.</p></div></li>
-    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date">12</span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.sam.t">샘 인재 발전기금</h3><p class="e-desc" data-i18n="e.sam.d">경북대 컴퓨터학부 발전기금 장학.</p></div></li>
-    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date">11</span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.wfk.t">월드프렌즈코리아 IT봉사단 장려상</h3><p class="e-desc" data-i18n="e.wfk.d">인도네시아 3주 파견. 소 품종·무게 감지 서비스 COWELL 개발·배포. 한국지능정보사회진흥원장상.</p></div></li>
-    <li class="entry" data-kind="work build"><p class="e-meta"><span class="e-date">07</span><span class="e-kind" data-i18n="k.work">경력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.ha.t">해피에이징 산학 프로젝트, DevOps 테크리드</h3><p class="e-desc" data-i18n="e.ha.d">노인 낙상 예방 앱. 집 안 사진을 OpenAI로 분석해 위험 요소 탐지. Spring Boot 서버, Kotlin 앱, Google Play 출시. 2025년 3월까지.</p><a class="e-link" href="projects/fall-prevention.html"><span data-i18n="e.ha.l">자세히</span> →</a></div></li>
-    <li class="entry" data-kind="build"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.build">프로젝트</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.council.t">컴퓨터학부 학생회 통합 시스템</h3><p class="e-desc" data-i18n="e.council.d">학부생 1,483명 대상. SSO 인증, QR 학생증, 관리자 페이지. 학교 망 물리서버에서 직접 운영 중.</p><a class="e-link" href="projects/knu-council.html"><span data-i18n="e.council.l">자세히</span> →</a></div></li>
-    <li class="entry" data-kind="build"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.build">프로젝트</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.locker.t">사물함 통합 관리 서비스</h3><p class="e-desc" data-i18n="e.locker.d">Ubuntu 물리서버에 방화벽, Nginx, SSL, Docker 직접 구성 후 Spring Boot 서비스 배포.</p><a class="e-link" href="projects/locker.html"><span data-i18n="e.locker.l">자세히</span> →</a></div></li>
-    <li class="entry" data-kind="activity"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.activity">활동</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.goorm.t">구름톤 KNU 3·4기 백엔드 운영진</h3></div></li>
-    <li class="entry" data-kind="activity"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.activity">활동</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.rep.t">심화컴퓨터 전공 과대표</h3><p class="e-desc" data-i18n="e.rep.d">2학년, 3학년 두 해.</p></div></li>
-  </ol>
-</section>
-<section class="year" id="y-2023" data-year="2023">
-  <h2 class="y-num">2023</h2>
-  <ol class="entries">
-    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date">11</span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.dsh.t">대구를 빛내는 SW 해커톤 최우수상</h3><p class="e-desc" data-i18n="e.dsh.d">블록체인 기반 교육권 침해 신고 서비스.</p></div></li>
-    <li class="entry" data-kind="activity"><p class="e-meta"><span class="e-date">07</span><span class="e-kind" data-i18n="k.activity">활동</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.gdg.t">GDG on Campus KNU</h3><p class="e-desc" data-i18n="e.gdg.d">2026년까지. 4.5기 백엔드 코어 멤버.</p></div></li>
-    <li class="entry" data-kind="work build"><p class="e-meta"><span class="e-date">06</span><span class="e-kind" data-i18n="k.work">경력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.stock.t">주식·금융 교육 스타트업 DevOps·서버 개발자</h3><p class="e-desc" data-i18n="e.stock.d">코스피·코스닥 전 종목(3,000+) 실시간 시세 파이프라인. 모놀리식을 MSA로 전환, 1초 미만 지연. 2024년 3월까지.</p><a class="e-link" href="projects/realtime-stock.html"><span data-i18n="e.stock.l">자세히</span> →</a></div></li>
-    <li class="entry" data-kind="activity"><p class="e-meta"><span class="e-date">03</span><span class="e-kind" data-i18n="k.activity">활동</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.ll.t">멋쟁이사자처럼 11기</h3><p class="e-desc" data-i18n="e.ll.d">2025년까지 3년. 12·13기 BE 운영진으로 Java·Spring Boot 커리큘럼 설계·강의.</p></div></li>
-    <li class="entry" data-kind="edu"><p class="e-meta"><span class="e-date">03</span><span class="e-kind" data-i18n="k.edu">학력</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.knu.t">경북대학교 컴퓨터학부 입학</h3></div></li>
-    <li class="entry" data-kind="award"><p class="e-meta"><span class="e-date"></span><span class="e-kind" data-i18n="k.award">수상</span></p><div class="e-body"><h3 class="e-title" data-i18n="e.hack.t">SW교육원 아이디어 해커톤 대상</h3><p class="e-desc" data-i18n="e.hack.d">대구·경북 5개 대학 참가. 사진 작가 전시 플랫폼 ‘우리 동네 사진 작가’.</p></div></li>
-  </ol>
-</section>
-            <p class="certs"><span class="certs-k" data-i18n="certs.k">자격증·장학</span><span data-i18n="certs.v">NVIDIA DLI LLM 응용개발(2026) · SQLD(2025) · 프로그래밍기능사(2024) · 국가우수장학금(이공계)</span></p>
-            <p class="certs" id="personal"><span class="certs-k" data-i18n="off.hobby.k">취미</span><span><span data-i18n="off.hobby.v1">러닝</span>, <span data-i18n="off.hobby.v2">수영</span></span></p>
-            <p class="certs"><span class="certs-k" data-i18n="off.lang.k">언어</span><span>한국어(<span data-i18n="off.lang.note">모국어</span>), English, Español</span></p>
         </section>
 
     </main>
