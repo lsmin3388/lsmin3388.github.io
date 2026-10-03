@@ -113,21 +113,25 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
     vertical-align: 0.35em;
 }
 .hero-es { font-family: var(--serif); font-style: italic; font-size: 19px; margin-top: 6px; }
-.hero-text {
+.hero-roles {
+    list-style: none;
     margin-top: 22px;
-    padding-top: 18px;
+    padding-top: 16px;
     border-top: 1px solid var(--ink);
-    max-width: 40em;
-    font-size: 16.5px;
-    color: var(--soft);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
 }
-.hero-text p + p { margin-top: 6px; }
-.hero-text p:first-child { color: var(--ink); font-weight: 600; }
+.hero-text { margin-top: 16px; max-width: 40em; font-size: 16px; color: var(--soft); }
+.hero-text p + p { margin-top: 4px; }
+.hero-text p:first-child { color: var(--ink); font-weight: 500; }
 .hero-links { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 18px; font-size: 15px; font-weight: 500; }
 
 /* ---------- 섹션 공통 ---------- */
 .featured, .log, .off, .contact { border-top: var(--thick) solid var(--ink); padding-top: 16px; }
 .featured, .log, .off { margin-bottom: clamp(64px, 9vh, 104px); }
+.log { margin-bottom: 56px; }
 .label { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; }
 .log-head, .year, .certs, .off, .contact {
     display: grid;
@@ -254,7 +258,8 @@ a.card-in:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--
 .e-link:hover span { text-decoration: underline; }
 .year.is-next .e-title, .year.is-next .e-desc { color: var(--muted); }
 
-.certs { font-size: 14px; color: var(--soft); padding-top: 20px; border-top: 1px solid var(--ink); }
+.certs { font-size: 14px; color: var(--soft); padding: 14px 0; border-top: 1px solid var(--hair); }
+.year + .certs { border-top: 1px solid var(--ink); padding-top: 20px; }
 .certs-k { color: var(--ink); font-weight: 700; }
 
 /* ---------- 취미 · 언어 ---------- */
@@ -410,7 +415,8 @@ a.card-in:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--
     .hero { grid-template-columns: 90px 1fr; padding: 0 0 14px; column-gap: 20px; }
     .hero-photo { width: 90px; border-width: 2px; }
     .hero-name { font-size: 26pt; }
-    .hero-text { font-size: 9.5pt; margin-top: 10px; padding-top: 8px; }
+    .hero-roles { font-size: 10pt; margin-top: 10px; padding-top: 8px; }
+    .hero-text { font-size: 9.5pt; margin-top: 6px; }
     .hero-links { margin-top: 8px; font-size: 9.5pt; }
     .log-head, .year, .certs, .off, .contact { grid-template-columns: 80px 1fr; column-gap: 20px; }
     .log, .off, .contact { margin-bottom: 16px; padding-top: 8px; }
@@ -433,3 +439,6 @@ a.card-in:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--
 @media (prefers-reduced-motion: no-preference) {
     @view-transition { navigation: auto; }
 }
+
+.foot a { color: var(--ink); text-decoration: none; font-weight: 600; }
+.foot a:hover { text-decoration: underline; }
