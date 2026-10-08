@@ -123,9 +123,6 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
     line-height: 1.6;
     letter-spacing: -0.01em;
 }
-.hero-text { margin-top: 16px; max-width: 40em; font-size: 16px; color: var(--soft); }
-.hero-text p + p { margin-top: 4px; }
-.hero-text p:first-child { color: var(--ink); font-weight: 500; }
 .hero-links { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 18px; font-size: 15px; font-weight: 500; }
 
 /* ---------- 섹션 공통 ---------- */
@@ -319,7 +316,6 @@ a.card-in:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--
     .hero-photo { width: 90px; border-width: 2px; }
     .hero-name { font-size: 26pt; }
     .hero-roles { font-size: 10pt; margin-top: 10px; padding-top: 8px; }
-    .hero-text { font-size: 9.5pt; margin-top: 6px; }
     .hero-links { margin-top: 8px; font-size: 9.5pt; }
     a { text-decoration: none; }
 }
