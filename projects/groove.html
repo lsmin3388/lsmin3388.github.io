@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="GROOVE 6단대 연합축제 웹앱. 신청곡·주막 QR 주문·가요제 투표. PRD·API 설계, 서버 개발, 배포와 축제 당일 운영. 이틀간 API 요청 약 35만 건, 5xx 0건.">
+    <title>GROOVE 6단대 연합축제 웹앱 · 이상민</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ffffff'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%230a0a0a'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#content">본문으로 건너뛰기</a>
+    <header class="nav detail-nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand" data-i18n="nav.brand">이상민</a>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail" id="content">
+        <a href="../index.html" class="back-link" data-i18n="common.back">← 처음으로</a>
+        <header class="detail-head">
+            <span class="eyebrow" data-i18n="p.groove.eyebrow">Project · 축제</span>
+            <h1 class="detail-title" data-i18n="p.groove.title">GROOVE 6단대 연합축제 웹앱</h1>
+            <div class="detail-meta"><div><span class="dm-label" data-i18n="d.role">역할</span><span data-i18n="p.groove.role">개발 총괄 · 서버 · 운영</span></div><div><span class="dm-label" data-i18n="d.period">기간</span><span data-i18n="p.groove.period">2026.08 ~ 10 · 2026.10.01–02 운영</span></div></div>
+        </header>
+        <div class="detail-body">
+            <section class="block"><h2 data-i18n="pg.summary">요약</h2><p data-i18n="p.groove.s0.0">경북대 6개 단과대(IT·간호·예술·사회·사범·자연) 연합축제 GROOVE의 모바일 웹. 신청곡 PLAYLIST, 주막 지도와 테이블 QR 주문, 가요제 사연 접수·투표, 역할별 관리자 대시보드 제공.</p><p data-i18n="p.groove.s0.1">요구사항 문서(PRD)·API 명세 작성, 서버 개발, 배포와 축제 당일 운영 담당. 대동제 80주년 웹앱의 서버 구조와 배포 방식을 이어받아 확장.</p></section>
+            <section class="block"><h2 data-i18n="pg.decisions">설계 결정</h2><ul class="findings"><li data-i18n="p.groove.s1.0">곡 검색 소스를 커버리지 기준으로 교체: Deezer(원곡 커버리지 약 65%)에서 iTunes, 한글 표기 확보를 위해 Last.fm으로 전환하고 앨범 커버는 iTunes로 보강</li><li data-i18n="p.groove.s1.1">곡 신청은 로그인 없이 학번으로 받고, 덮어쓰기 위험은 append-only 감사 로그로 복구 가능하게 설계</li><li data-i18n="p.groove.s1.2">캠퍼스 와이파이 NAT 환경을 고려해 신청 속도 제한 기준을 IP에서 학번으로 변경</li><li data-i18n="p.groove.s1.3">단일 인스턴스 전제로 키 단위 인-프로세스 락과 Idempotency-Key로 중복 요청 처리, Redis 없이 운영</li></ul></section>
+            <section class="block"><h2 data-i18n="pg.solved">해결한 문제</h2><ul class="findings"><li data-i18n="p.groove.s2.0">nullable 컬럼 변경 배포 후 ddl-auto가 기존 NOT NULL 제약을 풀지 못해 서버 재시작이 반복된 장애 복구. 이후 엔티티와 운영 스키마 불일치를 배포 전에 잡는 점검 스크립트, 축제 당일 준비 상태 점검 스크립트 도입. 초기 데이터 적재 실패가 서비스 전체 장애로 번지지 않게 분리</li><li data-i18n="p.groove.s2.1">개발 서버 배포가 대기 중인 운영 배포를 밀어내던 CD 결함을 브랜치별 동시 실행 그룹으로 분리. 재배포 때 업로드 이미지가 사라지던 볼륨 누락 보완</li><li data-i18n="p.groove.s2.2">축제 첫날 주문 버튼 연타로 생긴 중복 주문(487건 중 37건) 원인 파악. 서버·DB는 그대로 두고 클라이언트의 Idempotency-Key 재사용과 장바구니 초기화를 고쳐 운영 중 배포</li><li data-i18n="p.groove.s2.3">주막 관리자 화면을 입금 확인·주방·주문 내역·설정으로 분리하고 정산 엑셀 내려받기 추가. 사범대 날짜별 학과 분리, 새벽 5시 날짜 경계 처리</li></ul></section>
+            <section class="block"><h2 data-i18n="pg.ops">운영</h2><ul class="findings"><li data-i18n="p.groove.s3.0">축제 이틀간 API 요청 약 35만 건, 최대 분당 1,738건 처리. API 5xx 0건(프록시 로그 기준)</li><li data-i18n="p.groove.s3.1">학부 서버에 GHCR 이미지와 self-hosted runner 기반 자동 배포 구성, Nginx 프록시 뒤에서 운영</li></ul></section>
+            <section class="block"><h2 data-i18n="pg.stack">기술 스택</h2><ul class="findings"><li data-i18n="p.groove.s4.0">서버: Java 21, Spring Boot 3.5, JPA, MySQL</li><li data-i18n="p.groove.s4.1">클라이언트: React 19, Vite, TanStack Query, Tailwind, Sentry</li><li data-i18n="p.groove.s4.2">배포: Docker, GHCR, GitHub Actions(self-hosted runner), Nginx</li></ul></section>
+            <section class="block"><h2 data-i18n="pg.links">링크</h2><a class="text-link" href="https://chcse.knu.ac.kr/groove/" target="_blank" rel="noopener">GROOVE 웹사이트 ↗</a><br>
+                <a class="text-link" href="https://github.com/groove-festival/groove-client" target="_blank" rel="noopener">GitHub · client (React)</a></section>
+        </div>
+        <a href="../index.html" class="back-link bottom" data-i18n="common.back">← 처음으로</a>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-es es">Hecho con calma · Daegu, KR</p>
+        <p class="footer-credit">© 2026 이상민 · Sangmin Lee</p>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

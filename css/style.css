@@ -331,6 +331,7 @@ a.card-in:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--
 .block figure { margin: 0; }
 .block figure img { width: 100%; height: auto; border: 2px solid var(--ink); background: #fff; }
 .block figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+.figs { display: grid; gap: 24px; }
 .steps { list-style: none; counter-reset: step; }
 .steps li { position: relative; padding-left: 30px; color: var(--soft); }
 .steps li + li { margin-top: 8px; }

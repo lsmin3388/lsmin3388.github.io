@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="낙상 예방 어시스턴트. 집 안 사진으로 낙상 위험을 감지하는 산학 프로젝트. 해피에이징 DevOps 테크리드.">
+    <meta name="description" content="낙상 예방 어시스턴트. 해피에이징 산학 프로젝트. 집 안 사진 AI 분석과 건강 설문 기반 위험 등급·보고서. 서버·Android·인프라 개발 총괄.">
     <title>낙상 예방 어시스턴트 · 이상민</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ffffff'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%230a0a0a'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,24 +27,15 @@
     <main class="detail" id="content">
         <a href="../index.html" class="back-link" data-i18n="common.back">← 처음으로</a>
         <header class="detail-head">
-            <span class="eyebrow" data-i18n="d.fall.eyebrow">Project · 산학</span>
-            <h1 class="detail-title" data-i18n="d.fall.title">낙상 예방 어시스턴트</h1>
-            <div class="detail-meta">
-                <div><span class="dm-label" data-i18n="d.role">역할</span><span data-i18n="d.fall.role">DevOps 테크리드</span></div>
-                <div><span class="dm-label" data-i18n="d.period">기간</span><span data-i18n="d.fall.period">2024.07 ~ 2025.03 · 해피에이징</span></div>
-            </div>
+            <span class="eyebrow" data-i18n="p.fall.eyebrow">Project · 산학</span>
+            <h1 class="detail-title" data-i18n="p.fall.title">낙상 예방 어시스턴트</h1>
+            <div class="detail-meta"><div><span class="dm-label" data-i18n="d.role">역할</span><span data-i18n="p.fall.role">서버 · Android · 인프라 개발 총괄</span></div><div><span class="dm-label" data-i18n="d.period">기간</span><span data-i18n="p.fall.period">2024.07 ~ 2025.03 · 해피에이징</span></div></div>
         </header>
         <div class="detail-body">
-            <section class="block"><h2 data-i18n="d.h.context">배경</h2><p data-i18n="d.fall.context">해피에이징 산학 프로젝트. 고령자 가정 내 낙상 위험을 줄이는 서비스 개발 총괄.</p></section>
-            <section class="block"><h2 data-i18n="d.h.problem">문제</h2><p data-i18n="d.fall.problem">낙상 위험은 바닥, 가구 배치 같은 집 안 환경에서 발생. 일상적으로 점검할 방법 부재.</p></section>
-            <section class="block"><h2 data-i18n="d.h.solution">해결</h2><p data-i18n="d.fall.solution">사용자가 찍은 집 안 사진을 OpenAI로 분석해 위험 요소 탐지, 군집화로 위험 등급 분류. 건강 설문과 결합해 맞춤형 안전 보고서 생성. Kotlin 안드로이드 앱, Spring Boot 서버, AWS EC2·Docker 배포.</p></section>
-            <section class="block"><h2 data-i18n="d.h.impact">성과</h2><p data-i18n="d.fall.impact">위험 요소 탐지부터 보고서 생성까지 자동화. Google Play 출시.</p></section>
-            <section class="block"><h2 data-i18n="d.stack">기술 스택</h2>
-                <div class="tags"><span>Spring Boot</span><span>PostgreSQL</span><span>Python</span><span>Kotlin (Android)</span><span>OpenAI</span><span>Docker</span><span>AWS EC2</span><span>Nginx</span></div>
-            </section>
-            <section class="block"><h2 data-i18n="d.links">링크</h2>
-                <a class="text-link" href="https://github.com/lsmin3388/fall-prevention-server" target="_blank" rel="noopener">GitHub · fall-prevention-server</a>
-            </section>
+            <section class="block"><h2 data-i18n="pg.summary">요약</h2><p data-i18n="p.fall.s0.0">해피에이징 산학 프로젝트. 고령자 가정의 낙상 위험을 집 안 사진과 건강 설문으로 점검하는 서비스. 서버·Android 앱·인프라 개발 총괄. Google Play 출시(현재 서비스 종료).</p></section>
+            <section class="block"><h2 data-i18n="pg.work">주요 업무</h2><ul class="findings"><li data-i18n="p.fall.s1.0">집 안 사진을 OpenAI 비전 모델로 방별 분석해 위험 요소 탐지</li><li data-i18n="p.fall.s1.1">건강 설문 응답을 KMeans로 군집화해 위험 등급 산정, 맞춤형 안전 보고서(PDF) 생성 기능을 FastAPI 서버로 서비스화</li><li data-i18n="p.fall.s1.2">서버를 6개 Gradle 모듈로 분리하고 OpenAI 연동을 분석 모듈에 격리</li><li data-i18n="p.fall.s1.3">브랜치별 CI/CD: PR 빌드, 운영 브랜치 푸시 시 Docker 이미지 배포, 운영에서 메인으로 자동 동기화</li><li data-i18n="p.fall.s1.4">Android 앱(Kotlin) 주 개발. 고해상도 사진을 5MB 이하로 줄이는 업로드 처리, 토큰 재발급 시 인증 헤더가 중복되던 버그 수정</li></ul></section>
+            <section class="block"><h2 data-i18n="pg.stack">기술 스택</h2><ul class="findings"><li data-i18n="p.fall.s2.0">서버: Spring Boot, JPA, PostgreSQL</li><li data-i18n="p.fall.s2.1">AI: OpenAI, Python, FastAPI</li><li data-i18n="p.fall.s2.2">앱: Kotlin(Android)</li><li data-i18n="p.fall.s2.3">인프라: Docker, GitHub Actions, AWS EC2</li></ul></section>
+            <section class="block"><h2 data-i18n="pg.links">링크</h2><a class="text-link" href="https://github.com/lsmin3388/fall-prevention-server" target="_blank" rel="noopener">GitHub · fall-prevention-server</a></section>
         </div>
         <a href="../index.html" class="back-link bottom" data-i18n="common.back">← 처음으로</a>
     </main>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="경북대 컴퓨터학부 학생회 통합 시스템. 학부 재학생 1,483명 대상 SSO·QR 인증, 물리서버 직접 운영.">
-    <title>경북대 학생회 통합 시스템 · 이상민</title>
+    <meta name="description" content="경북대 컴퓨터학부 학생회 서비스 플랫폼. 재적생 1,483명 대상 SSO 인증 서버, 공용 인증 라이브러리, 통합 인프라, 사물함·학생회비 서비스.">
+    <title>컴퓨터학부 학생회 서비스 플랫폼 · 이상민</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ffffff'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%230a0a0a'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,21 +27,16 @@
     <main class="detail" id="content">
         <a href="../index.html" class="back-link" data-i18n="common.back">← 처음으로</a>
         <header class="detail-head">
-            <span class="eyebrow" data-i18n="d.council.eyebrow">Project · 학생회</span>
-            <h1 class="detail-title" data-i18n="d.council.title">경북대 컴퓨터학부 학생회 통합 시스템</h1>
-            <div class="detail-meta">
-                <div><span class="dm-label" data-i18n="d.role">역할</span><span data-i18n="d.council.role">설계 · 구축 · 운영</span></div>
-                <div><span class="dm-label" data-i18n="d.period">기간</span><span data-i18n="d.council.period">2024 ~ 현재 · 학부 재학생 1,483명</span></div>
-            </div>
+            <span class="eyebrow" data-i18n="p.council.eyebrow">Project · 학생회</span>
+            <h1 class="detail-title" data-i18n="p.council.title">컴퓨터학부 학생회 서비스 플랫폼</h1>
+            <div class="detail-meta"><div><span class="dm-label" data-i18n="d.role">역할</span><span data-i18n="p.council.role">설계 · 서버 · 인프라 · 운영</span></div><div><span class="dm-label" data-i18n="d.period">기간</span><span data-i18n="p.council.period">2023 ~ 현재 · 재적생 1,483명</span></div></div>
         </header>
         <div class="detail-body">
-            <section class="block"><h2 data-i18n="d.h.context">배경</h2><p data-i18n="d.council.context">학부 학생회 운영용 통합 웹 시스템 설계·구축·운영. 대상은 학부 재학생 1,483명.</p></section>
-            <section class="block"><h2 data-i18n="d.h.problem">문제</h2><p data-i18n="d.council.problem">학생 정보, 인증, 학생회비, 사물함 관리가 흩어진 채 수기로 진행.</p></section>
-            <section class="block"><h2 data-i18n="d.h.solution">해결</h2><p data-i18n="d.council.solution">학부 학적 DB 설계(1,485건). SSO 인증서버, QR 학생증 인증, 학생회 관리자 페이지 구축. 학교 망 물리서버를 직접 운영하며 Docker·Nginx로 통합 배포.</p></section>
-            <section class="block"><h2 data-i18n="d.h.impact">성과</h2><p data-i18n="d.council.impact">흩어진 학사·학생회 업무를 인증 하나로 통합. 학부 재학생 1,483명 대상 서비스 직접 운영 중.</p></section>
-            <section class="block"><h2 data-i18n="d.stack">기술 스택</h2>
-                <div class="tags"><span>Spring Boot</span><span>JPA</span><span>Spring Security</span><span>Thymeleaf</span><span>MySQL</span><span>Flyway</span><span>Docker</span><span>Nginx</span></div>
-            </section>
+            <section class="block"><h2 data-i18n="pg.summary">요약</h2><p data-i18n="p.council.s0.0">경북대 컴퓨터학부 재적생 1,483명 대상 학생회 서비스 플랫폼. 통합 로그인(SSO)을 중심으로 사물함·학생회비 장부·커뮤니티 서비스를 연결하고, 학부 서버에서 통합 배포·운영.</p></section>
+            <section class="block"><h2 data-i18n="pg.work">주요 업무</h2><ul class="findings"><li data-i18n="p.council.s1.0">SSO 인증 서버: Google 학교 계정 인증에서 Keycloak 기반 OAuth2 인가 코드 흐름으로 전환. 역할·사용자 유형 체계, 학번 검증, 클라이언트 셀프 등록용 개발자 포털 구축</li><li data-i18n="p.council.s1.1">공용 인증 라이브러리(auth-sso-spring-boot-starter): 설정 두 줄로 JWT 검증 자동 구성, KnuCseUser·@RequireRole 제공. GitHub Packages로 배포해 사물함·장부 서비스의 중복 인증 코드 대체</li><li data-i18n="p.council.s1.2">통합 인프라 재설계: 서비스별 DB 스키마와 Docker 네트워크 분리, Nginx에서 내부 API 외부 차단, 재사용 CI/CD 워크플로와 운영 런북 정리, APM(Pinpoint) 연동</li><li data-i18n="p.council.s1.3">사물함 서비스: 2023년 수업 팀 프로젝트로 시작해 2024년 재작성. 동시 신청 경합을 트랜잭션 격리 수준 조정으로 해결, 2026년 CSV 일괄 배정과 학생회비 납부 확인 연동</li><li data-i18n="p.council.s1.4">학생증 QR 인증, 학적 명단 관리, 관리자 페이지 구축</li></ul></section>
+            <section class="block"><h2 data-i18n="pg.solved">해결한 문제</h2><ul class="findings"><li data-i18n="p.council.s2.0">프록시 경로 접두사가 두 번 제거돼 관리자 API 전체가 실패하던 문제 수정</li><li data-i18n="p.council.s2.1">DB 커넥션 초기화 단계에서 문자셋을 강제해 한글 깨짐 해결</li></ul></section>
+            <section class="block"><h2 data-i18n="pg.scope">역할 범위</h2><p data-i18n="p.council.s3.0">SSO·공용 라이브러리·인프라는 설계와 주 구현 담당. 학생회비 장부 서비스와 각 서비스 프론트엔드는 팀원과 공동 개발.</p></section>
+            <section class="block"><h2 data-i18n="pg.stack">기술 스택</h2><ul class="findings"><li data-i18n="p.council.s4.0">서버: Spring Boot, Spring Security, JPA, MySQL, Flyway</li><li data-i18n="p.council.s4.1">인증: Keycloak, OAuth2, JWT</li><li data-i18n="p.council.s4.2">인프라: Docker Compose, Nginx, GitHub Actions(self-hosted runner), Pinpoint</li></ul></section>
         </div>
         <a href="../index.html" class="back-link bottom" data-i18n="common.back">← 처음으로</a>
     </main>
