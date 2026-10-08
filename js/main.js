@@ -2,40 +2,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initI18n();
-    initFilters();
     initCards();
     initRail();
     document.querySelectorAll('.js-print').forEach(b => b.addEventListener('click', () => window.print()));
 });
-
-/* 기록 분류 필터. 항목이 하나도 안 남은 연도는 통째로 숨긴다. */
-function initFilters() {
-    const buttons = document.querySelectorAll('.filters [data-filter]');
-    if (!buttons.length) return;
-    const entries = document.querySelectorAll('.entry');
-    const years = document.querySelectorAll('.year');
-
-    const apply = (kind) => {
-        buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === kind)));
-        entries.forEach(el => {
-            const kinds = (el.dataset.kind || '').split(' ');
-            el.hidden = kind !== 'all' && !kinds.includes(kind);
-            el.classList.remove('is-first', 'is-last');
-        });
-        years.forEach(y => {
-            const visible = y.querySelectorAll('.entry:not([hidden])');
-            y.classList.toggle('is-empty', visible.length === 0);
-            const railItem = document.querySelector(`.rail a[href="#${y.id}"]`);
-            if (railItem) railItem.parentElement.hidden = visible.length === 0;
-            if (visible.length) visible[visible.length - 1].classList.add('is-last');
-            if (y.dataset.year === '2026' && visible.length) visible[0].classList.add('is-first');
-        });
-    };
-
-    buttons.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter)));
-    // 인쇄는 항상 전체 기록으로
-    window.addEventListener('beforeprint', () => apply('all'));
-}
 
 /* 대표 카드: 버튼으로 한 장씩, 끝에 닿으면 버튼 비활성 */
 function initCards() {
@@ -44,7 +14,8 @@ function initCards() {
     const btns = document.querySelectorAll('.feat-btn');
     const step = () => {
         const card = track.querySelector('.card');
-        return card ? card.getBoundingClientRect().width + 16 : 300;
+        const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+        return card ? card.getBoundingClientRect().width + gap : 300;
     };
     const ctrl = document.querySelector('.feat-ctrl');
     const update = () => {
@@ -62,7 +33,7 @@ function initCards() {
     update();
 }
 
-/* 왼쪽 목차: 화면 위쪽 40% 선을 지난 마지막 섹션·연도를 표시 */
+/* 왼쪽 목차: 화면 위쪽 40% 선을 지난 마지막 섹션을 표시 */
 function initRail() {
     const links = [...document.querySelectorAll('.rail a[href^="#"]')];
     if (!links.length) return;
@@ -74,19 +45,15 @@ function initRail() {
     const mark = () => {
         ticking = false;
         const line = window.innerHeight * 0.4;
-        let section = null, year = null;
+        let current = null;
         pairs.forEach(([a, t]) => {
             if (t.offsetParent === null || t.getBoundingClientRect().top > line) return;
-            if (t.classList.contains('year')) year = a; else section = a;
+            current = a;
         });
-        links.forEach(a => a.classList.remove('is-active'));
-        if (section) section.classList.add('is-active');
-        if (year && section && section.getAttribute('href') === '#log') year.classList.add('is-active');
+        links.forEach(a => a.classList.toggle('is-active', a === current));
     };
     window.addEventListener('scroll', () => {
         if (!ticking) { ticking = true; requestAnimationFrame(mark); }
     }, { passive: true });
     mark();
 }
-
-console.log('%cHecho con calma.', 'font-family: Georgia, serif; font-style: italic; font-size: 16px; color: #c4634a;');
