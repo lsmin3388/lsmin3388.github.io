@@ -2,37 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initI18n();
-    initCards();
     initRail();
     document.querySelectorAll('.js-print').forEach(b => b.addEventListener('click', () => window.print()));
 });
-
-/* 대표 카드: 버튼으로 한 장씩, 끝에 닿으면 버튼 비활성 */
-function initCards() {
-    const track = document.querySelector('.cards');
-    if (!track) return;
-    const btns = document.querySelectorAll('.feat-btn');
-    const step = () => {
-        const card = track.querySelector('.card');
-        const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-        return card ? card.getBoundingClientRect().width + gap : 300;
-    };
-    const ctrl = document.querySelector('.feat-ctrl');
-    const update = () => {
-        const max = track.scrollWidth - track.clientWidth - 2;
-        if (ctrl) ctrl.hidden = max <= 0;
-        if (max > 0) track.tabIndex = 0; else track.removeAttribute('tabindex');
-        btns.forEach(b => {
-            b.disabled = b.dataset.dir === '-1' ? track.scrollLeft <= 2 : track.scrollLeft >= max;
-        });
-    };
-    btns.forEach(b => b.addEventListener('click', () => {
-        track.scrollBy({ left: step() * Number(b.dataset.dir), behavior: 'auto' });
-    }));
-    track.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-    update();
-}
 
 /* 왼쪽 목차: 화면 위쪽 40% 선을 지난 마지막 섹션을 표시 */
 function initRail() {

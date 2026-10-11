@@ -125,71 +125,32 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
 .featured { border-top: var(--thick) solid var(--ink); padding-top: 16px; margin-bottom: clamp(64px, 9vh, 104px); }
 .label { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; }
 
-/* ---------- 대표 프로젝트 ---------- */
-.feat-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
-.feat-ctrl { display: flex; gap: 8px; }
-.feat-ctrl[hidden] { display: none; }
-.feat-btn { width: 40px; height: 40px; border: var(--thick) solid var(--ink); font-size: 16px; }
-.feat-btn:active:not(:disabled) { background: var(--ink); color: var(--bg); }
+/* ---------- 대표 프로젝트: 블로그 글 목록처럼 ---------- */
+.featured .label { margin-bottom: 22px; }
+.posts { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 32px; }
+.post a { display: block; text-decoration: none; color: inherit; }
+.p-thumb { aspect-ratio: 16 / 9; overflow: hidden; border-radius: 12px; background: #f2f2f2; }
+.p-thumb img { width: 100%; height: 100% !important; object-fit: cover; }
+.p-title {
+    font-size: 21px; font-weight: 700; line-height: 1.45; letter-spacing: -0.025em;
+    margin-top: 16px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.p-desc {
+    font-size: 15px; color: var(--soft); line-height: 1.65; margin-top: 8px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.p-meta { font-size: 14px; color: var(--muted); margin-top: 12px; font-variant-numeric: tabular-nums; }
+.p-meta span { margin-right: 10px; }
+.post a:focus-visible { outline-offset: 6px; }
+.post a:focus-visible .p-title { text-decoration: underline; }
 @media (hover: hover) and (pointer: fine) {
-    .feat-btn:hover:not(:disabled) { background: var(--ink); color: var(--bg); }
+    .post a:hover .p-title { text-decoration: underline; }
 }
-.feat-btn:disabled { opacity: .25; cursor: default; }
-
-.cards {
-    list-style: none;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(270px, 310px);
-    gap: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
-    padding: 0 8px 14px 0;
-    scrollbar-width: thin;
-    overscroll-behavior-x: contain;
+@media (max-width: 720px) {
+    .posts { grid-template-columns: 1fr; gap: 36px; }
+    .p-title { font-size: 19px; }
 }
-.card { scroll-snap-align: start; }
-.card-in {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border: var(--thick) solid var(--ink);
-    background: var(--bg);
-    text-decoration: none;
-    color: inherit;
-}
-a.card-in:focus-visible { outline-offset: -7px; }
-a.card-in:focus-visible .c-title { text-decoration: underline; }
-@media (hover: hover) and (pointer: fine) {
-    a.card-in:hover .c-title { text-decoration: underline; }
-}
-.c-thumb { aspect-ratio: 16 / 9; overflow: hidden; border-bottom: var(--thick) solid var(--ink); background: var(--bg); }
-.c-thumb img { width: 100%; height: 100% !important; object-fit: cover; }
-.c-body { padding: 16px 18px 14px; flex: 1; display: flex; flex-direction: column; }
-.c-title { font-size: 17px; font-weight: 700; line-height: 1.45; letter-spacing: -0.02em; }
-.c-desc {
-    font-size: 14px;
-    color: var(--soft);
-    line-height: 1.65;
-    margin-top: 6px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-.c-date { font-size: 12.5px; color: var(--muted); margin-top: auto; padding-top: 14px; }
-.c-foot { display: flex; justify-content: space-between; gap: 12px; padding: 4px 18px 16px; font-size: 13px; }
-.c-stack { font-size: 13px; color: var(--muted); align-self: center; min-width: 0; }
-.c-go { font-weight: 700; white-space: nowrap; }
-
-/* 카드가 한 장이면 가로로 넓게 */
-.cards:has(> .card:only-child) { display: block; overflow: visible; padding: 0 6px 6px 0; }
-.card:only-child .card-in { display: grid; grid-template-columns: 54% 1fr; grid-template-rows: 1fr auto; }
-.card:only-child .c-thumb { grid-row: 1 / 3; aspect-ratio: auto; min-height: 300px; border-bottom: 0; border-right: var(--thick) solid var(--ink); }
-.card:only-child .c-body { padding: 26px 28px 18px; }
-.card:only-child .c-title { font-size: 24px; line-height: 1.3; }
-.card:only-child .c-desc { font-size: 15px; -webkit-line-clamp: 6; margin-top: 12px; }
-.card:only-child .c-foot { padding: 4px 28px 22px; }
 
 /* ---------- 자격·취미·언어 ---------- */
 .certs { font-size: 14px; color: var(--soft); }
@@ -292,13 +253,6 @@ a.card-in:focus-visible .c-title { text-decoration: underline; }
 .notfound .btn { display: inline-block; margin-top: 28px; font-weight: 700; }
 
 /* ---------- 좁은 화면 ---------- */
-@media (max-width: 860px) {
-    .card:only-child .card-in { display: flex; flex-direction: column; }
-    .card:only-child .c-thumb { aspect-ratio: 16 / 9; min-height: 0; border-right: 0; border-bottom: var(--thick) solid var(--ink); }
-    .card:only-child .c-body { padding: 18px 20px 14px; }
-    .card:only-child .c-title { font-size: 20px; }
-    .card:only-child .c-foot { padding: 4px 20px 16px; }
-}
 @media (max-width: 720px) {
     .hero { grid-template-columns: 1fr; row-gap: 22px; }
     .hero-photo { width: 132px; }
