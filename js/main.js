@@ -21,12 +21,13 @@ function initCards() {
     const update = () => {
         const max = track.scrollWidth - track.clientWidth - 2;
         if (ctrl) ctrl.hidden = max <= 0;
+        if (max > 0) track.tabIndex = 0; else track.removeAttribute('tabindex');
         btns.forEach(b => {
             b.disabled = b.dataset.dir === '-1' ? track.scrollLeft <= 2 : track.scrollLeft >= max;
         });
     };
     btns.forEach(b => b.addEventListener('click', () => {
-        track.scrollBy({ left: step() * Number(b.dataset.dir), behavior: 'smooth' });
+        track.scrollBy({ left: step() * Number(b.dataset.dir), behavior: 'auto' });
     }));
     track.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
@@ -50,10 +51,16 @@ function initRail() {
             if (t.offsetParent === null || t.getBoundingClientRect().top > line) return;
             current = a;
         });
-        links.forEach(a => a.classList.toggle('is-active', a === current));
+        links.forEach(a => {
+            a.classList.toggle('is-active', a === current);
+            if (a === current) a.setAttribute('aria-current', 'location');
+            else a.removeAttribute('aria-current');
+        });
     };
-    window.addEventListener('scroll', () => {
+    const schedule = () => {
         if (!ticking) { ticking = true; requestAnimationFrame(mark); }
-    }, { passive: true });
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
     mark();
 }
